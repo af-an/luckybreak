@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lucky_break:block/lucky_block"
+  }
+} 

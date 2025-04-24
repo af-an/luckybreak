@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SRS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone",
+      "fabric:type": "item"
+    },
+    "R": {
+      "item": "minecraft:rotten_flesh",
+      "fabric:type": "item"
+    }
+  },
+  "result": {
+    "id": "lucky_break:unlucky_block",
+    "count": 1
+  }
+} 

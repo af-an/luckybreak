@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "GDG",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "D": "minecraft:dropper"
+  },
+  "result": {
+    "id": "lucky_break:lucky_block",
+    "count": 1
+  }
+} 

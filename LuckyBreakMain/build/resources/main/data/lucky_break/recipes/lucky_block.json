@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GDG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot",
+      "fabric:type": "item"
+    },
+    "D": {
+      "item": "minecraft:dropper",
+      "fabric:type": "item"
+    }
+  },
+  "result": {
+    "id": "lucky_break:lucky_block",
+    "count": 1
+  }
+} 

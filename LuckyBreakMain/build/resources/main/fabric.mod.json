@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "lucky_break",
+	"version": "1.0.0",
+	"name": "Lucky Break",
+	"description": "Adds Lucky Blocks that drop random loot when broken!",
+	"authors": [
+		"Lucky Break Team"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/"
+	},
+	"license": "MIT",
+	"icon": "assets/lucky_break/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.luckybreak.LuckyBreakMod"
+		],
+		"client": [
+			"com.luckybreak.LuckyBreakClient"
+		],
+		"fabric-datagen": [
+			"com.luckybreak.LuckyBreakDataGenerator"
+		]
+	},
+	"mixins": [
+		"lucky_break.mixins.json",
+		{
+			"config": "lucky_break.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

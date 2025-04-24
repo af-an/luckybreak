@@ -1,0 +1,20 @@
+{
+  "block.lucky_break.lucky_block": "Lucky Block",
+  "item.lucky_break.lucky_block": "Lucky Block",
+  "block.lucky_break.unlucky_block": "Unlucky Block",
+  "item.lucky_break.unlucky_block": "Unlucky Block",
+  "block.lucky_break.legendary_block": "Legendary Block",
+  "item.lucky_break.legendary_block": "Legendary Block",
+  "itemGroup.lucky_break.luckybreakgroup": "Lucky Break",
+  
+  "advancement.lucky_break.root": "Lucky Break",
+  "advancement.lucky_break.root.desc": "Start your lucky journey!",
+  "advancement.lucky_break.lucky_block": "Getting Lucky",
+  "advancement.lucky_break.lucky_block.desc": "Obtain a Lucky Block",
+  "advancement.lucky_break.recipes.lucky_block": "Lucky Crafting",
+  "advancement.lucky_break.recipes.lucky_block.desc": "Craft a Lucky Block with gold ingots and a dropper",
+  "advancement.lucky_break.recipes.unlucky_block": "Risky Business",
+  "advancement.lucky_break.recipes.unlucky_block.desc": "Craft an Unlucky Block with iron ingots and a dispenser",
+  "advancement.lucky_break.recipes.legendary_block": "Legendary Crafting",
+  "advancement.lucky_break.recipes.legendary_block.desc": "Craft a Legendary Block with diamonds and a Lucky Block"
+} 

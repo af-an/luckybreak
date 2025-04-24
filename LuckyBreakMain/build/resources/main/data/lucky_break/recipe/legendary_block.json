@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DDD",
+    "DLD",
+    "DDD"
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "L": "lucky_break:lucky_block"
+  },
+  "result": {
+    "id": "lucky_break:legendary_block",
+    "count": 1
+  }
+} 

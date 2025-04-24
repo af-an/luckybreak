@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "fabric:type": "minecraft:item",
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "fabric:type": "minecraft:item",
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gold_block",
+    "count": 1
+  },
+  "show_notification": true
+} 
