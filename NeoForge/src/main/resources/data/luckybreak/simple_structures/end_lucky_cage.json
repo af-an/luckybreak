@@ -1,0 +1,352 @@
+{
+  "size": [
+    3,
+    3,
+    3
+  ],
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "ignore_air": true,
+  "replace_air_only": false,
+  "blocks": [
+    {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        1,
+        0,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_chiseled_copper"
+    },
+    {
+      "pos": [
+        2,
+        0,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        2,
+        0,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        1,
+        1,
+        1
+      ],
+      "block": "luckybreak:mostly_lucky_block"
+    },
+    {
+      "pos": [
+        0,
+        2,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        0,
+        2,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        1,
+        2,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_chiseled_copper"
+    },
+    {
+      "pos": [
+        2,
+        2,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        2,
+        2,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bulb",
+      "properties": {
+        "powered": "false",
+        "lit": "false"
+      }
+    },
+    {
+      "pos": [
+        0,
+        0,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "bottom"
+      }
+    },
+    {
+      "pos": [
+        1,
+        0,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "bottom"
+      }
+    },
+    {
+      "pos": [
+        1,
+        0,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "bottom"
+      }
+    },
+    {
+      "pos": [
+        2,
+        0,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "bottom"
+      }
+    },
+    {
+      "pos": [
+        0,
+        1,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "true",
+        "waterlogged": "false",
+        "south": "true",
+        "north": "false",
+        "west": "false"
+      }
+    },
+    {
+      "pos": [
+        0,
+        1,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "true",
+        "waterlogged": "false",
+        "south": "true",
+        "north": "true",
+        "west": "false"
+      }
+    },
+    {
+      "pos": [
+        0,
+        1,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "true",
+        "waterlogged": "false",
+        "south": "false",
+        "north": "true",
+        "west": "false"
+      }
+    },
+    {
+      "pos": [
+        1,
+        1,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "true",
+        "waterlogged": "false",
+        "south": "true",
+        "north": "false",
+        "west": "true"
+      }
+    },
+    {
+      "pos": [
+        1,
+        1,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "true",
+        "waterlogged": "false",
+        "south": "false",
+        "north": "true",
+        "west": "true"
+      }
+    },
+    {
+      "pos": [
+        2,
+        1,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "false",
+        "waterlogged": "false",
+        "south": "true",
+        "north": "false",
+        "west": "true"
+      }
+    },
+    {
+      "pos": [
+        2,
+        1,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "false",
+        "waterlogged": "false",
+        "south": "true",
+        "north": "true",
+        "west": "true"
+      }
+    },
+    {
+      "pos": [
+        2,
+        1,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_copper_bars",
+      "properties": {
+        "east": "false",
+        "waterlogged": "false",
+        "south": "false",
+        "north": "true",
+        "west": "true"
+      }
+    },
+    {
+      "pos": [
+        0,
+        2,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "top"
+      }
+    },
+    {
+      "pos": [
+        1,
+        2,
+        0
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "top"
+      }
+    },
+    {
+      "pos": [
+        1,
+        2,
+        2
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "top"
+      }
+    },
+    {
+      "pos": [
+        2,
+        2,
+        1
+      ],
+      "block": "minecraft:waxed_oxidized_cut_copper_slab",
+      "properties": {
+        "waterlogged": "false",
+        "type": "top"
+      }
+    }
+  ]
+}

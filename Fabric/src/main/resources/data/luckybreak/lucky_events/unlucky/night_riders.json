@@ -1,0 +1,36 @@
+{
+  "name": "night_riders",
+  "type": "luckybreak:night_riders",
+  "weight": 9,
+
+  "night_time": 13000,
+  "radius": 12.0,
+  "min_count": 4,
+  "max_count": 8,
+
+  "message": "The Night Riders Approach",
+  "message_color": "#FF0000",
+  "thunderstorm": true,
+  "thunder_duration_ticks": 12000,
+
+  "armor_chance": 0.55,
+  "armor_piece_chance": 0.5,
+  "armor_enchant_chance": 0.4,
+  "armor_enchant_cost_min": 8,
+  "armor_enchant_cost_max": 20,
+
+  "xp_multiplier": 3.0,
+
+  "bonus_gold_min": 1,
+  "bonus_gold_max": 3,
+  "bonus_iron_min": 1,
+  "bonus_iron_max": 3,
+  "bonus_emerald_min": 1,
+  "bonus_emerald_max": 1,
+  "bonus_diamond_min": 1,
+  "bonus_diamond_max": 1,
+  "bonus_gold_weight": 40,
+  "bonus_iron_weight": 40,
+  "bonus_emerald_weight": 12,
+  "bonus_diamond_weight": 8
+}

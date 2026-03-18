@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DGD",
+    "ECE",
+    "DGD"
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "G": "minecraft:gold_ingot",
+    "E": "minecraft:emerald",
+    "C": "minecraft:compass"
+  },
+  "result": {
+    "id": "luckybreak:lucky_compass",
+    "count": 1
+  }
+}

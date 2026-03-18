@@ -1,0 +1,122 @@
+{
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700",
+  "durability": 32,
+  "attack_damage": 7.0,
+  "attack_speed": 1.0,
+  "lightning": {
+    "enabled": false,
+    "block_break_chance": 0.08,
+    "mob_hit_chance": 0.12
+  },
+  "leaf_storm": {
+    "enabled": true,
+    "chance": 0.22,
+    "particle_count": 20,
+    "stick_min": 1,
+    "stick_max": 3,
+    "apple_chance": 0.25
+  },
+  "bee_swarm": {
+    "enabled": true,
+    "chance": 0.08,
+    "min_count": 1,
+    "max_count": 3
+  },
+  "timber_launch": {
+    "enabled": true,
+    "chance": 0.2,
+    "upward_boost": 0.9,
+    "horizontal_boost": 0.25
+  },
+  "loot_pinata": {
+    "enabled": true,
+    "chance": 0.2,
+    "min_rolls": 2,
+    "max_rolls": 4,
+    "particle_count": 18,
+    "entries": [
+      { "item": "minecraft:stick", "weight": 24, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:apple", "weight": 20, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:charcoal", "weight": 16, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:honeycomb", "weight": 12, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:sweet_berries", "weight": 12, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:gold_nugget", "weight": 10, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:emerald", "weight": 3, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:diamond", "weight": 1, "min_count": 1, "max_count": 1 }
+    ]
+  },
+  "axe_bonus_drops": {
+    "enabled": true,
+    "drop_chance": 0.8,
+    "gold_nugget": {
+      "weight": 80,
+      "min_count": 1,
+      "max_count": 1
+    },
+    "charcoal": {
+      "weight": 16,
+      "min_count": 1,
+      "max_count": 2
+    },
+    "gold_ingot": {
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    "diamond": {
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    },
+    "emerald": {
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    }
+  },
+  "lucky_block_transform": {
+    "enabled": true,
+    "chance": 0.06,
+    "lucky_block_chance": 1.0
+  },
+  "temporary_enchantments": {
+    "enabled": true,
+    "chance": 0.9,
+    "min_enchantments": 1,
+    "max_enchantments": 2,
+    "min_duration_seconds": 3,
+    "max_duration_seconds": 8,
+    "effect_particles": {
+      "enabled": true,
+      "apply_particle": "minecraft:enchant",
+      "expire_particle": "minecraft:crit",
+      "count": 4,
+      "spread_x": 0.18,
+      "spread_y": 0.12,
+      "spread_z": 0.18,
+      "speed": 0.01
+    },
+    "entries": [
+      { "id": "minecraft:efficiency", "weight": 32, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:unbreaking", "weight": 26, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:fortune", "weight": 22, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:silk_touch", "weight": 10, "min_level": 1, "max_level": 1 },
+      { "id": "minecraft:mending", "weight": 10, "min_level": 1, "max_level": 1 },
+      { "id": "minecraft:sharpness", "weight": 10, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:smite", "weight": 8, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:bane_of_arthropods", "weight": 8, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:fire_aspect", "weight": 6, "min_level": 1, "max_level": 2 },
+      { "id": "minecraft:looting", "weight": 6, "min_level": 1, "max_level": 3 }
+    ]
+  },
+  "drop_particles": {
+    "enabled": true,
+    "count": 10,
+    "spread_x": 0.3,
+    "spread_y": 0.2,
+    "spread_z": 0.3,
+    "speed": 0.02
+  }
+}

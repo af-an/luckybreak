@@ -1,0 +1,6 @@
+{
+  "name": "iron_beacon",
+  "type": "luckybreak:iron_beacon",
+  "weight": 8,
+  "clear_above_beacon": true
+}

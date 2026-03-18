@@ -1,0 +1,164 @@
+{
+  "name": "mob_arena",
+  "type": "luckybreak:mob_arena",
+  "weight": 7,
+  "check_interval_ticks": 10,
+  "night_time": 13000,
+  "radius": 8,
+  "wall_height": 15,
+  "wall_depth": 25,
+  "wall_torch_spacing": 4,
+  "wall_block": "minecraft:cobblestone",
+  "arena_message": "Arena challenge! Defeat waves of mobs for a reward.",
+  "arena_message_color": "#FFD76A",
+  "forfeit_message": "Arena challenge ended, you forfeit",
+  "forfeit_message_color": "#FF5555",
+  "timeout_message": "You took too long! Challenge ended. Here's a reward for trying",
+  "wave_timeout_ticks": 2400,
+  "timeout_emerald_drop_min": 1,
+  "timeout_emerald_drop_max": 3,
+  "owner_forfeit_distance_margin": 2.5,
+  "owner_forfeit_grace_ticks": 140,
+  "arena_protect_walls_from_explosions": true,
+  "arena_protect_support_chest_from_explosions": true,
+  "wave_start_message_color": "#FFAA55",
+  "wave_count_weights": {
+    "1": 1,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 4
+  },
+  "zombie_armor_chance": 0.45,
+  "zombie_armor_piece_chance": 0.8,
+  "zombie_armor_enchant_chance": 0.05,
+  "zombie_armor_enchant_cost_min": 5,
+  "zombie_armor_enchant_cost_max": 12,
+  "zombie_armor_tiers": [
+    {
+      "helmet": "minecraft:leather_helmet",
+      "chestplate": "minecraft:leather_chestplate",
+      "leggings": "minecraft:leather_leggings",
+      "boots": "minecraft:leather_boots",
+      "weight": 6
+    },
+    {
+      "helmet": "minecraft:golden_helmet",
+      "chestplate": "minecraft:golden_chestplate",
+      "leggings": "minecraft:golden_leggings",
+      "boots": "minecraft:golden_boots",
+      "weight": 3
+    },
+    {
+      "helmet": "minecraft:chainmail_helmet",
+      "chestplate": "minecraft:chainmail_chestplate",
+      "leggings": "minecraft:chainmail_leggings",
+      "boots": "minecraft:chainmail_boots",
+      "weight": 2
+    },
+    {
+      "helmet": "minecraft:iron_helmet",
+      "chestplate": "minecraft:iron_chestplate",
+      "leggings": "minecraft:iron_leggings",
+      "boots": "minecraft:iron_boots",
+      "weight": 1
+    }
+  ],
+  "support_chest": {
+    "enabled": true,
+    "stacks_min": 3,
+    "stacks_max": 6,
+    "guaranteed_items": [
+      { "item": "minecraft:stone_sword", "count_min": 1, "count_max": 1 },
+      { "item": "minecraft:shield", "count_min": 1, "count_max": 1 }
+    ],
+    "items": [
+      { "item": "minecraft:cooked_beef", "count_min": 1, "count_max": 3, "weight": 6 },
+      { "item": "minecraft:shield", "count_min": 1, "count_max": 1, "weight": 5 },
+      { "item": "minecraft:stone_sword", "count_min": 1, "count_max": 1, "weight": 4 },
+      { "item": "minecraft:stone_axe", "count_min": 1, "count_max": 1, "weight": 4 },
+      { "item": "minecraft:leather_helmet", "count_min": 1, "count_max": 1, "weight": 3 },
+      { "item": "minecraft:leather_chestplate", "count_min": 1, "count_max": 1, "weight": 3 }
+    ]
+  },
+  "waves": [
+    {
+      "entity": "minecraft:zombie",
+      "count_min": 3,
+      "count_max": 5,
+      "message": "Wave 1! Zombies incoming!",
+      "message_color": "#FFAA55"
+    },
+    {
+      "entity": "minecraft:skeleton",
+      "count_min": 4,
+      "count_max": 6,
+      "message": "Wave 2! Skeleton archers!",
+      "message_color": "#FFAA55"
+    },
+    {
+      "entity": "minecraft:husk",
+      "count_min": 4,
+      "count_max": 6,
+      "message": "Wave 3! Husk reinforcements!",
+      "message_color": "#FFA94D"
+    },
+    {
+      "entity": "minecraft:spider",
+      "count_min": 5,
+      "count_max": 8,
+      "message": "Wave 4! Spiders swarm the arena!",
+      "message_color": "#FF7A7A"
+    },
+    {
+      "entity": "minecraft:creeper",
+      "count_min": 3,
+      "count_max": 5,
+      "message": "Wave 5! Creepers rush the arena!",
+      "message_color": "#FF5A5A"
+    }
+  ],
+  "reward_rolls_min": 4,
+  "reward_rolls_max": 7,
+  "reward_loot_table": [
+    { "item": "minecraft:emerald", "count_min": 3, "count_max": 8, "weight": 10, "wave_weight_bonus": 1 },
+    { "item": "minecraft:diamond", "count_min": 2, "count_max": 5, "weight": 8, "wave_weight_bonus": 1 },
+    { "item": "minecraft:gold_ingot", "count_min": 3, "count_max": 8, "weight": 10, "wave_weight_bonus": 1 },
+    { "item": "minecraft:golden_apple", "count_min": 1, "count_max": 2, "weight": 6, "wave_weight_bonus": 1 },
+    { "item": "minecraft:enchanted_golden_apple", "count_min": 1, "count_max": 1, "weight": 1, "wave_weight_bonus": 0 },
+    { "item": "luckybreak:lucky_block", "count_min": 1, "count_max": 1, "weight": 4, "wave_weight_bonus": 1 },
+    { "item": "luckybreak:very_lucky_block", "count_min": 1, "count_max": 1, "weight": 1, "wave_weight_bonus": 0 },
+    { "item": "minecraft:diamond_sword", "count_min": 1, "count_max": 1, "weight": 4, "wave_weight_bonus": 1 },
+    { "item": "minecraft:golden_sword", "count_min": 1, "count_max": 1, "weight": 4, "wave_weight_bonus": 1, "enchanted": true, "enchant_cost_min": 20, "enchant_cost_max": 30 },
+    { "item": "minecraft:golden_carrot", "count_min": 4, "count_max": 12, "weight": 8, "wave_weight_bonus": 1 },
+    { "item": "luckybreak:lucky_compass", "count_min": 1, "count_max": 1, "weight": 1, "wave_weight_bonus": 0 },
+    { "item": "minecraft:obsidian", "count_min": 4, "count_max": 16, "weight": 8, "wave_weight_bonus": 1 },
+    { "item": "minecraft:gold_block", "count_min": 1, "count_max": 3, "weight": 6, "wave_weight_bonus": 1 },
+    { "item": "minecraft:coal", "count_min": 8, "count_max": 24, "weight": 9, "wave_weight_bonus": 0 },
+    { "item": "minecraft:crossbow", "count_min": 1, "count_max": 1, "weight": 6, "wave_weight_bonus": 1 },
+    { "item": "minecraft:arrow", "count_min": 5, "count_max": 18, "weight": 9, "wave_weight_bonus": 0 },
+    { "item": "minecraft:diamond_helmet", "count_min": 1, "count_max": 1, "weight": 4, "wave_weight_bonus": 1 },
+    { "item": "minecraft:golden_boots", "count_min": 1, "count_max": 1, "weight": 5, "wave_weight_bonus": 1 },
+    { "item": "minecraft:dropper", "count_min": 1, "count_max": 2, "weight": 5, "wave_weight_bonus": 0 },
+    { "item": "minecraft:anvil", "count_min": 1, "count_max": 1, "weight": 5, "wave_weight_bonus": 1 },
+    { "item": "minecraft:netherite_sword", "count_min": 1, "count_max": 1, "weight": 1, "wave_weight_bonus": 0 },
+    { "item": "minecraft:shield", "count_min": 1, "count_max": 1, "weight": 8, "wave_weight_bonus": 1 }
+  ],
+  "reward_chest_forward_offset": 3,
+  "reward_sign_lines": ["", "Collect your", "Reward", ""],
+  "reward_particle_count": 36,
+  "reward_particle_spread_x": 0.8,
+  "reward_particle_spread_y": 0.5,
+  "reward_particle_spread_z": 0.8,
+  "reward_fireworks_count": 3,
+  "reward_fireworks_velocity_min": 0.8,
+  "reward_fireworks_velocity_max": 1.05,
+  "reward_firework_burst_delay_min_ticks": 16,
+  "reward_firework_burst_delay_max_ticks": 23,
+  "reward_firework_ring_points": 18,
+  "reward_firework_ring_radius": 0.9,
+  "reward_firework_star_outer_radius": 1.0,
+  "reward_firework_star_inner_radius": 0.45,
+  "reward_firework_particles_per_point": 2,
+  "max_duration_ticks": 2400
+}

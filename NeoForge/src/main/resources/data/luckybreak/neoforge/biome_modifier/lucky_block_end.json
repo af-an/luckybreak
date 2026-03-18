@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features": "luckybreak:end_lucky_cage",
+  "step": "top_layer_modification"
+}

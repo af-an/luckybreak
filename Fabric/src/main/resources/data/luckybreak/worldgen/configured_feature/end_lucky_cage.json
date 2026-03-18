@@ -1,0 +1,19 @@
+{
+  "type": "luckybreak:simple_json_structure",
+  "config": {
+    "structure": "luckybreak:end_lucky_cage",
+    "origin_x": 2,
+    "origin_y": 1,
+    "origin_z": 2,
+    "ignore_air": true,
+    "replace_air_only": false,
+    "replace_blocks_with_air": [],
+    "required_floor_blocks": [
+      "minecraft:end_stone"
+    ],
+    "required_air_blocks_above": 1,
+    "min_distance_from_same_structure": 96,
+    "clear_occupied_space": true,
+    "search_down_depth": 120
+  }
+}

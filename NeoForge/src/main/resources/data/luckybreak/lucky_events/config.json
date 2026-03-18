@@ -1,0 +1,50 @@
+{
+  "_lucky_block_comment": "Lucky Block tier chances. Values must be whole numbers that sum to 100.",
+
+  "lucky_block": {
+    "lucky_chance": 20,
+    "average_chance": 60,
+    "unlucky_chance": 20
+  },
+
+  "very_lucky_block": {
+    "lucky_chance": 100,
+    "average_chance": 0,
+    "unlucky_chance": 0
+  },
+
+  "very_unlucky_block": {
+    "lucky_chance": 0,
+    "average_chance": 0,
+    "unlucky_chance": 100
+  },
+
+  "mostly_lucky_block": {
+    "lucky_chance": 70,
+    "average_chance": 20,
+    "unlucky_chance": 10
+  },
+
+  "mostly_unlucky_block": {
+    "lucky_chance": 10,
+    "average_chance": 20,
+    "unlucky_chance": 70
+  },
+
+  "block_name_colors": {
+    "match_lucky_block_for_tier_blocks": true
+  },
+
+  "lucky_compass": {
+    "found_message": "Lucky Block found!",
+    "found_message_color": "#FFD700",
+    "not_found_message": "No Lucky Block found nearby.",
+    "not_found_message_color": "#FFFFFF",
+    "blocked_nether_message": "The Lucky Compass doesn't work in The Nether",
+    "blocked_nether_message_color": "#FFD700",
+    "blocked_end_message": "The Lucky Compass doesn't work in The End",
+    "blocked_end_message_color": "#FFD700"
+  },
+
+  "trigger_events_in_creative": false
+}

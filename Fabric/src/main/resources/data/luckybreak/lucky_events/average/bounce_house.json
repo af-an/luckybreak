@@ -1,0 +1,15 @@
+{
+  "name": "bounce_house",
+  "type": "luckybreak:bounce_house",
+  "weight": 8,
+  "structure": "luckybreak:slime_house",
+  "message": "How high can you jump?",
+  "message_color": "green",
+  "offset_x": 0,
+  "offset_y": -1,
+  "offset_z": 0,
+  "clear_area_before_place": true,
+  "origin_x": 2,
+  "origin_y": 0,
+  "origin_z": 2
+}

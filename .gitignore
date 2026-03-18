@@ -1,0 +1,51 @@
+# OS / editor
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# Python helper artifacts
+**/__pycache__/
+**/*.pyc
+
+# Gradle / build outputs
+**/.gradle/
+**/build/
+**/out/
+
+# Local run data (Minecraft dev runtime)
+**/run/
+**/run-data/
+
+# Logs and reports
+**/logs/
+**/crash-reports/
+**/hs_err_pid*.log
+
+# Generated resources and tool caches
+**/src/generated/
+**/generated/
+**/.cache/
+**/tmp_decompile/
+**/tmp_client_decompile/
+**/tmp_server_decompile/
+**/decompile/
+
+# Keep gradle wrapper and project sources/config tracked
+!**/gradle/wrapper/gradle-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.properties
+!**/gradlew
+!**/gradlew.bat
+!**/src/**
+!**/build.gradle
+!**/settings.gradle
+!**/gradle.properties
+!**/LICENSE*
+
+# Ignore README files
+**/README.md
+
+# Re-ignore metadata files under re-included source trees
+**/.DS_Store

@@ -1,0 +1,9 @@
+{
+  "name": "lava_pit",
+  "type": "luckybreak:lava_pit",
+  "weight": 6,
+  "radius": 10,
+  "depth": 30,
+  "wall_thickness": 1,
+  "clear_height": 20
+}

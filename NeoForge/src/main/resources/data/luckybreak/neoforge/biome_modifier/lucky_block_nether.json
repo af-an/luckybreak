@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "luckybreak:nether_lucky_block",
+  "step": "top_layer_modification"
+}

@@ -1,0 +1,75 @@
+{
+  "held_y_offset": 10,
+  "entries": [
+    {
+      "item": "luckybreak:lucky_compass",
+      "held_text": "Right-click to get Lucky",
+      "menu_text": "Find nearby Lucky Blocks",
+      "held_color": "#FFD76A",
+      "menu_color": "#9BCBFF"
+    },
+    {
+      "item": "luckybreak:lucky_block",
+      "menu_text": "Break for a surprise!",
+      "menu_color": "#FFD700"
+    },
+    {
+      "item": "minecraft:gold_nugget",
+      "custom_name": "Coin",
+      "require_well_coin_marker": true,
+      "held_text": "Throw in the well to make a wish",
+      "menu_text": "Make a wish",
+      "held_color": "#FFFFFF",
+      "menu_color": "#FFD76A"
+    },
+    {
+      "item": "luckybreak:golden_hen_spawn_egg",
+      "menu_text": "Lays Gold",
+      "menu_color": "#FFD700"
+    },
+    {
+      "item": "luckybreak:very_lucky_block",
+      "held_text": "+100% Lucky",
+      "menu_text": "+100% Lucky",
+      "held_color": "#00FF00",
+      "menu_color": "#00FF00"
+    },
+    {
+      "item": "luckybreak:very_unlucky_block",
+      "held_text": "+100% Unlucky",
+      "menu_text": "+100% Unlucky",
+      "held_color": "#FF0000",
+      "menu_color": "#FF0000"
+    },
+    {
+      "item": "luckybreak:lucky_potion",
+      "held_text": "Drink some Luck",
+      "held_color": "#FFFFFF",
+      "menu_text": "Random Effects",
+      "menu_letter_colors": [
+        "#FF0000",
+        "#FF7F00",
+        "#FFFF00",
+        "#00FF00",
+        "#0000FF",
+        "#4B0082",
+        "#9400D3"
+      ],
+      "hide_potion_effects": true
+    },
+    {
+      "item": "luckybreak:mostly_lucky_block",
+      "held_text": "+70% Lucky",
+      "menu_text": "+70% Lucky",
+      "held_color": "#90EE90",
+      "menu_color": "#90EE90"
+    },
+    {
+      "item": "luckybreak:mostly_unlucky_block",
+      "held_text": "+70% Unlucky",
+      "menu_text": "+70% Unlucky",
+      "held_color": "#FF7F7F",
+      "menu_color": "#FF7F7F"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "golden_hen_gift",
+  "type": "luckybreak:golden_hen_gift",
+  "weight": 6,
+
+  "count_min": 1,
+  "count_max": 2,
+  "spawn_radius": 2.0,
+
+  "message": "You got a Golden Hen! Wait for it to lay something...",
+  "message_color": "#FFD700",
+
+  "firework_burst_count": 24,
+  "firework_rocket_count": 2,
+  "firework_flight": 1,
+  "firework_colors": [
+    "#FFD700",
+    "#FFAA00"
+  ],
+  "firework_fade_colors": [
+    "#FFFFFF"
+  ],
+  "firework_flicker": true,
+  "firework_trail": true,
+
+  "chime_volume": 1.0,
+  "chime_pitch": 1.05
+}

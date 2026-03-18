@@ -1,0 +1,12 @@
+{
+  "name": "night_ambush",
+  "type": "luckybreak:night_blind_ambush",
+  "weight": 9,
+  "min_count": 8,
+  "max_count": 15,
+  "radius": 5.0,
+  "spider_chance": 0.5,
+  "blindness_duration_ticks": 160,
+  "blindness_amplifier": 0,
+  "night_time": 13000
+}

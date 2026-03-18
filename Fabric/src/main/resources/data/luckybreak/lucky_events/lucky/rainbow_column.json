@@ -1,0 +1,26 @@
+{
+  "name": "rainbow_column",
+  "type": "luckybreak:rainbow_column",
+  "weight": 10,
+  "fall_ticks": 30,
+  "lightning_delay_ticks": 5,
+  "clear_height": 20,
+  "top_blocks": [
+    {
+      "block": "minecraft:diamond_block",
+      "weight": 10
+    },
+    {
+      "block": "minecraft:gold_block",
+      "weight": 40
+    },
+    {
+      "block": "minecraft:iron_block",
+      "weight": 40
+    },
+    {
+      "block": "minecraft:emerald_block",
+      "weight": 10
+    }
+  ]
+}

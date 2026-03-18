@@ -1,0 +1,12 @@
+{
+  "name": "tnt_rain",
+  "type": "luckybreak:throw_tnt_up_slowness",
+  "weight": 8,
+  "min_count": 15,
+  "max_count": 30,
+  "spawn_range": 0.9,
+  "upward_min": 0.6,
+  "upward_max": 1.2,
+  "slowness_duration_ticks": 200,
+  "slowness_amplifier": 1
+}

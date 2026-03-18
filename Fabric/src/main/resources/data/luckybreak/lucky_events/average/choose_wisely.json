@@ -1,0 +1,13 @@
+{
+  "name": "choose_wisely",
+  "type": "luckybreak:choose_wisely",
+  "weight": 10,
+  "spacing": 3,
+  "clear_height": 3,
+  "sign_lines": [
+    "One is Lucky,",
+    "One is Not,",
+    "Choose Wisely.",
+    ""
+  ]
+}

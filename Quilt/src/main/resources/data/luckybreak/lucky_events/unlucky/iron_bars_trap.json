@@ -1,0 +1,20 @@
+{
+  "name": "iron_bars_trap",
+  "type": "luckybreak:iron_bars_look_up_trap",
+  "weight": 8,
+  "bar_block": "minecraft:iron_bars",
+  "cage_radius": 1,
+  "cage_height": 3,
+  "center_player": true,
+  "message": "uh-oh, look up",
+  "message_color": "#FF0000",
+  "hazard_mode": "random",
+  "anvil_chance": 0.5,
+  "hazard_delay_ticks": 25,
+  "anvil_hazard_height": 16,
+  "lava_hazard_height": 3,
+  "clear_cage_space": true,
+  "clear_drop_column": true,
+  "anvil_block": "minecraft:damaged_anvil",
+  "lava_block": "minecraft:lava"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "luckybreak:simple_json_structure",
+  "config": {
+    "structure": "luckybreak:nether_lucky_block",
+    "origin_x": 1,
+    "origin_y": 1,
+    "origin_z": 1,
+    "ignore_air": true,
+    "replace_air_only": false,
+    "replace_blocks_with_air": [],
+    "required_floor_blocks": [
+      "minecraft:netherrack",
+      "minecraft:crimson_nylium",
+      "minecraft:warped_nylium",
+      "minecraft:soul_sand",
+      "minecraft:soul_soil",
+      "minecraft:basalt",
+      "minecraft:blackstone",
+      "minecraft:magma_block",
+      "minecraft:gravel"
+    ],
+    "required_air_blocks_above": 1,
+    "min_distance_from_same_structure": 40,
+    "generate_support_pillars": true,
+    "clear_occupied_space": true,
+    "search_down_depth": 220
+  }
+}

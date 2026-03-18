@@ -1,0 +1,43 @@
+{
+  "_comment": "Golden Hen configuration — edit to customize behavior, drops, sounds, and appearance",
+
+  "_comment_timing": "Lay interval in ticks (20 ticks = 1 second). Allowed range: 20 to 72000",
+  "lay_interval_min_ticks": 5000,
+  "lay_interval_max_ticks": 10000,
+
+  "_comment_death": "Item dropped when the Golden Hen is killed. Set death_drop_count to 0 to drop nothing",
+  "death_drop_item":  "minecraft:gold_ingot",
+  "death_drop_count": 1,
+
+  "_comment_drops": "Weighted drop pool — higher weight = more likely. drop_count applies to non-nugget items",
+  "drop_pool": [
+    { "item": "minecraft:gold_nugget",  "weight": 75 },
+    { "item": "minecraft:gold_ingot",   "weight": 20 },
+    { "item": "minecraft:iron_ingot",   "weight": 10 },
+    { "item": "minecraft:emerald",      "weight":  6 },
+    { "item": "minecraft:diamond",      "weight":  4 },
+    { "item": "luckybreak:lucky_block", "weight":  2 }
+  ],
+  "drop_count_min": 1,
+  "drop_count_max": 2,
+  "gold_nugget_drop_count_min": 3,
+  "gold_nugget_drop_count_max": 9,
+
+  "_comment_sounds": "Use any valid Minecraft sound ID, e.g. minecraft:entity.chicken.ambient",
+  "ambient_sound":  "minecraft:entity.chicken.ambient",
+  "hurt_sound":     "minecraft:entity.chicken.hurt",
+  "death_sound":    "minecraft:entity.chicken.death",
+  "lay_sound":      "minecraft:entity.chicken.egg",
+  "play_lay_sound": true,
+
+  "_comment_glint": "Glint overlay on body/wings/head — color is #RRGGBB, alpha range 0.0-1.0, pulse_speed controls shimmer rate",
+  "glint_enabled":     true,
+  "glint_color":       "#FFD700",
+  "glint_min_alpha":   0.25,
+  "glint_max_alpha":   0.75,
+  "glint_pulse_speed": 0.2,
+  "glint_texture":     "luckybreak:textures/misc/enchanted_glint_armor.png",
+
+  "_comment_spawning": "allow_spawn_egg_on_parent: right-clicking a Golden Hen with its spawn egg produces a baby",
+  "allow_spawn_egg_on_parent": true
+}

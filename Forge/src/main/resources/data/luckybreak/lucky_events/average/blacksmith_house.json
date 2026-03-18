@@ -1,0 +1,186 @@
+{
+  "name": "blacksmith_house",
+  "type": "luckybreak:blacksmith_house",
+  "weight": 7,
+  "structure": "luckybreak:villager_blacksmith",
+  "offset_x": 0,
+  "offset_y": 0,
+  "offset_z": 0,
+  "origin_x": 4,
+  "origin_y": 0,
+  "origin_z": 5,
+  "spawn_in_front_of_player": true,
+  "spawn_distance": 8,
+  "structure_front": "south",
+  "door_x": 6,
+  "door_y": 1,
+  "door_z": 4,
+  "door_facing": "north",
+  "player_distance_from_door": 3,
+  "structure_size_x": 9,
+  "structure_size_y": 8,
+  "structure_size_z": 11,
+  "clear_area_before_place": true,
+  "fill_foundation_to_ground": true,
+  "max_foundation_depth": 20,
+  "foundation_block": "minecraft:cobblestone",
+  "ignore_air": true,
+  "replace_air_only": true,
+  "chest_x": 2,
+  "chest_y": 1,
+  "chest_z": 6,
+  "loot_rolls_min": 3,
+  "loot_rolls_max": 7,
+  "loot": [
+    {
+      "item": "minecraft:apple",
+      "weight": 15,
+      "count_min": 1,
+      "count_max": 3
+    },
+    {
+      "item": "minecraft:bread",
+      "weight": 15,
+      "count_min": 1,
+      "count_max": 3
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "weight": 10,
+      "count_min": 1,
+      "count_max": 5
+    },
+    {
+      "item": "minecraft:bundle",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:copper_spear",
+      "weight": 7,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:oak_sapling",
+      "weight": 5,
+      "count_min": 3,
+      "count_max": 7
+    },
+    {
+      "item": "minecraft:obsidian",
+      "weight": 5,
+      "count_min": 3,
+      "count_max": 7
+    },
+    {
+      "item": "minecraft:gold_ingot",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 3
+    },
+    {
+      "item": "minecraft:iron_pickaxe",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_spear",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_sword",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_helmet",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_chestplate",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_leggings",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_boots",
+      "weight": 5,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:diamond",
+      "weight": 3,
+      "count_min": 1,
+      "count_max": 3
+    },
+    {
+      "item": "minecraft:saddle",
+      "weight": 3,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:copper_horse_armor",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:iron_horse_armor",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:golden_horse_armor",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:diamond_horse_armor",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "luckybreak:lucky_potion",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "luckybreak:lucky_hoe",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "luckybreak:lucky_axe",
+      "weight": 1,
+      "count_min": 1,
+      "count_max": 1
+    }
+  ],
+  "villager_x": 4,
+  "villager_y": 1,
+  "villager_z": 5,
+  "villager_profession": "minecraft:toolsmith",
+  "villager_type": "minecraft:plains",
+  "villager_level": 2
+}

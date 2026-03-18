@@ -1,0 +1,19 @@
+{
+  "name": "puffer_tank",
+  "type": "luckybreak:puffer_tank_trap",
+  "weight": 6,
+  "structure": "luckybreak:puffer_tank",
+  "offset_x": 0,
+  "offset_y": -1,
+  "offset_z": 0,
+  "origin_x": 1,
+  "origin_y": 0,
+  "origin_z": 1,
+  "spawn_x": 1,
+  "spawn_y": 2,
+  "spawn_z": 1,
+  "fallback_search_radius": 2,
+  "pufferfish_count": 1,
+  "message": "Glub glub...",
+  "message_color": "#55CCFF"
+}

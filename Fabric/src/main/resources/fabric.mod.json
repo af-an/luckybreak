@@ -1,0 +1,46 @@
+{
+	"schemaVersion": 1,
+	"id": "luckybreak",
+	"version": "${version}",
+	"name": "Lucky Break",
+	"description": "Find and break the Lucky Block and it just might be your Lucky Break.\n\nYou can craft a Lucky Block with 8 gold ingots around 1 dropper, or find Lucky Blocks while exploring the world.\n\nBreak a block and surprise stuff happens! Sometimes you get cool loot, sometimes funny trouble, and sometimes wild lucky events.\n\nYou can also use special Lucky tools and potion effects for even more fun.",
+	"authors": [
+		"af-an"
+	],
+	"contact": {
+		"homepage": "https://github.com/af-an/luckybreak",
+		"sources": "https://github.com/af-an/luckybreak",
+		"license": "https://github.com/af-an/luckybreak/blob/main/LICENSE",
+		"issues": "https://github.com/af-an/luckybreak/issues"
+	},
+	"license": "MIT + additional Lucky Break terms (see LICENSE)",
+	"icon": "assets/luckybreak/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.luckybreak.LuckyBreak"
+		],
+		"client": [
+			"com.luckybreak.LuckyBreakClient"
+		],
+		"modmenu": [
+			"com.luckybreak.client.compat.LuckyBreakModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"luckybreak.mixins.json",
+		{
+			"config": "luckybreak.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

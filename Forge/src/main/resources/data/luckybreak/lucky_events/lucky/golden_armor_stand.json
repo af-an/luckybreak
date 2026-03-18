@@ -1,0 +1,55 @@
+{
+  "name": "golden_armor_stand",
+  "type": "luckybreak:golden_armor_stand",
+  "weight": 5,
+
+  "offset_x": 0,
+  "offset_y": 0,
+  "offset_z": 0,
+
+  "clear_space_if_needed": true,
+  "clear_radius": 1,
+  "clear_height": 3,
+  "place_support_block_if_needed": true,
+  "support_block": "minecraft:gold_block",
+
+  "invulnerable": false,
+  "show_arms": true,
+
+  "helmet_item": "minecraft:golden_helmet",
+  "chest_item": "minecraft:golden_chestplate",
+  "legs_item": "minecraft:golden_leggings",
+  "boots_item": "minecraft:golden_boots",
+  "main_hand_items": [
+    "luckybreak:lucky_sword",
+    "luckybreak:lucky_pickaxe",
+    "luckybreak:lucky_shovel",
+    "luckybreak:lucky_hoe",
+    "luckybreak:lucky_axe",
+    "luckybreak:lucky_bow"
+  ],
+
+  "message": "A golden guardian appears!",
+  "message_color": "gold",
+
+  "particle_type": "minecraft:wax_on",
+  "particle_count": 30,
+  "particle_y_offset": 0.8,
+  "particle_spread_x": 0.45,
+  "particle_spread_y": 0.45,
+  "particle_spread_z": 0.45,
+  "particle_speed": 0.02,
+
+  "firework_burst_count": 24,
+  "firework_rocket_count": 2,
+  "firework_flight": 1,
+  "firework_colors": [
+    "#FFD700",
+    "#FFAA00"
+  ],
+  "firework_fade_colors": [
+    "#FFF0A0"
+  ],
+  "firework_flicker": true,
+  "firework_trail": true
+}

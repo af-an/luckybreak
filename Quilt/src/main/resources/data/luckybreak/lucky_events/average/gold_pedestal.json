@@ -1,0 +1,26 @@
+{
+  "name": "gold_pedestal",
+  "type": "luckybreak:gold_pedestal_falling_lucky_block",
+  "weight": 8,
+  "offset_x": 0,
+  "offset_y": 0,
+  "offset_z": 0,
+  "falling_height": 8,
+  "clear_column": true,
+  "firework_burst_count": 24,
+  "firework_rocket_count": 2,
+  "firework_flight": 1,
+  "firework_colors": [
+    "#FF0000",
+    "#FFFFFF",
+    "#0000FF"
+  ],
+  "firework_fade_colors": [
+    "#FFFFFF"
+  ],
+  "firework_flicker": true,
+  "firework_trail": true,
+  "villager_trade_particle_count": 20,
+  "amethyst_sound_volume": 1.0,
+  "amethyst_sound_pitch": 1.05
+}

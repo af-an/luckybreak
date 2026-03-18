@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "luckybreak:block/lucky_block"
+  }
+}

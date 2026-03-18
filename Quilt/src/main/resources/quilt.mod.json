@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "luckybreak",
+    "version": "${version}",
+    "metadata": {
+      "name": "Lucky Break",
+      "description": "Find and break the Lucky Block and it just might be your Lucky Break.",
+      "contributors": {
+        "af-an": "Owner"
+      },
+      "contact": {
+        "homepage": "https://github.com/af-an/luckybreak",
+        "issues": "https://github.com/af-an/luckybreak/issues",
+        "sources": "https://github.com/af-an/luckybreak"
+      },
+      "license": "MIT",
+      "icon": "assets/luckybreak/icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "init": [
+        "com.luckybreak.LuckyBreak"
+      ],
+      "client_init": [
+        "com.luckybreak.LuckyBreakClient"
+      ],
+      "modmenu": [
+        "com.luckybreak.client.compat.LuckyBreakModMenuIntegration"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.29.2"
+      },
+      {
+        "id": "minecraft",
+        "versions": "~1.21.11"
+      }
+    ]
+  },
+  "mixin": [
+    "luckybreak.mixins.json",
+    "luckybreak.client.mixins.json"
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "name": "loot_chest_lucky",
+  "type": "luckybreak:loot_chest",
+  "weight": 7,
+  "spawn_base_blocks": [
+    { "block": "minecraft:gold_block", "weight": 3.0 },
+    { "block": "minecraft:diamond_block", "weight": 1.5 },
+    { "block": "minecraft:emerald_block", "weight": 2.0 },
+    { "block": "minecraft:iron_block", "weight": 3.5 }
+  ],
+  "chest_y_offset": 1,
+  "spawn_particle_count": 18,
+  "spawn_sound": "minecraft:block.amethyst_block.chime",
+  "allow_duplicate_items": false,
+  "rolls_min": 3,
+  "rolls_max": 6,
+  "loot": [
+    {
+      "item": "minecraft:diamond",
+      "weight": 0.9,
+      "count_min": 1,
+      "count_max": 4
+    },
+    {
+      "item": "minecraft:emerald",
+      "weight": 0.85,
+      "count_min": 2,
+      "count_max": 7
+    },
+    {
+      "item": "minecraft:diamond_sword",
+      "weight": 0.5,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 26,
+      "enchant_cost_max": 40
+    },
+    {
+      "item": "minecraft:diamond_axe",
+      "weight": 0.45,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 24,
+      "enchant_cost_max": 38
+    },
+    {
+      "item": "minecraft:diamond_pickaxe",
+      "weight": 0.45,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 24,
+      "enchant_cost_max": 38
+    },
+    {
+      "item": "minecraft:diamond_horse_armor",
+      "weight": 0.35,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:golden_boots",
+      "weight": 0.32,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 20,
+      "enchant_cost_max": 34
+    },
+    {
+      "item": "minecraft:chainmail_helmet",
+      "weight": 0.3,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:chainmail_chestplate",
+      "weight": 0.28,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:chainmail_leggings",
+      "weight": 0.28,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:chainmail_boots",
+      "weight": 0.3,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:obsidian",
+      "weight": 0.28,
+      "count_min": 2,
+      "count_max": 8
+    },
+    {
+      "item": "minecraft:coal",
+      "weight": 0.4,
+      "count_min": 6,
+      "count_max": 20
+    },
+    {
+      "item": "minecraft:saddle",
+      "weight": 0.35,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:totem_of_undying",
+      "weight": 0.12,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:heart_of_the_sea",
+      "weight": 0.07,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:prismarine_crystals",
+      "weight": 0.22,
+      "count_min": 4,
+      "count_max": 16
+    },
+    {
+      "item": "minecraft:netherite_upgrade_smithing_template",
+      "weight": 0.08,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:netherite_scrap",
+      "weight": 0.06,
+      "count_min": 1,
+      "count_max": 2
+    },
+    {
+      "item": "minecraft:nether_star",
+      "weight": 0.05,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:enchanted_golden_apple",
+      "weight": 0.06,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:elytra",
+      "weight": 0.03,
+      "count_min": 1,
+      "count_max": 1
+    },
+    {
+      "item": "minecraft:netherite_spear",
+      "weight": 0.02,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 30,
+      "enchant_cost_max": 45
+    },
+    {
+      "item": "minecraft:trident",
+      "weight": 0.02,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 28,
+      "enchant_cost_max": 42
+    },
+    {
+      "item": "minecraft:book",
+      "weight": 0.12,
+      "count_min": 1,
+      "count_max": 1,
+      "enchant_cost_min": 30,
+      "enchant_cost_max": 50
+    },
+    {
+      "item": "luckybreak:lucky_block",
+      "weight": 0.35,
+      "count_min": 1,
+      "count_max": 2
+    },
+    {
+      "item": "luckybreak:lucky_compass",
+      "weight": 0.15,
+      "count_min": 1,
+      "count_max": 1
+    }
+  ]
+}

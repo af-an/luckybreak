@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "luckybreak:lucky_block",
+  "step": "top_layer_modification"
+}

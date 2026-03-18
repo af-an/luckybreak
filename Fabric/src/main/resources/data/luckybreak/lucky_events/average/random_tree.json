@@ -1,0 +1,27 @@
+{
+  "name": "random_tree",
+  "type": "luckybreak:random_tree",
+  "weight": 8,
+  "spawn_radius": 8,
+  "attempts": 12,
+  "clear_height": 20,
+  "bonemeal_attempts": 16,
+  "min_player_distance": 2,
+  "forward_fallback_min_distance": 3,
+  "forward_fallback_max_distance": 6,
+  "pale_oak_creaking_heart_chance": 0.15,
+  "fallback_random_attempts": false,
+  "clear_land_if_needed": true,
+  "clear_land_radius": 2,
+  "tree_chances": {
+    "dark_oak": 20,
+    "jungle": 20,
+    "spruce": 20,
+    "oak": 10,
+    "pale_oak": 10,
+    "birch": 10,
+    "acacia": 10,
+    "cherry": 5,
+    "mangrove": 5
+  }
+}

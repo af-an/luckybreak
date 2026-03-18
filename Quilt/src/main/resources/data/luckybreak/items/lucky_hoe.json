@@ -1,0 +1,85 @@
+{
+  "durability": 32,
+  "attack_damage": 1.0,
+  "attack_speed": 1.0,
+  "till_bonus_drops": {
+    "enabled": true,
+    "chance": 0.35,
+    "min_count": 1,
+    "max_count": 2
+  },
+  "villager_spawn": {
+    "enabled": false,
+    "chance": 0.01,
+    "search_radius": 4,
+    "guarantee_enabled": false,
+    "guaranteed_min_per_hoe": 1
+  },
+  "crop_bloom": {
+    "enabled": true,
+    "chance": 0.22,
+    "radius": 3,
+    "growth_min_steps": 1,
+    "growth_max_steps": 2,
+    "particle_count": 12
+  },
+  "chicken_parade": {
+    "enabled": true,
+    "chance": 0.08,
+    "min_count": 1,
+    "max_count": 3,
+    "search_radius": 4
+  },
+  "pinata_hit": {
+    "enabled": true,
+    "chance": 0.25,
+    "min_rolls": 2,
+    "max_rolls": 4,
+    "particle_count": 18,
+    "entries": [
+      { "item": "minecraft:wheat", "weight": 22, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:beetroot_seeds", "weight": 16, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:pumpkin_seeds", "weight": 14, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:melon_seeds", "weight": 14, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:carrot", "weight": 16, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:potato", "weight": 16, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:golden_carrot", "weight": 2, "min_count": 1, "max_count": 1 }
+    ]
+  },
+  "mob_hit_food_bonus_drops": {
+    "enabled": true,
+    "chance": 0.3,
+    "entries": [
+      { "item": "minecraft:apple", "weight": 24, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:potato", "weight": 22, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:poisonous_potato", "weight": 10, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:carrot", "weight": 22, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:golden_carrot", "weight": 5, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:cake", "weight": 1, "min_count": 1, "max_count": 1 }
+    ]
+  },
+  "till_effect": {
+    "enabled": true,
+    "water_farmland": true,
+    "plant_chance": 0.9,
+    "grow_chance": 0.65,
+    "growth_min_steps": 1,
+    "growth_max_steps": 3,
+    "include_all_seed_items": true,
+    "include_all_food_items": true,
+    "seed_weight": 12,
+    "food_weight": 4,
+    "plantable_only": true,
+    "custom_entries": [
+      { "item": "minecraft:wheat_seeds", "weight": 18 },
+      { "item": "minecraft:beetroot_seeds", "weight": 14 },
+      { "item": "minecraft:carrot", "weight": 14 },
+      { "item": "minecraft:potato", "weight": 14 },
+      { "item": "minecraft:melon_seeds", "weight": 10 },
+      { "item": "minecraft:pumpkin_seeds", "weight": 10 }
+    ]
+  },
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "treasure_block",
+  "type": "luckybreak:spawn_treasure_block",
+  "weight": 12,
+  "blocks": [
+    {
+      "block": "minecraft:diamond_block",
+      "weight": 35
+    },
+    {
+      "block": "minecraft:gold_block",
+      "weight": 35
+    },
+    {
+      "block": "minecraft:emerald_block",
+      "weight": 29
+    },
+    {
+      "block": "minecraft:netherite_block",
+      "weight": 1
+    }
+  ],
+  "particle_count": 36
+}

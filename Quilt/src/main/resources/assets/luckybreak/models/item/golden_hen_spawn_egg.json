@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "luckybreak:item/golden_hen_spawn_egg"
+  }
+}

@@ -1,0 +1,27 @@
+{
+	"required": true,
+	"package": "com.luckybreak.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"BuiltInRegistriesBootstrapMixin",
+		"BiomeAccessor",
+		"BiomeGenerationSettingsAccessor",
+		"BiomeGenerationSettingsInvoker",
+		"EntityTypeBuilderDataFixerMixin",
+		"DefaultAttributesAccessor",
+		"CreativeModeTabsMixin",
+		"CreativeModeTabAccessor",
+		"AbstractArrowMixin",
+		"MinecraftServerHooksMixin",
+		"ServerLevelHooksMixin",
+		"LivingEntityHooksMixin",
+		"CommandsHooksMixin",
+		"PackRepositoryMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

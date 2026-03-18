@@ -1,0 +1,112 @@
+{
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700",
+  "durability": 32,
+  "attack_damage": 6.0,
+  "attack_speed": 1.6,
+  "lightning": {
+    "enabled": true,
+    "mob_hit_chance": 0.35,
+    "visual_only": true,
+    "damage": 5.0,
+    "ignite_target": true,
+    "ignite_seconds": 5.0,
+    "follow_duration_ticks": 6,
+    "follow_interval_ticks": 2,
+    "freeze_target_during_visual": false
+  },
+  "knockback_fire_trail": {
+    "enabled": true,
+    "chance": 1.0,
+    "ignite_target": true,
+    "ignite_seconds": 4.0,
+    "knockback_strength": 3.75,
+    "upward_boost": 0.3,
+    "trail_duration_ticks": 20,
+    "trail_interval_ticks": 1,
+    "particles_per_step": 12,
+    "spread": 0.24
+  },
+  "temporary_enchantments": {
+    "enabled": true,
+    "chance": 0.3,
+    "min_enchantments": 1,
+    "max_enchantments": 2,
+    "min_duration_seconds": 3,
+    "max_duration_seconds": 8,
+    "effect_particles": {
+      "enabled": true,
+      "apply_particle": "minecraft:enchant",
+      "expire_particle": "minecraft:crit",
+      "count": 4,
+      "spread_x": 0.18,
+      "spread_y": 0.12,
+      "spread_z": 0.18,
+      "speed": 0.01
+    },
+    "entries": [
+      { "id": "minecraft:sharpness", "weight": 30, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:smite", "weight": 18, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:bane_of_arthropods", "weight": 14, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:knockback", "weight": 14, "min_level": 1, "max_level": 2 },
+      { "id": "minecraft:fire_aspect", "weight": 12, "min_level": 1, "max_level": 2 },
+      { "id": "minecraft:looting", "weight": 10, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:sweeping_edge", "weight": 10, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:unbreaking", "weight": 14, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:mending", "weight": 8, "min_level": 1, "max_level": 1 }
+    ]
+  },
+  "fun_effects": {
+    "ender_swap": {
+      "enabled": true,
+      "chance": 0.08,
+      "failed_swap_ignite_seconds": 4.0
+    },
+    "sky_launch": {
+      "enabled": true,
+      "chance": 0.14,
+      "vertical_boost": 1.25,
+      "trail_duration_ticks": 14,
+      "trail_interval_ticks": 1,
+      "particles_per_step": 8
+    },
+    "echo_slash": {
+      "enabled": true,
+      "chance": 0.12,
+      "extra_hits": 2,
+      "interval_ticks": 3,
+      "damage_per_hit": 2.5
+    },
+    "chain_lightning": {
+      "enabled": true,
+      "chance": 0.08,
+      "radius": 32.0,
+      "min_targets": 3,
+      "max_targets": 6,
+      "damage_per_target": 3.0,
+      "ignite_target": true,
+      "ignite_seconds": 4.0
+    },
+    "shadow_step": {
+      "enabled": true,
+      "chance": 0.1,
+      "behind_distance": 1.6,
+      "bonus_damage": 2.0
+    },
+    "frost_prison": {
+      "enabled": true,
+      "chance": 0.12,
+      "duration_ticks": 30,
+      "slowness_amplifier": 6,
+      "particle_count": 20
+    },
+    "starfall_strike": {
+      "enabled": true,
+      "chance": 0.09,
+      "delay_ticks": 10,
+      "damage": 5.0,
+      "particle_count": 28
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.luckybreak.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"LuckyCompassHeldTooltipMixin",
+		"ItemStackRenderStateAccessor",
+		"LuckyItemGlintStrengthMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

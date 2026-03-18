@@ -1,0 +1,1229 @@
+{
+    "name":  "loot_chest",
+    "type":  "luckybreak:loot_chest",
+    "weight":  9,
+    "rolls_min":  3,
+    "rolls_max":  7,
+    "loot":  [
+                 {
+                     "item":  "minecraft:iron_ingot",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  8
+                 },
+                 {
+                     "item":  "minecraft:gold_ingot",
+                     "weight":  3.5,
+                     "count_min":  2,
+                     "count_max":  6
+                 },
+                 {
+                     "item":  "minecraft:redstone",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  14
+                 },
+                 {
+                     "item":  "minecraft:lapis_lazuli",
+                     "weight":  4.5,
+                     "count_min":  4,
+                     "count_max":  12
+                 },
+                 {
+                     "item":  "minecraft:emerald",
+                     "weight":  3.5,
+                     "count_min":  1,
+                     "count_max":  4
+                 },
+                 {
+                     "item":  "minecraft:diamond",
+                     "weight":  1.6,
+                     "count_min":  1,
+                     "count_max":  3
+                 },
+                 {
+                     "item":  "minecraft:iron_sword",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:iron_axe",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:iron_pickaxe",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:copper_sword",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:copper_axe",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:copper_pickaxe",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:copper_shovel",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:copper_hoe",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:bow",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:crossbow",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:shield",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:diamond_sword",
+                     "weight":  1.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:diamond_axe",
+                     "weight":  1.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:diamond_pickaxe",
+                     "weight":  1.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:diamond_shovel",
+                     "weight":  1.4,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:diamond_hoe",
+                     "weight":  1.4,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:saddle",
+                     "weight":  1.8,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:leather_horse_armor",
+                     "weight":  2.5,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:iron_horse_armor",
+                     "weight":  1.8,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:golden_horse_armor",
+                     "weight":  1.8,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:diamond_horse_armor",
+                     "weight":  0.7,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "luckybreak:lucky_compass",
+                     "weight":  0.8,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "luckybreak:lucky_block",
+                     "weight":  1.8,
+                     "count_min":  1,
+                     "count_max":  2
+                 },
+                 {
+                     "item":  "minecraft:bread",
+                     "weight":  3.5,
+                     "count_min":  2,
+                     "count_max":  6
+                 },
+                 {
+                     "item":  "minecraft:apple",
+                     "weight":  3.5,
+                     "count_min":  2,
+                     "count_max":  7
+                 },
+                 {
+                     "item":  "minecraft:carrot",
+                     "weight":  4.5,
+                     "count_min":  3,
+                     "count_max":  10
+                 },
+                 {
+                     "item":  "minecraft:baked_potato",
+                     "weight":  3.5,
+                     "count_min":  2,
+                     "count_max":  7
+                 },
+                 {
+                     "item":  "minecraft:cooked_beef",
+                     "weight":  3.5,
+                     "count_min":  1,
+                     "count_max":  4
+                 },
+                 {
+                     "item":  "minecraft:rotten_flesh",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  14
+                 },
+                 {
+                     "item":  "minecraft:poisonous_potato",
+                     "weight":  3.5,
+                     "count_min":  1,
+                     "count_max":  5
+                 },
+                 {
+                     "item":  "minecraft:stick",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:string",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  10
+                 },
+                 {
+                     "item":  "minecraft:flint",
+                     "weight":  3.5,
+                     "count_min":  1,
+                     "count_max":  6
+                 },
+                 {
+                     "item":  "minecraft:bone",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  9
+                 },
+                 {
+                     "item":  "minecraft:cobblestone",
+                     "weight":  7,
+                     "count_min":  8,
+                     "count_max":  32
+                 },
+                 {
+                     "item":  "minecraft:coal",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  18
+                 },
+                 {
+                     "item":  "minecraft:charcoal",
+                     "weight":  4.5,
+                     "count_min":  3,
+                     "count_max":  12
+                 },
+                 {
+                     "item":  "minecraft:quartz",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  10
+                 },
+                 {
+                     "item":  "minecraft:amethyst_shard",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  10
+                 },
+                 {
+                     "item":  "minecraft:copper_ingot",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:raw_iron",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  8
+                 },
+                 {
+                     "item":  "minecraft:raw_copper",
+                     "weight":  4.5,
+                     "count_min":  3,
+                     "count_max":  12
+                 },
+                 {
+                     "item":  "minecraft:clay_ball",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:brick",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  10
+                 },
+                 {
+                     "item":  "minecraft:oak_log",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  20
+                 },
+                 {
+                     "item":  "minecraft:spruce_log",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  20
+                 },
+                 {
+                     "item":  "minecraft:birch_log",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  20
+                 },
+                 {
+                     "item":  "minecraft:jungle_log",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:acacia_log",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:dark_oak_log",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:mangrove_log",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  12
+                 },
+                 {
+                     "item":  "minecraft:cherry_log",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  12
+                 },
+                 {
+                     "item":  "minecraft:stone",
+                     "weight":  7,
+                     "count_min":  8,
+                     "count_max":  28
+                 },
+                 {
+                     "item":  "minecraft:deepslate",
+                     "weight":  7,
+                     "count_min":  8,
+                     "count_max":  28
+                 },
+                 {
+                     "item":  "minecraft:tuff",
+                     "weight":  5.5,
+                     "count_min":  6,
+                     "count_max":  22
+                 },
+                 {
+                     "item":  "minecraft:calcite",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:dripstone_block",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:moss_block",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  14
+                 },
+                 {
+                     "item":  "minecraft:dirt",
+                     "weight":  7,
+                     "count_min":  8,
+                     "count_max":  32
+                 },
+                 {
+                     "item":  "minecraft:gravel",
+                     "weight":  7,
+                     "count_min":  8,
+                     "count_max":  32
+                 },
+                 {
+                     "item":  "minecraft:sand",
+                     "weight":  7,
+                     "count_min":  6,
+                     "count_max":  24
+                 },
+                 {
+                     "item":  "minecraft:red_sand",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:netherrack",
+                     "weight":  7,
+                     "count_min":  8,
+                     "count_max":  32
+                 },
+                 {
+                     "item":  "minecraft:basalt",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  18
+                 },
+                 {
+                     "item":  "minecraft:blackstone",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  18
+                 },
+                 {
+                     "item":  "minecraft:end_stone",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  14
+                 },
+                 {
+                     "item":  "minecraft:torch",
+                     "weight":  7,
+                     "count_min":  6,
+                     "count_max":  24
+                 },
+                 {
+                     "item":  "minecraft:lantern",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  6
+                 },
+                 {
+                     "item":  "minecraft:glass",
+                     "weight":  5.5,
+                     "count_min":  4,
+                     "count_max":  16
+                 },
+                 {
+                     "item":  "minecraft:bookshelf",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  5
+                 },
+                 {
+                     "item":  "minecraft:glow_berries",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  10
+                 },
+                 {
+                     "item":  "minecraft:sweet_berries",
+                     "weight":  4.5,
+                     "count_min":  3,
+                     "count_max":  12
+                 },
+                 {
+                     "item":  "minecraft:honey_bottle",
+                     "weight":  3.5,
+                     "count_min":  1,
+                     "count_max":  4
+                 },
+                 {
+                     "item":  "minecraft:slime_ball",
+                     "weight":  3.5,
+                     "count_min":  1,
+                     "count_max":  6
+                 },
+                 {
+                     "item":  "minecraft:paper",
+                     "weight":  5.5,
+                     "count_min":  3,
+                     "count_max":  14
+                 },
+                 {
+                     "item":  "minecraft:ink_sac",
+                     "weight":  4.5,
+                     "count_min":  2,
+                     "count_max":  9
+                 },
+                 {
+                     "item":  "minecraft:obsidian",
+                     "weight":  1.6,
+                     "count_min":  1,
+                     "count_max":  6
+                 },
+                 {
+                     "item":  "minecraft:ender_pearl",
+                     "weight":  1.3,
+                     "count_min":  1,
+                     "count_max":  3
+                 },
+                 {
+                     "item":  "minecraft:ender_eye",
+                     "weight":  0.6,
+                     "count_min":  1,
+                     "count_max":  2
+                 },
+                 {
+                     "item":  "minecraft:cake",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:jack_o_lantern",
+                     "weight":  2,
+                     "count_min":  1,
+                     "count_max":  3
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  12,
+                     "enchant_cost_max":  24
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  18,
+                     "enchant_cost_max":  30
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  22,
+                     "enchant_cost_max":  34
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  26,
+                     "enchant_cost_max":  38
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  30,
+                     "enchant_cost_max":  42
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  34,
+                     "enchant_cost_max":  46
+                 },
+                 {
+                     "item":  "minecraft:book",
+                     "weight":  0.35,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "enchant_cost_min":  40,
+                     "enchant_cost_max":  50
+                 },
+                 {
+                     "item":  "minecraft:potion",
+                     "weight":  1.1,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "potion":  "minecraft:healing"
+                 },
+                 {
+                     "item":  "minecraft:potion",
+                     "weight":  1.1,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "potion":  "minecraft:swiftness"
+                 },
+                 {
+                     "item":  "minecraft:potion",
+                     "weight":  1.1,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "potion":  "minecraft:fire_resistance"
+                 },
+                 {
+                     "item":  "minecraft:splash_potion",
+                     "weight":  1.1,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "potion":  "minecraft:strong_healing"
+                 },
+                 {
+                     "item":  "minecraft:splash_potion",
+                     "weight":  1.1,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "potion":  "minecraft:strong_swiftness"
+                 },
+                 {
+                     "item":  "minecraft:lingering_potion",
+                     "weight":  1.1,
+                     "count_min":  1,
+                     "count_max":  1,
+                     "potion":  "minecraft:regeneration"
+                 },
+                 {
+                     "item":  "minecraft:music_disc_13",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_cat",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_blocks",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_chirp",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_far",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_mall",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_mellohi",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_stal",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_strad",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_ward",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_11",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_wait",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_pigstep",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_otherside",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_5",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_relic",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_creator",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_creator_music_box",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:music_disc_precipice",
+                     "weight":  0.2,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:allay_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:armadillo_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:axolotl_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:bat_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:bee_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:blaze_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:bogged_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:breeze_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:camel_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:cat_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:cave_spider_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:chicken_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:cod_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:cow_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:creeper_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:dolphin_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:donkey_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:drowned_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:elder_guardian_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:enderman_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:endermite_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:evoker_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:fox_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:frog_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:ghast_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:glow_squid_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:goat_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:guardian_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:hoglin_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:horse_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:husk_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:iron_golem_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:llama_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:magma_cube_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:mooshroom_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:mule_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:ocelot_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:panda_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:parrot_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:phantom_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:pig_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:piglin_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:piglin_brute_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:pillager_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:polar_bear_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:pufferfish_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:rabbit_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:ravager_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:salmon_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:sheep_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:shulker_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:silverfish_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:skeleton_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:skeleton_horse_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:slime_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:sniffer_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:snow_golem_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:spider_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:squid_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:stray_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:strider_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:tadpole_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:trader_llama_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:tropical_fish_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:turtle_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:vex_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:villager_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:vindicator_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:wandering_trader_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:warden_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:witch_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:wither_skeleton_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:wolf_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:zoglin_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:zombie_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:zombie_horse_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:zombie_villager_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:zombified_piglin_spawn_egg",
+                     "weight":  0.12,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:spawner",
+                     "weight":  0.1,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:netherite_sword",
+                     "weight":  0.08,
+                     "count_min":  1,
+                     "count_max":  1
+                 },
+                 {
+                     "item":  "minecraft:golden_apple",
+                     "weight":  0.9,
+                     "count_min":  1,
+                     "count_max":  1
+                 }
+             ]
+}

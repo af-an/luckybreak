@@ -1,0 +1,249 @@
+{
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700",
+  "mining_tier": "diamond",
+  "durability": 32,
+  "attack_damage": 2.0,
+  "attack_speed": 1.2,
+  "pickaxe_bonus_drops": {
+    "enabled": true,
+    "drop_chance": 0.12,
+    "gold_nugget": {
+      "weight": 80,
+      "min_count": 1,
+      "max_count": 2
+    },
+    "charcoal": {
+      "weight": 16,
+      "min_count": 1,
+      "max_count": 2
+    },
+    "gold_ingot": {
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    "diamond": {
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    },
+    "emerald": {
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    }
+  },
+  "tnt_transform": {
+    "enabled": true,
+    "chance": 0.06,
+    "fuse_ticks": 80,
+    "min_count": 1,
+    "max_count": 6
+  },
+  "bedrock_transform": {
+    "enabled": true,
+    "chance": 0.04
+  },
+  "lucky_block_transform": {
+    "enabled": true,
+    "chance": 0.035,
+    "lucky_block_chance": 0.2
+  },
+  "block_transform": {
+    "enabled": true,
+    "chance": 0.08,
+    "blocks": [
+      "minecraft:stone",
+      "minecraft:cobblestone",
+      "minecraft:dirt",
+      "minecraft:grass_block",
+      "minecraft:sand",
+      "minecraft:red_sand",
+      "minecraft:gravel",
+      "minecraft:clay",
+      "minecraft:oak_log",
+      "minecraft:birch_log",
+      "minecraft:spruce_log",
+      "minecraft:jungle_log",
+      "minecraft:acacia_log",
+      "minecraft:dark_oak_log",
+      "minecraft:mangrove_log",
+      "minecraft:cherry_log",
+      "minecraft:oak_planks",
+      "minecraft:birch_planks",
+      "minecraft:spruce_planks",
+      "minecraft:bricks",
+      "minecraft:mossy_cobblestone",
+      "minecraft:netherrack",
+      "minecraft:end_stone",
+      "minecraft:deepslate",
+      "minecraft:tuff",
+      "minecraft:calcite",
+      "minecraft:basalt",
+      "minecraft:blackstone",
+      "minecraft:sandstone",
+      "minecraft:terracotta",
+      "minecraft:anvil",
+      "minecraft:iron_block",
+      "minecraft:deepslate_diamond_ore",
+      "minecraft:soul_sand",
+      "minecraft:obsidian"
+    ]
+  },
+  "golden_hen_spawn": {
+    "enabled": true,
+    "chance": 0.008,
+    "spawn_radius": 2
+  },
+  "event_particles": {
+    "enabled": true,
+    "good_count": 12,
+    "bad_count": 12,
+    "spread_x": 0.35,
+    "spread_y": 0.25,
+    "spread_z": 0.35,
+    "good_speed": 0.02,
+    "bad_speed": 0.01,
+    "good_events": [
+      "lucky_block_transform",
+      "block_transform",
+      "golden_hen_spawn",
+      "mine_bonus_drops",
+      "ore_vein_burst",
+      "xp_burst",
+      "friendly_spawn"
+    ],
+    "bad_events": [
+      "tnt_transform",
+      "bedrock_transform",
+      "mostly_unlucky_block_transform",
+      "seismic_burst",
+      "hostile_spawn"
+    ]
+  },
+  "ore_vein_burst": {
+    "enabled": true,
+    "chance": 0.1,
+    "min_rolls": 2,
+    "max_rolls": 4,
+    "entries": [
+      { "item": "minecraft:coal", "weight": 28, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:redstone", "weight": 24, "min_count": 1, "max_count": 4 },
+      { "item": "minecraft:lapis_lazuli", "weight": 18, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:iron_nugget", "weight": 16, "min_count": 1, "max_count": 4 },
+      { "item": "minecraft:gold_nugget", "weight": 10, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:diamond", "weight": 2, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:emerald", "weight": 2, "min_count": 1, "max_count": 1 }
+    ]
+  },
+  "seismic_burst": {
+    "enabled": true,
+    "chance": 0.07,
+    "radius": 4.5,
+    "slowness_ticks": 60,
+    "slowness_amplifier": 1,
+    "upward_boost": 0.42
+  },
+  "temporary_enchantments": {
+    "enabled": true,
+    "chance": 0.5,
+    "min_enchantments": 1,
+    "max_enchantments": 2,
+    "min_duration_seconds": 3,
+    "max_duration_seconds": 8,
+    "effect_particles": {
+      "enabled": true,
+      "apply_particle": "minecraft:enchant",
+      "expire_particle": "minecraft:crit",
+      "count": 4,
+      "spread_x": 0.18,
+      "spread_y": 0.12,
+      "spread_z": 0.18,
+      "speed": 0.01
+    },
+    "entries": [
+      { "id": "minecraft:looting", "weight": 24, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:sharpness", "weight": 22, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:smite", "weight": 16, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:bane_of_arthropods", "weight": 16, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:fire_aspect", "weight": 10, "min_level": 1, "max_level": 2 },
+      { "id": "minecraft:knockback", "weight": 10, "min_level": 1, "max_level": 2 },
+      { "id": "minecraft:sweeping_edge", "weight": 8, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:thorns", "weight": 8, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:depth_strider", "weight": 7, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:feather_falling", "weight": 7, "min_level": 1, "max_level": 4 },
+      { "id": "minecraft:respiration", "weight": 6, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:aqua_affinity", "weight": 6, "min_level": 1, "max_level": 1 },
+      { "id": "minecraft:soul_speed", "weight": 4, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:swift_sneak", "weight": 4, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:frost_walker", "weight": 4, "min_level": 1, "max_level": 2 }
+    ]
+  },
+  "xp_burst": {
+    "enabled": true,
+    "chance": 0.2,
+    "min_xp": 1,
+    "max_xp": 6
+  },
+  "hostile_spawn": {
+    "enabled": true,
+    "chance": 0.07,
+    "force_normal_on_peaceful": true,
+    "spawn_radius": 2,
+    "overall_min_count": 1,
+    "overall_max_count": 2,
+    "mobs": [
+      {
+        "id": "minecraft:zombie",
+        "min_count": 0,
+        "max_count": 1
+      },
+      {
+        "id": "minecraft:skeleton",
+        "min_count": 0,
+        "max_count": 1
+      },
+      {
+        "id": "minecraft:spider",
+        "min_count": 0,
+        "max_count": 1
+      },
+      {
+        "id": "minecraft:creeper",
+        "min_count": 0,
+        "max_count": 1
+      }
+    ]
+  },
+  "friendly_spawn": {
+    "enabled": true,
+    "chance": 0.07,
+    "spawn_radius": 2,
+    "overall_min_count": 1,
+    "overall_max_count": 2,
+    "mobs": [
+      {
+        "id": "minecraft:cow",
+        "min_count": 0,
+        "max_count": 1
+      },
+      {
+        "id": "minecraft:sheep",
+        "min_count": 0,
+        "max_count": 1
+      },
+      {
+        "id": "minecraft:pig",
+        "min_count": 0,
+        "max_count": 1
+      },
+      {
+        "id": "minecraft:chicken",
+        "min_count": 0,
+        "max_count": 1
+      }
+    ]
+  }
+}

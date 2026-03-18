@@ -1,0 +1,119 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'net.minecraftforge.gradle' version '[7.0.3,8)'
+}
+
+version = mod_version
+group = maven_group
+
+def modId = project.findProperty('mod_id')
+def modName = project.findProperty('mod_name')
+def modVersion = project.findProperty('mod_version')
+def modAuthors = project.findProperty('mod_authors')
+def modDescription = project.findProperty('mod_description')
+def forgeLoaderRange = project.findProperty('forge_loader_range')
+def forgeVersion = project.findProperty('forge_version')
+def minecraftVersion = project.findProperty('minecraft_version')
+
+base {
+    archivesName = archives_base_name
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+            srcDir 'src/client/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+            srcDir 'src/client/resources'
+            srcDir 'src/generated/resources'
+        }
+    }
+}
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+
+    runs {
+        configureEach {
+            workingDir = layout.projectDirectory.dir('run')
+            systemProperty 'eventbus.api.strictRuntimeChecks', 'true'
+            systemProperty 'forge.enabledGameTestNamespaces', modId
+            args '-mixin.config=luckybreak.mixins.json'
+        }
+
+        register('client') {
+            args '-mixin.config=luckybreak.client.mixins.json'
+        }
+
+        register('server') {
+            args '--nogui'
+        }
+
+        register('gameTestServer')
+
+        register('data') {
+            workingDir = layout.projectDirectory.dir('run-data')
+            args '--mod', modId, '--all', '--output', layout.projectDirectory.dir('src/generated/resources'), '--existing', layout.projectDirectory.dir('src/main/resources')
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+                'MixinConfigs': 'luckybreak.mixins.json,luckybreak.client.mixins.json'
+        ])
+    }
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    maven { url = 'https://maven.minecraftforge.net/' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation minecraft.dependency("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
+    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    inputs.properties([
+            mod_id            : modId,
+            mod_name          : modName,
+            mod_version       : modVersion,
+            mod_authors       : modAuthors,
+            mod_description   : modDescription,
+            forge_loader_range: forgeLoaderRange,
+            forge_version     : forgeVersion,
+            minecraft_version : minecraftVersion
+    ])
+
+    filesMatching('META-INF/mods.toml') {
+        expand([
+                mod_id            : modId,
+                mod_name          : modName,
+                mod_version       : modVersion,
+                mod_authors       : modAuthors,
+                mod_description   : modDescription,
+                forge_loader_range: forgeLoaderRange,
+                forge_version     : forgeVersion,
+                minecraft_version : minecraftVersion
+        ])
+    }
+}

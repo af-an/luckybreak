@@ -1,0 +1,106 @@
+{
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700",
+  "durability": 32,
+  "attack_damage": 2.5,
+  "attack_speed": 1.0,
+  "shovel_bonus_drops": {
+    "enabled": true,
+    "drop_chance": 0.12,
+    "entries": [
+      { "item": "minecraft:gold_nugget", "weight": 80, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:flint", "weight": 24, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:gold_ingot", "weight": 3, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:diamond", "weight": 1, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:emerald", "weight": 1, "min_count": 1, "max_count": 1 },
+
+      { "item": "minecraft:clay_ball", "weight": 28, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:sand", "weight": 24, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:red_sand", "weight": 18, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:gravel", "weight": 18, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:dirt", "weight": 16, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:coarse_dirt", "weight": 14, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:mud", "weight": 14, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:snowball", "weight": 20, "min_count": 1, "max_count": 4 },
+      { "item": "minecraft:bone_meal", "weight": 14, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:gunpowder", "weight": 6, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:quartz", "weight": 6, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:prismarine_shard", "weight": 4, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:amethyst_shard", "weight": 4, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:copper_ingot", "weight": 5, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:iron_nugget", "weight": 12, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:lapis_lazuli", "weight": 4, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:glowstone_dust", "weight": 4, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:slime_ball", "weight": 3, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:string", "weight": 7, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:nautilus_shell", "weight": 1, "min_count": 1, "max_count": 1 }
+    ]
+  },
+  "lucky_block_transform": {
+    "enabled": true,
+    "chance": 0.06,
+    "lucky_block_chance": 1.0
+  },
+  "sandstorm": {
+    "enabled": true,
+    "chance": 0.12,
+    "radius": 4.0,
+    "duration_ticks": 80,
+    "slowness_amplifier": 1,
+    "weakness_amplifier": 0,
+    "particle_count": 22
+  },
+  "treasure_burst": {
+    "enabled": true,
+    "chance": 0.08,
+    "min_rolls": 2,
+    "max_rolls": 4,
+    "particle_count": 16,
+    "entries": [
+      { "item": "minecraft:iron_nugget", "weight": 28, "min_count": 1, "max_count": 3 },
+      { "item": "minecraft:copper_ingot", "weight": 20, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:quartz", "weight": 14, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:amethyst_shard", "weight": 12, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:gold_ingot", "weight": 8, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:prismarine_shard", "weight": 8, "min_count": 1, "max_count": 2 },
+      { "item": "minecraft:diamond", "weight": 3, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:emerald", "weight": 3, "min_count": 1, "max_count": 1 },
+      { "item": "minecraft:heart_of_the_sea", "weight": 1, "min_count": 1, "max_count": 1 }
+    ]
+  },
+  "temporary_enchantments": {
+    "enabled": true,
+    "chance": 0.9,
+    "min_enchantments": 1,
+    "max_enchantments": 2,
+    "min_duration_seconds": 3,
+    "max_duration_seconds": 8,
+    "effect_particles": {
+      "enabled": true,
+      "apply_particle": "minecraft:enchant",
+      "expire_particle": "minecraft:crit",
+      "count": 4,
+      "spread_x": 0.18,
+      "spread_y": 0.12,
+      "spread_z": 0.18,
+      "speed": 0.01
+    },
+    "entries": [
+      { "id": "minecraft:efficiency", "weight": 36, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:unbreaking", "weight": 26, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:fortune", "weight": 22, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:mending", "weight": 8, "min_level": 1, "max_level": 1 },
+      { "id": "minecraft:silk_touch", "weight": 8, "min_level": 1, "max_level": 1 }
+    ]
+  },
+  "drop_particles": {
+    "enabled": true,
+    "particle": "minecraft:happy_villager",
+    "count": 10,
+    "spread_x": 0.3,
+    "spread_y": 0.2,
+    "spread_z": 0.3,
+    "speed": 0.02
+  }
+}

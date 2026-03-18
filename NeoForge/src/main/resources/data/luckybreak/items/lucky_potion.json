@@ -1,0 +1,31 @@
+{
+  "positive_effects": {
+    "enabled": true,
+    "min_effects": 4,
+    "max_effects": 15,
+    "entries": [
+      { "id": "minecraft:speed", "weight": 20, "duration_ticks": 1800, "amplifier": 1 },
+      { "id": "minecraft:haste", "weight": 18, "duration_ticks": 1800, "amplifier": 1 },
+      { "id": "minecraft:strength", "weight": 16, "duration_ticks": 1800, "amplifier": 0 },
+      { "id": "minecraft:instant_health", "weight": 12, "duration_ticks": 1, "amplifier": 1 },
+      { "id": "minecraft:jump_boost", "weight": 16, "duration_ticks": 1800, "amplifier": 1 },
+      { "id": "minecraft:regeneration", "weight": 16, "duration_ticks": 900, "amplifier": 1 },
+      { "id": "minecraft:resistance", "weight": 14, "duration_ticks": 1800, "amplifier": 0 },
+      { "id": "minecraft:fire_resistance", "weight": 14, "duration_ticks": 1800, "amplifier": 0 },
+      { "id": "minecraft:water_breathing", "weight": 12, "duration_ticks": 1800, "amplifier": 0 },
+      { "id": "minecraft:invisibility", "weight": 10, "duration_ticks": 1200, "amplifier": 0 },
+      { "id": "minecraft:night_vision", "weight": 12, "duration_ticks": 1800, "amplifier": 0 },
+      { "id": "minecraft:health_boost", "weight": 10, "duration_ticks": 1800, "amplifier": 1 },
+      { "id": "minecraft:absorption", "weight": 12, "duration_ticks": 1800, "amplifier": 1 },
+      { "id": "minecraft:saturation", "weight": 6, "duration_ticks": 1, "amplifier": 1 },
+      { "id": "minecraft:luck", "weight": 10, "duration_ticks": 1800, "amplifier": 0 },
+      { "id": "minecraft:slow_falling", "weight": 10, "duration_ticks": 1200, "amplifier": 0 },
+      { "id": "minecraft:conduit_power", "weight": 8, "duration_ticks": 1200, "amplifier": 0 },
+      { "id": "minecraft:dolphins_grace", "weight": 8, "duration_ticks": 1200, "amplifier": 0 },
+      { "id": "minecraft:hero_of_the_village", "weight": 6, "duration_ticks": 2400, "amplifier": 0 }
+    ]
+  },
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700"
+}

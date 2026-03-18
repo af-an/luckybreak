@@ -1,0 +1,162 @@
+{
+  "_comment": "Lucky Bow behavior config",
+  "durability": 64,
+  "infinity_enabled": false,
+  "infinity_without_arrows": false,
+  "non_collectable_fired_arrows": true,
+  "random_arrow_types": {
+    "enabled": true,
+    "chance": 1.0,
+    "types": [
+      { "type": "normal", "weight": 1 },
+      { "type": "spectral", "weight": 4 },
+      { "type": "tipped", "weight": 8 }
+    ]
+  },
+  "effect_combination": {
+    "allow_multiple": true,
+    "min_effects": 1,
+    "max_effects": 10,
+    "enforce_mutual_exclusions": true,
+    "count_weights": [
+      { "count": 1, "weight": 2 },
+      { "count": 2, "weight": 8 },
+      { "count": 3, "weight": 8 },
+      { "count": 4, "weight": 3 },
+      { "count": 5, "weight": 2 },
+      { "count": 6, "weight": 1 },
+      { "count": 7, "weight": 1 },
+      { "count": 8, "weight": 1 },
+      { "count": 9, "weight": 1 },
+      { "count": 10, "weight": 1 }
+    ],
+    "mutually_exclusive_pairs": [
+      { "mode_a": "tnt_trail", "mode_b": "block_transform" }
+    ]
+  },
+  "effect_modes": [
+    { "mode": "tnt_trail", "weight": 2 },
+    { "mode": "block_transform", "weight": 2 },
+    { "mode": "fire_spread", "weight": 2 },
+    { "mode": "entity_hit_block_transform", "weight": 2 },
+    { "mode": "entity_hit_potion", "weight": 2 },
+    { "mode": "entity_hit_lightning", "weight": 2 },
+    { "mode": "chicken_rain", "weight": 2 },
+    { "mode": "party_pop", "weight": 2 },
+    { "mode": "entity_bounce", "weight": 2 },
+    { "mode": "random_arrow_types", "weight": 2 }
+  ],
+  "tnt_trail": {
+    "enabled": true,
+    "min_count": 3,
+    "max_count": 8,
+    "start_distance": 5.0,
+    "spacing": 2.0,
+    "fuse_ticks": 35
+  },
+  "fire_spread": {
+    "enabled": true,
+    "chance": 0.75,
+    "min_count": 3,
+    "max_count": 8,
+    "search_radius": 3
+  },
+  "block_transform": {
+    "enabled": true,
+    "search_radius": 2,
+    "transform_count": 6,
+    "possible_blocks": [
+      { "block": "minecraft:stone", "weight": 1 },
+      { "block": "minecraft:cobblestone", "weight": 1 },
+      { "block": "minecraft:dirt", "weight": 1 },
+      { "block": "minecraft:oak_log", "weight": 1 },
+      { "block": "minecraft:sandstone", "weight": 1 },
+      { "block": "minecraft:obsidian", "weight": 1 },
+      { "block": "minecraft:deepslate_iron_ore", "weight": 1 },
+      { "block": "minecraft:deepslate_gold_ore", "weight": 1 },
+      { "block": "minecraft:deepslate_emerald_ore", "weight": 1 },
+      { "block": "minecraft:deepslate_diamond_ore", "weight": 1 }
+    ]
+  },
+  "entity_hit_block_transform": {
+    "enabled": true,
+    "search_radius": 2,
+    "transform_count": 4,
+    "possible_blocks": [
+      { "block": "minecraft:water", "weight": 1 },
+      { "block": "minecraft:lava", "weight": 1 }
+    ]
+  },
+  "entity_hit_potion": {
+    "enabled": true,
+    "possible_effects": [
+      { "effect": "minecraft:slowness", "duration_ticks": 120, "amplifier": 1, "weight": 1 },
+      { "effect": "minecraft:weakness", "duration_ticks": 120, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:poison", "duration_ticks": 100, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:blindness", "duration_ticks": 80, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:glowing", "duration_ticks": 200, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:levitation", "duration_ticks": 60, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:regeneration", "duration_ticks": 80, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:speed", "duration_ticks": 120, "amplifier": 1, "weight": 1 },
+      { "effect": "minecraft:jump_boost", "duration_ticks": 120, "amplifier": 1, "weight": 1 },
+      { "effect": "minecraft:resistance", "duration_ticks": 100, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:haste", "duration_ticks": 120, "amplifier": 1, "weight": 1 },
+      { "effect": "minecraft:mining_fatigue", "duration_ticks": 100, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:nausea", "duration_ticks": 80, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:night_vision", "duration_ticks": 300, "amplifier": 0, "weight": 1 },
+      { "effect": "minecraft:invisibility", "duration_ticks": 120, "amplifier": 0, "weight": 1 }
+    ]
+  },
+  "entity_hit_lightning": {
+    "enabled": true,
+    "visual_only": false
+  },
+  "chicken_rain": {
+    "enabled": true,
+    "chance": 0.55,
+    "min_count": 2,
+    "max_count": 5,
+    "search_radius": 4
+  },
+  "party_pop": {
+    "enabled": true,
+    "chance": 0.65,
+    "radius": 3.5,
+    "particle_count": 24
+  },
+  "entity_bounce": {
+    "enabled": true,
+    "chance": 0.65,
+    "upward_boost": 0.85,
+    "horizontal_boost": 0.25
+  },
+  "temporary_enchantments": {
+    "enabled": true,
+    "chance": 0.25,
+    "min_enchantments": 1,
+    "max_enchantments": 2,
+    "min_duration_seconds": 3,
+    "max_duration_seconds": 8,
+    "effect_particles": {
+      "enabled": true,
+      "apply_particle": "minecraft:enchant",
+      "expire_particle": "minecraft:crit",
+      "count": 4,
+      "spread_x": 0.18,
+      "spread_y": 0.12,
+      "spread_z": 0.18,
+      "speed": 0.01
+    },
+    "entries": [
+      { "id": "minecraft:power", "weight": 32, "min_level": 1, "max_level": 5 },
+      { "id": "minecraft:punch", "weight": 18, "min_level": 1, "max_level": 2 },
+      { "id": "minecraft:flame", "weight": 10, "min_level": 1, "max_level": 1 },
+      { "id": "minecraft:infinity", "weight": 8, "min_level": 1, "max_level": 1 },
+      { "id": "minecraft:unbreaking", "weight": 20, "min_level": 1, "max_level": 3 },
+      { "id": "minecraft:mending", "weight": 8, "min_level": 1, "max_level": 1 }
+    ]
+  },
+  "glint_enabled": true,
+  "glint_strength": 2.0,
+  "name_color": "#FFD700"
+}
