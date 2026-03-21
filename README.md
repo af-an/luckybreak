@@ -2,6 +2,14 @@
 
 # ✦ Lucky Break
 
+<details>
+<summary>Lucky Break</summary>
+
+<!-- ![Lucky Break Title](images/lucky-break-title.png) -->
+<!-- [Lucky Break Title Video](https://example.com/lucky-break-title-video) -->
+
+</details>
+
 **A Minecraft mod about breaking blocks and letting chaos decide your fate.**
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b447?style=flat-square&logo=minecraft&logoColor=white)
@@ -40,6 +48,14 @@ Available for **Fabric, Forge, NeoForge, and Quilt**.
 
 ## The Lucky Blocks
 
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![The Lucky Blocks](images/the-lucky-blocks.png) -->
+<!-- [The Lucky Blocks Video](https://example.com/the-lucky-blocks-video) -->
+
+</details>
+
 The odds:
 
 | Block | Lucky | Average | Unlucky |
@@ -58,6 +74,14 @@ Very Lucky and Very Unlucky Blocks are often placed in pairs. Breaking one autom
 
 ## Lucky Compass
 
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Compass](images/lucky-compass.png) -->
+<!-- [Lucky Compass Video](https://example.com/lucky-compass-video) -->
+
+</details>
+
 Right-click to scan up to **512 chunks** (8192 blocks) in any direction for the nearest Lucky Block. The compass needle locks onto the nearest one it finds, just like a lodestone compass, and it stays pointed there until the block is broken.
 
 Durability consumed scales with distance — closer blocks cost less uses. Blocked in The Nether and The End (with configurable messages — maybe you want to allow it, maybe not).
@@ -66,18 +90,44 @@ Durability consumed scales with distance — closer blocks cost less uses. Block
 
 ## Lucky Tools
 
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Tools Overview](images/lucky-tools-overview.png) -->
+<!-- [Lucky Tools Overview Video](https://example.com/lucky-tools-overview-video) -->
+
+</details>
+
 Six tools and a potion. All gold-tier material, all repairable with gold ingots, all carrying their own flavor of random effects. Numbers below are defaults — everything is configurable per-item in `data/luckybreak/items/`.
 
 ---
 
-### ![Sword](https://img.shields.io/badge/Tool-Sword-bb2d3b?style=flat-square) Lucky Sword
+### Lucky Sword
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Sword](images/lucky-sword.png) -->
+<!-- [Lucky Sword Video](https://example.com/lucky-sword-video) -->
+
+</details>
+
 *7 attack · 1.6 speed*
 
 On hit, rolls a chance for lightning, or launches the target with a knockback fire trail. Sometimes temporarily picks up 1–2 random enchantments from a wide pool (Sharpness, Smite, Fire Aspect, Looting, Sweeping Edge, Mending...) that last 3–8 seconds before disappearing.
 
 ---
 
-### ![Bow](https://img.shields.io/badge/Tool-Bow-7f4f24?style=flat-square) Lucky Bow
+### Lucky Bow
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Bow](images/lucky-bow.png) -->
+<!-- [Lucky Bow Video](https://example.com/lucky-bow-video) -->
+
+</details>
+
 *Fires normal / spectral / tipped arrows*
 
 The arrow type randomizes each shot. But the weird part is the hit effects — each shot independently rolls 1–10 random effects from a pool of 10, and any matching ones all fire simultaneously:
@@ -97,7 +147,16 @@ The arrow type randomizes each shot. But the weird part is the hit effects — e
 
 ---
 
-### ![Pickaxe](https://img.shields.io/badge/Tool-Pickaxe-4b5563?style=flat-square) Lucky Pickaxe
+### Lucky Pickaxe
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Pickaxe](images/lucky-pickaxe.png) -->
+<!-- [Lucky Pickaxe Video](https://example.com/lucky-pickaxe-video) -->
+
+</details>
+
 *Diamond mining tier · 3.0 attack*
 
 Every block you mine has a chance to roll a side effect. Most of the time nothing happens. Sometimes:
@@ -124,28 +183,63 @@ Effects are shuffled each check — only one fires per mine.
 
 ---
 
-### ![Axe](https://img.shields.io/badge/Tool-Axe-1f6f43?style=flat-square) Lucky Axe
+### Lucky Axe
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Axe](images/lucky-axe.png) -->
+<!-- [Lucky Axe Video](https://example.com/lucky-axe-video) -->
+
+</details>
+
 *8.0 attack · 1.0 speed*
 
 Chopping wood can trigger a leaf storm (drops sticks and sometimes an apple), summon 1–3 bees, launch the cut log upward, pop a piñata of sticks/apples/charcoal/honeycomb/berries/gems, or occasionally transform nearby blocks into Lucky Blocks. Lightning on block break and temporary enchantments round it out.
 
 ---
 
-### ![Shovel](https://img.shields.io/badge/Tool-Shovel-2563eb?style=flat-square) Lucky Shovel
+### Lucky Shovel
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Shovel](images/lucky-shovel.png) -->
+<!-- [Lucky Shovel Video](https://example.com/lucky-shovel-video) -->
+
+</details>
+
 *3.5 attack · 2.0 speed*
 
 The bonus drop table on this one is absurd. Digging has a 12% chance per block to drop something from a massive pool: gold nuggets, flint, iron nuggets, clay, sand, red sand, gravel, mud, snowballs, bone meal, gunpowder, quartz, copper, lapis, glowstone, string, amethyst, prismarine, slimeball, nautilus shell, and actual gems. Sandstorm applies slowness and weakness in a 4-block radius. Lucky Block Transform and a Treasure Burst are also in the pool.
 
 ---
 
-### ![Hoe](https://img.shields.io/badge/Tool-Hoe-2f855a?style=flat-square) Lucky Hoe
+### Lucky Hoe
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Hoe](images/lucky-hoe.png) -->
+<!-- [Lucky Hoe Video](https://example.com/lucky-hoe-video) -->
+
+</details>
+
 *2.0 attack · 2.0 speed*
 
 Tilling has a **90% chance to auto-plant a random seed** in the freshly tilled block, then a 65% chance to immediately advance it 1–3 growth stages. Crop bloom grows nearby crops (3-block radius) 1–2 steps. Hitting mobs has a 30% chance to drop food — apple, potato, carrot, golden carrot, or cake. A piñata hit can scatter seeds and root vegetables.
 
 ---
 
-### ![Potion](https://img.shields.io/badge/Item-Potion-7c3aed?style=flat-square) Lucky Potion
+### Lucky Potion
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Lucky Potion](images/lucky-potion.png) -->
+<!-- [Lucky Potion Video](https://example.com/lucky-potion-video) -->
+
+</details>
 
 Drink it. Receive 4–15 simultaneous random positive effects drawn from a weighted pool of 19 options: Speed II, Haste II, Strength, Instant Health II, Jump Boost II, Regen II, Resistance, Fire Resistance, Water Breathing, Invisibility, Night Vision, Health Boost II, Absorption II, Saturation II, Luck, Slow Falling, Conduit Power, Dolphin's Grace, and Hero of the Village.
 
@@ -153,10 +247,18 @@ Drink it. Receive 4–15 simultaneous random positive effects drawn from a weigh
 
 ## Events
 
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![Events Overview](images/events-overview.png) -->
+<!-- [Events Overview Video](https://example.com/events-overview-video) -->
+
+</details>
+
 Many events across three tiers.
 
 <details>
-<summary><img alt="Lucky Tier" src="https://img.shields.io/badge/Tier-Lucky-f1c40f?style=flat-square"> Lucky Events</summary>
+<summary>Lucky Events</summary>
 
 | Event | What happens |
 |:---|:---|
@@ -174,7 +276,7 @@ Many events across three tiers.
 </details>
 
 <details>
-<summary><img alt="Average Tier" src="https://img.shields.io/badge/Tier-Average-6b7280?style=flat-square"> Average Events</summary>
+<summary>Average Events</summary>
 
 | Event | What happens |
 |:---|:---|
@@ -193,7 +295,7 @@ Many events across three tiers.
 </details>
 
 <details>
-<summary><img alt="Unlucky Tier" src="https://img.shields.io/badge/Tier-Unlucky-c0392b?style=flat-square"> Unlucky Events</summary>
+<summary>Unlucky Events</summary>
 
 | Event | What happens |
 |:---|:---|
@@ -212,6 +314,14 @@ Many events across three tiers.
 
 ## The Wishing Well
 
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![The Wishing Well](images/the-wishing-well.png) -->
+<!-- [The Wishing Well Video](https://example.com/the-wishing-well-video) -->
+
+</details>
+
 Three variants, one structure — a well built from stone and stone bricks, sunken 10 blocks into the terrain in front of you.
 
 Every variant works the same way to start: you receive a **Coin** (a marked gold nugget) in your inventory with the message to make a wish. The well stays active for 45 seconds. Throw the coin into the water basin at the top. What happens next depends on which well you got.
@@ -226,6 +336,14 @@ Every variant works the same way to start: you receive a **Coin** (a marked gold
 
 ## The Golden Hen
 
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![The Golden Hen](images/the-golden-hen.png) -->
+<!-- [The Golden Hen Video](https://example.com/the-golden-hen-video) -->
+
+</details>
+
 A chicken that glows and lays gold nuggets and more. If a golden hen dies, it drops a gold ingot.
 
 Breeding is not possible and Golden chicks are only available in creative.
@@ -235,6 +353,14 @@ You can get them from the Lucky pickaxe or Lucky Block.
 ---
 
 ## World Generation
+
+<details>
+<summary>Media placeholders</summary>
+
+<!-- ![World Generation](images/world-generation.png) -->
+<!-- [World Generation Video](https://example.com/world-generation-video) -->
+
+</details>
 
 Lucky Blocks generate in all three dimensions.
 
