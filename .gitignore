@@ -44,9 +44,5 @@ Thumbs.db
 !**/gradle.properties
 !**/LICENSE*
 
-# Ignore README files (except the root one)
-**/README.md
-!/README.md
-
 # Re-ignore metadata files under re-included source trees
 **/.DS_Store

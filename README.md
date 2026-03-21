@@ -70,14 +70,14 @@ Six tools and a potion. All gold-tier material, all repairable with gold ingots,
 
 ---
 
-### ⚔️ Lucky Sword
+### ![Sword](https://img.shields.io/badge/Tool-Sword-bb2d3b?style=flat-square) Lucky Sword
 *7 attack · 1.6 speed*
 
 On hit, rolls a chance for lightning, or launches the target with a knockback fire trail. Sometimes temporarily picks up 1–2 random enchantments from a wide pool (Sharpness, Smite, Fire Aspect, Looting, Sweeping Edge, Mending...) that last 3–8 seconds before disappearing.
 
 ---
 
-### 🏹 Lucky Bow
+### ![Bow](https://img.shields.io/badge/Tool-Bow-7f4f24?style=flat-square) Lucky Bow
 *Fires normal / spectral / tipped arrows*
 
 The arrow type randomizes each shot. But the weird part is the hit effects — each shot independently rolls 1–10 random effects from a pool of 10, and any matching ones all fire simultaneously:
@@ -97,7 +97,7 @@ The arrow type randomizes each shot. But the weird part is the hit effects — e
 
 ---
 
-### ⛏️ Lucky Pickaxe
+### ![Pickaxe](https://img.shields.io/badge/Tool-Pickaxe-4b5563?style=flat-square) Lucky Pickaxe
 *Diamond mining tier · 3.0 attack*
 
 Every block you mine has a chance to roll a side effect. Most of the time nothing happens. Sometimes:
@@ -124,28 +124,28 @@ Effects are shuffled each check — only one fires per mine.
 
 ---
 
-### 🪓 Lucky Axe
+### ![Axe](https://img.shields.io/badge/Tool-Axe-1f6f43?style=flat-square) Lucky Axe
 *8.0 attack · 1.0 speed*
 
 Chopping wood can trigger a leaf storm (drops sticks and sometimes an apple), summon 1–3 bees, launch the cut log upward, pop a piñata of sticks/apples/charcoal/honeycomb/berries/gems, or occasionally transform nearby blocks into Lucky Blocks. Lightning on block break and temporary enchantments round it out.
 
 ---
 
-### 🔱 Lucky Shovel
+### ![Shovel](https://img.shields.io/badge/Tool-Shovel-2563eb?style=flat-square) Lucky Shovel
 *3.5 attack · 2.0 speed*
 
 The bonus drop table on this one is absurd. Digging has a 12% chance per block to drop something from a massive pool: gold nuggets, flint, iron nuggets, clay, sand, red sand, gravel, mud, snowballs, bone meal, gunpowder, quartz, copper, lapis, glowstone, string, amethyst, prismarine, slimeball, nautilus shell, and actual gems. Sandstorm applies slowness and weakness in a 4-block radius. Lucky Block Transform and a Treasure Burst are also in the pool.
 
 ---
 
-### 🌱 Lucky Hoe
+### ![Hoe](https://img.shields.io/badge/Tool-Hoe-2f855a?style=flat-square) Lucky Hoe
 *2.0 attack · 2.0 speed*
 
 Tilling has a **90% chance to auto-plant a random seed** in the freshly tilled block, then a 65% chance to immediately advance it 1–3 growth stages. Crop bloom grows nearby crops (3-block radius) 1–2 steps. Hitting mobs has a 30% chance to drop food — apple, potato, carrot, golden carrot, or cake. A piñata hit can scatter seeds and root vegetables.
 
 ---
 
-### 🍶 Lucky Potion
+### ![Potion](https://img.shields.io/badge/Item-Potion-7c3aed?style=flat-square) Lucky Potion
 
 Drink it. Receive 4–15 simultaneous random positive effects drawn from a weighted pool of 19 options: Speed II, Haste II, Strength, Instant Health II, Jump Boost II, Regen II, Resistance, Fire Resistance, Water Breathing, Invisibility, Night Vision, Health Boost II, Absorption II, Saturation II, Luck, Slow Falling, Conduit Power, Dolphin's Grace, and Hero of the Village.
 
@@ -156,7 +156,7 @@ Drink it. Receive 4–15 simultaneous random positive effects drawn from a weigh
 Many events across three tiers.
 
 <details>
-<summary>✨ Lucky Events</summary>
+<summary><img alt="Lucky Tier" src="https://img.shields.io/badge/Tier-Lucky-f1c40f?style=flat-square"> Lucky Events</summary>
 
 | Event | What happens |
 |:---|:---|
@@ -174,7 +174,7 @@ Many events across three tiers.
 </details>
 
 <details>
-<summary>⚖️ Average Events</summary>
+<summary><img alt="Average Tier" src="https://img.shields.io/badge/Tier-Average-6b7280?style=flat-square"> Average Events</summary>
 
 | Event | What happens |
 |:---|:---|
@@ -193,7 +193,7 @@ Many events across three tiers.
 </details>
 
 <details>
-<summary>💀 Unlucky Events</summary>
+<summary><img alt="Unlucky Tier" src="https://img.shields.io/badge/Tier-Unlucky-c0392b?style=flat-square"> Unlucky Events</summary>
 
 | Event | What happens |
 |:---|:---|
