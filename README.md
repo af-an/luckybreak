@@ -64,7 +64,7 @@ Break and a random event occurs. Silk touch will drop the block.
 <details>
 <summary>Spoiler</summary>
 
-[![Watch the video](https://img.youtube.com/vi/lAup8jiqpxQ/0.jpg)](https://www.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/lAup8jiqpxQ/0.jpg)](https://www.youtube.com/watch?v=lAup8jiqpxQ)
 
 </details>
 
@@ -100,7 +100,7 @@ On hit, rolls a chance for lightning, or launches the target with a knockback fi
 <details>
 <summary>Spoiler</summary>
 
-[![Watch the video](https://img.youtube.com/vi/Up8Zzl3TRBs/0.jpg)](https://www.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/Up8Zzl3TRBs/0.jpg)](https://www.youtube.com/watch?v=Up8Zzl3TRBs)
 
 </details>
 
@@ -180,7 +180,7 @@ Tilling has a chance to auto-plant a random seed in the freshly tilled block, th
 <details>
 <summary>Spoiler</summary>
 
-[![Watch the video](https://img.youtube.com/vi/JcDKrs5oxXQ/0.jpg)](https://www.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/JcDKrs5oxXQ/0.jpg)](https://www.youtube.com/watch?v=JcDKrs5oxXQ)
 
 </details>
 
@@ -193,8 +193,8 @@ Drink it. Receive 4–15 simultaneous random positive effects drawn from a weigh
 <details>
 <summary>Spoiler</summary>
 
-[![Watch the video](https://img.youtube.com/vi/hXiN_9QRB-g/0.jpg)](https://www.youtube.com)
-[![Watch the video](https://img.youtube.com/vi/TBjl68XZaAg/0.jpg)](https://www.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/hXiN_9QRB-g/0.jpg)](https://www.youtube.com/watch?v=hXiN_9QRB-g)
+[![Watch the video](https://img.youtube.com/vi/TBjl68XZaAg/0.jpg)](https://www.youtube.com/watch?v=TBjl68XZaAg)
 
 </details>
 
@@ -251,7 +251,7 @@ Unlucky Events
 <details>
 <summary>Spoiler</summary>
 
-[![Watch the video](https://img.youtube.com/vi/ZAW0F2viTpw/0.jpg)](https://www.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/ZAW0F2viTpw/0.jpg)](https://www.youtube.com/watch?v=ZAW0F2viTpw)
 
 </details>
 
