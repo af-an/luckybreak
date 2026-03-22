@@ -69,6 +69,14 @@ Break and a random event occurs. Silk touch will drop the block.
 
 </details>
 
+<details>
+<summary>Show Recipe</summary>
+
+Craft with gold ingots, diamonds, and emeralds surrounding a compass in the configuration below.
+![The Lucky Blocks](https://luckybreak.sirv.com/Images/lc-craft.png)
+
+</details>
+
 Right-click to find the nearest Lucky Block. The compass needle locks onto the nearest one it finds, and it stays pointed there until the block is broken.
 
 Durability consumed scales with distance — closer blocks cost less uses. Blocked in The Nether and The End.
