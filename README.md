@@ -1,6 +1,6 @@
 <div align="center">
 
-![Lucky Break Title](https://luckybreak.sirv.com/Images/title00.png)
+![Lucky Break Title](https://luckybreak.sirv.com/Images/title03.png)
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b447?style=flat-square&logo=minecraft&logoColor=white)
 ![Fabric](https://img.shields.io/badge/Fabric-supported-dbb045?style=flat-square)
