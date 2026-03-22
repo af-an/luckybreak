@@ -36,6 +36,7 @@ Available for **Fabric, Forge, NeoForge, and Quilt**.
 - [Configuration](#configuration)
 - [Commands](#commands)
 - [Installation](#installation)
+- [License](#license)
 
 ---
 
@@ -350,6 +351,7 @@ Output jar lands in `build/libs/`.
 MIT License with Additional Requirements
 
 Copyright (c) 2026 af-an
+
 Attribution required — see below
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
