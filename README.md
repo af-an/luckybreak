@@ -1,16 +1,6 @@
 <div align="center">
 
-# ✦ Lucky Break
-
-<details>
-<summary>Lucky Break</summary>
-
-<!-- ![Lucky Break Title](images/lucky-break-title.png) -->
-<!-- [Lucky Break Title Video](https://example.com/lucky-break-title-video) -->
-
-</details>
-
-**A Minecraft mod about breaking blocks and letting chaos decide your fate.**
+![Lucky Break Title](https://luckybreak.sirv.com/Images/lb03.png)
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b447?style=flat-square&logo=minecraft&logoColor=white)
 ![Fabric](https://img.shields.io/badge/Fabric-supported-dbb045?style=flat-square)
@@ -19,11 +9,14 @@
 ![Quilt](https://img.shields.io/badge/Quilt-supported-9b59b6?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
+[![](https://img.shields.io/badge/Modrinth-00AF5C.svg?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/lucky-break) 
+[![](https://img.shields.io/badge/CurseForge-F16436.svg?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/lucky-break)
+
 </div>
 
 ---
 
-Lucky Break adds **Lucky Blocks** — golden cubes that can explode into chaos when you break them. One block might spawn a full blacksmith's shop and a chest full of diamonds. The next one might drop you in a lava pit. The one after that traps you in iron bars and hails 20 TNT above your head.
+Lucky Break Mod adds **Lucky Blocks** that can explode when you break them. One block might spawn a full blacksmith's shop and a chest full of diamonds. The next one might drop you in a lava pit. The one after that traps you in iron bars and an anvil above your head.
 
 Beyond the blocks themselves there's a full **Lucky toolkit** (sword, bow, pickaxe, axe, shovel, hoe), a **Lucky Potion**, and a **Lucky Compass** that hunts down the nearest Lucky Block for you. There's a wishing well you can throw a coin into. A chicken that lays gold and other goodies. Lucky Blocks generate in the Nether and End dimensions as well.
 
@@ -33,7 +26,7 @@ Available for **Fabric, Forge, NeoForge, and Quilt**.
 
 ## Table of Contents
 
-- [The Lucky Blocks](#the-lucky-blocks)
+- [Lucky Block](#lucky-block)
 - [Lucky Compass](#lucky-compass)
 - [Lucky Tools](#lucky-tools)
 - [Events](#events)
@@ -46,13 +39,13 @@ Available for **Fabric, Forge, NeoForge, and Quilt**.
 
 ---
 
-## The Lucky Blocks
+## Lucky Block
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Show Recipe</summary>
 
-<!-- ![The Lucky Blocks](images/the-lucky-blocks.png) -->
-<!-- [The Lucky Blocks Video](https://example.com/the-lucky-blocks-video) -->
+Craft by placing 8 gold ingots around a dropper.
+![The Lucky Blocks](https://luckybreak.sirv.com/Images/lb-craft.png)
 
 </details>
 
@@ -62,55 +55,39 @@ The odds:
 |:---|:---:|:---:|:---:|
 | **Lucky Block** | 20% | 60% | 20% |
 
-Break it without Silk Touch and a random event fires from that tier's pool. Silk Touch just drops the block.
-
-The mod maintains a **global tracker** for every Lucky Block in the world, including ones that generated during worldgen, so the Lucky Compass always knows where to point.
-
-> **Choose Wisely** — one of the average events places two block variants side-by-side with a sign that tells you exactly this. One is lucky. One isn't. You won't know which until you break it.
-
-Very Lucky and Very Unlucky Blocks are often placed in pairs. Breaking one automatically removes its counterpart nearby, so the "choose one" scenario stays fair.
+Break and a random event occurs. Silk touch will drop the block. 
 
 ---
 
 ## Lucky Compass
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![Lucky Compass](images/lucky-compass.png) -->
-<!-- [Lucky Compass Video](https://example.com/lucky-compass-video) -->
+[![Watch the video](https://img.youtube.com/vi/lAup8jiqpxQ/0.jpg)](https://www.youtube.com)
 
 </details>
 
-Right-click to scan up to **512 chunks** (8192 blocks) in any direction for the nearest Lucky Block. The compass needle locks onto the nearest one it finds, just like a lodestone compass, and it stays pointed there until the block is broken.
+Right-click to find the nearest Lucky Block. The compass needle locks onto the nearest one it finds, and it stays pointed there until the block is broken.
 
-Durability consumed scales with distance — closer blocks cost less uses. Blocked in The Nether and The End (with configurable messages — maybe you want to allow it, maybe not).
+Durability consumed scales with distance — closer blocks cost less uses. Blocked in The Nether and The End.
 
 ---
 
 ## Lucky Tools
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![Lucky Tools Overview](images/lucky-tools-overview.png) -->
-<!-- [Lucky Tools Overview Video](https://example.com/lucky-tools-overview-video) -->
+![Lucky Tools Overview](https://luckybreak.sirv.com/Images/creative-tab.png)
 
 </details>
 
-Six tools and a potion. All gold-tier material, all repairable with gold ingots, all carrying their own flavor of random effects. Numbers below are defaults — everything is configurable per-item in `data/luckybreak/items/`.
+Six tools and a potion. All gold-tier material, all repairable with gold ingots, all carrying their own flavor of random effects.
 
 ---
 
 ### Lucky Sword
-
-<details>
-<summary>Media placeholders</summary>
-
-<!-- ![Lucky Sword](images/lucky-sword.png) -->
-<!-- [Lucky Sword Video](https://example.com/lucky-sword-video) -->
-
-</details>
 
 *7 attack · 1.6 speed*
 
@@ -121,16 +98,15 @@ On hit, rolls a chance for lightning, or launches the target with a knockback fi
 ### Lucky Bow
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![Lucky Bow](images/lucky-bow.png) -->
-<!-- [Lucky Bow Video](https://example.com/lucky-bow-video) -->
+[![Watch the video](https://img.youtube.com/vi/Up8Zzl3TRBs/0.jpg)](https://www.youtube.com)
 
 </details>
 
 *Fires normal / spectral / tipped arrows*
 
-The arrow type randomizes each shot. But the weird part is the hit effects — each shot independently rolls 1–10 random effects from a pool of 10, and any matching ones all fire simultaneously:
+The arrow type randomizes each shot. But the weird part is the hit effects — each shot carries random effects:
 
 - **TNT Trail** — primed TNT along the arrow's path
 - **Block Transform** — converts hit blocks into ores or random block types
@@ -149,14 +125,6 @@ The arrow type randomizes each shot. But the weird part is the hit effects — e
 
 ### Lucky Pickaxe
 
-<details>
-<summary>Media placeholders</summary>
-
-<!-- ![Lucky Pickaxe](images/lucky-pickaxe.png) -->
-<!-- [Lucky Pickaxe Video](https://example.com/lucky-pickaxe-video) -->
-
-</details>
-
 *Diamond mining tier · 3.0 attack*
 
 Every block you mine has a chance to roll a side effect. Most of the time nothing happens. Sometimes:
@@ -166,17 +134,17 @@ Every block you mine has a chance to roll a side effect. Most of the time nothin
 
 | Effect | Chance | What happens |
 |:---|:---:|:---|
-| TNT Transform | 6% | 1–6 primed TNT replace the mined block |
-| Bedrock Transform | 4% | Block becomes bedrock |
-| Lucky Block Transform | 3.5% | Block becomes a Lucky Block |
-| Block Type Transform | 8% | Block becomes stone, cobblestone, dirt, a log, or a deepslate ore |
-| Bonus Drop | 12% | Gold nugget / charcoal / gold ingot / diamond / emerald drops pop out |
-| Golden Hen Spawn | — | A Golden Hen materializes at the dig site |
-| XP Burst | — | Experience orbs scatter around you |
-| Ore Vein Burst | — | Nearby ore veins explode into floating item drops |
-| Hostile Spawn | — | A hostile mob appears nearby |
-| Friendly Spawn | — | A friendly mob appears nearby |
-| Seismic Burst | — | Cave-in style block disruption |
+| TNT Transform | 1–6 primed TNT replace the mined block |
+| Bedrock Transform | Block becomes bedrock |
+| Lucky Block Transform | Block becomes a Lucky Block |
+| Block Type Transform | Block becomes stone, cobblestone, dirt, a log, or a deepslate ore |
+| Bonus Drop | Gold nugget / charcoal / gold ingot / diamond / emerald drops pop out |
+| Golden Hen Spawn | A Golden Hen materializes at the dig site |
+| XP Burst | Experience orbs scatter around you |
+| Ore Vein Burst | Nearby ore veins explode into floating item drops |
+| Hostile Spawn | A hostile mob appears nearby |
+| Friendly Spawn | A friendly mob appears nearby |
+| Seismic Burst | Cave-in style block disruption |
 
 Effects are shuffled each check — only one fires per mine.
 </details>
@@ -185,59 +153,34 @@ Effects are shuffled each check — only one fires per mine.
 
 ### Lucky Axe
 
-<details>
-<summary>Media placeholders</summary>
-
-<!-- ![Lucky Axe](images/lucky-axe.png) -->
-<!-- [Lucky Axe Video](https://example.com/lucky-axe-video) -->
-
-</details>
-
 *8.0 attack · 1.0 speed*
 
-Chopping wood can trigger a leaf storm (drops sticks and sometimes an apple), summon 1–3 bees, launch the cut log upward, pop a piñata of sticks/apples/charcoal/honeycomb/berries/gems, or occasionally transform nearby blocks into Lucky Blocks. Lightning on block break and temporary enchantments round it out.
+Chopping wood can trigger a leaf storm (drops sticks and sometimes an apple), summon 1–3 bees, launch the cut log upward, pop a piñata of sticks/apples/charcoal/honeycomb/berries/gems, or occasionally transform nearby blocks into Lucky Blocks. Lightning on block break and temporary enchantments also possible.
 
 ---
 
 ### Lucky Shovel
 
-<details>
-<summary>Media placeholders</summary>
-
-<!-- ![Lucky Shovel](images/lucky-shovel.png) -->
-<!-- [Lucky Shovel Video](https://example.com/lucky-shovel-video) -->
-
-</details>
-
 *3.5 attack · 2.0 speed*
 
-The bonus drop table on this one is absurd. Digging has a 12% chance per block to drop something from a massive pool: gold nuggets, flint, iron nuggets, clay, sand, red sand, gravel, mud, snowballs, bone meal, gunpowder, quartz, copper, lapis, glowstone, string, amethyst, prismarine, slimeball, nautilus shell, and actual gems. Sandstorm applies slowness and weakness in a 4-block radius. Lucky Block Transform and a Treasure Burst are also in the pool.
+Digging has a chance per block to drop something: gold nuggets, flint, iron nuggets, clay, sand, red sand, gravel, mud, snowballs, bone meal, gunpowder, quartz, copper, lapis, glowstone, string, amethyst, prismarine, slimeball, nautilus shell, and actual gems. Sandstorm applies slowness and weakness in a 4-block radius. Lucky Block Transform and a Treasure Burst are also possibilities.
 
 ---
 
 ### Lucky Hoe
 
-<details>
-<summary>Media placeholders</summary>
-
-<!-- ![Lucky Hoe](images/lucky-hoe.png) -->
-<!-- [Lucky Hoe Video](https://example.com/lucky-hoe-video) -->
-
-</details>
-
 *2.0 attack · 2.0 speed*
 
-Tilling has a **90% chance to auto-plant a random seed** in the freshly tilled block, then a 65% chance to immediately advance it 1–3 growth stages. Crop bloom grows nearby crops (3-block radius) 1–2 steps. Hitting mobs has a 30% chance to drop food — apple, potato, carrot, golden carrot, or cake. A piñata hit can scatter seeds and root vegetables.
+Tilling has a chance to auto-plant a random seed in the freshly tilled block, then a chance to immediately advance it 1–3 growth stages. Crop bloom grows nearby crops (3-block radius) 1–2 steps. Hitting mobs has a 30% chance to drop food — apple, potato, carrot, golden carrot, or cake. A piñata hit can scatter seeds and root vegetables.
 
 ---
 
 ### Lucky Potion
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![Lucky Potion](images/lucky-potion.png) -->
-<!-- [Lucky Potion Video](https://example.com/lucky-potion-video) -->
+[![Watch the video](https://img.youtube.com/vi/JcDKrs5oxXQ/0.jpg)](https://www.youtube.com)
 
 </details>
 
@@ -248,17 +191,16 @@ Drink it. Receive 4–15 simultaneous random positive effects drawn from a weigh
 ## Events
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![Events Overview](images/events-overview.png) -->
-<!-- [Events Overview Video](https://example.com/events-overview-video) -->
+[![Watch the video](https://img.youtube.com/vi/hXiN_9QRB-g/0.jpg)](https://www.youtube.com)
+[![Watch the video](https://img.youtube.com/vi/TBjl68XZaAg/0.jpg)](https://www.youtube.com)
 
 </details>
 
-Many events across three tiers.
+Many events across three tiers: Lucky, Average, and Unlucky:
 
-<details>
-<summary>Lucky Events</summary>
+Lucky Events
 
 | Event | What happens |
 |:---|:---|
@@ -273,10 +215,7 @@ Many events across three tiers.
 | **Treasure Block** | A single block materializes: diamond (35%), gold (35%), emerald (29%), or netherite (1%). |
 | **Wishing Well (Lucky)** | See [The Wishing Well](#the-wishing-well) — better loot variant. |
 
-</details>
-
-<details>
-<summary>Average Events</summary>
+Average Events
 
 | Event | What happens |
 |:---|:---|
@@ -292,10 +231,7 @@ Many events across three tiers.
 | **Random Tree** | A bonemeal-grown tree sprouts within 8 blocks — dark oak, jungle, spruce, cherry, mangrove, pale oak (with a 15% chance to include a Creaking Heart), and more. |
 | **Wishing Well** | See [The Wishing Well](#the-wishing-well). |
 
-</details>
-
-<details>
-<summary>Unlucky Events</summary>
+Unlucky Events
 
 | Event | What happens |
 |:---|:---|
@@ -308,39 +244,35 @@ Many events across three tiers.
 | **TNT Rain** | Slowness II for 10 seconds. Then 15–30 TNT launch upward with varied trajectories. |
 | **Wishing Well (Unlucky)** | See [The Wishing Well](#the-wishing-well) — the bad one. |
 
-</details>
-
 ---
 
 ## The Wishing Well
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![The Wishing Well](images/the-wishing-well.png) -->
-<!-- [The Wishing Well Video](https://example.com/the-wishing-well-video) -->
+[![Watch the video](https://img.youtube.com/vi/ZAW0F2viTpw/0.jpg)](https://www.youtube.com)
 
 </details>
 
-Three variants, one structure — a well built from stone and stone bricks, sunken 10 blocks into the terrain in front of you.
+Three variants, one structure — a well built from stone and stone bricks.
 
-Every variant works the same way to start: you receive a **Coin** (a marked gold nugget) in your inventory with the message to make a wish. The well stays active for 45 seconds. Throw the coin into the water basin at the top. What happens next depends on which well you got.
+Every variant works the same way to start: you receive a **Coin** in your inventory with the message to make a wish. The well stays active for 45 seconds. Throw the coin into the water basin at the top. What happens next depends on which well you got.
 
 **Normal well** — Food rains around the well for 15 seconds. Bread, cooked meats, golden carrot, apple, melon slices, cookie, baked potato, pumpkin pie, salmon, cod, rabbit stew, golden apple. Heart particles and bubble pop effects.
 
-**Lucky well** — Resource items instead of food. Enchanted Golden Apples are guaranteed drops on top of the rain. The loot pool includes iron through gold, redstone, lapis, emeralds, diamonds, Lucky Potions, and netherite scrap.
+**Lucky well** — Resource items instead of food. Enchanted Golden Apples are a favorite. The loot includes iron through gold, redstone, lapis, emeralds, diamonds, Lucky Potions, and netherite scrap.
 
-**Unlucky well** — The coin hits the water and the TNT priming sound plays. Night falls. The water in the basin converts to lava. 2–4 TNT appear in a nearby radius. 3–6 skeletons (near-100% bow preference) and zombies close in. Fire spreads in a 9-block radius. There's smoke while everything goes wrong.
+**Unlucky well** — The coin hits the water and the TNT priming sound plays. Night falls. The water in the basin converts to lava. 2–4 TNT appear in a nearby radius. 3–6 skeletons and zombies close in. Fire spreads in a 9-block radius. There's smoke while everything goes wrong.
 
 ---
 
 ## The Golden Hen
 
 <details>
-<summary>Media placeholders</summary>
+<summary>Spoiler</summary>
 
-<!-- ![The Golden Hen](images/the-golden-hen.png) -->
-<!-- [The Golden Hen Video](https://example.com/the-golden-hen-video) -->
+![The Golden Hen](https://luckybreak.sirv.com/Images/lucky-chicken.png)
 
 </details>
 
@@ -348,19 +280,11 @@ A chicken that glows and lays gold nuggets and more. If a golden hen dies, it dr
 
 Breeding is not possible and Golden chicks are only available in creative.
 
-You can get them from the Lucky pickaxe or Lucky Block.
+You can get them from breaking a Lucky Block or by mining with the Lucky pickaxe.
 
 ---
 
 ## World Generation
-
-<details>
-<summary>Media placeholders</summary>
-
-<!-- ![World Generation](images/world-generation.png) -->
-<!-- [World Generation Video](https://example.com/world-generation-video) -->
-
-</details>
 
 Lucky Blocks generate in all three dimensions.
 
@@ -374,7 +298,14 @@ Lucky Blocks generate in all three dimensions.
 
 ## Configuration
 
-**In-game config screen** — Press `Ctrl + K` at any time to open a live tier-chance editor for the standard Lucky Block. Drag the percentages, save and close the screen, and changes take effect immediately. Accessible through Forge and NeoForge's config settings. Also accessible through ModMenu for Fabric if you have it installed.
+<details>
+<summary>Spoiler</summary>
+
+![Settings Menu](https://luckybreak.sirv.com/Images/settings-menu.png)
+
+</details>
+
+**In-game config screen** — Press `Ctrl + K` at any time to open a live tier-chance editor for the standard Lucky Block. Drag the percentages, save and close the screen, and changes take effect immediately. Accessible through Forge and NeoForge's config settings. Also accessible through ModMenu for Fabric if you have it installed. For Quilt, keyboard command `Ctrl + K` is the only method to open config screen.
 
 ---
 
@@ -383,22 +314,25 @@ Lucky Blocks generate in all three dimensions.
 All under `/luckybreak`. Permission level follows standard Minecraft operator levels.
 
 ```
-/luckybreak <event> <lucky|average|unlucky> [player]
+/luckybreak <event> <lucky / average / unlucky> <event name>
 ```
 Fires a random Lucky Block event of the given tier at the target player. Defaults to yourself.
 
 ```
-/luckybreak <item> <effectName> [player]
+/luckybreak <item> <item name> <effect name>
 ```
-Fires a specific Lucky Tool effect by name. Works for the compass and the potion too.
+Fires a specific Lucky Tool effect by name.
 
 ---
 
 ## Installation
 
-**Requirements:** No extra mods needed. Just drop the `.jar` into your `mods/` folder for the appropriate loader.
+**Drop the `.jar` into your `mods/` folder for the appropriate loader. 
 
-**Optional:** [ModMenu](https://modrinth.com/mod/modmenu) (Fabric ONLY) gives you a config button in the mod list that opens the Lucky Break config screen. Not required — `Ctrl + K` always works. For Quilt, keyboard command (Ctrl + K) is the only method to open config screen.
+**Fabric REQUIRES Fabric API: [Modrinth](https://modrinth.com/mod/fabric-api); [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
+
+
+**Optional:** [ModMenu](https://modrinth.com/mod/modmenu) (Fabric ONLY) gives you a config button in the mod list that opens the Lucky Break config screen. Not required — `Ctrl + K` always works. For Quilt, keyboard command `Ctrl + K` is the only method to open config screen.
 
 If you're building from source:
 
@@ -413,9 +347,10 @@ Output jar lands in `build/libs/`.
 
 ## License
 
-MIT License
+MIT License with Additional Requirements
 
-Copyright (c) 2026
+Copyright (c) 2026 af-an
+Attribution required — see below
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -424,8 +359,17 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Attribution — Any distribution, public display, or derivative work based on this Software must include clear and visible credit to the original author(s). Credit must include:
+
+The name "Lucky Break" and a link to the original project (if applicable)
+
+The author name(s) as specified in the project metadata
+
+This attribution must appear in a location reasonably visible to end users (e.g., in-game credits, mod list description, or a prominent section of documentation)
+
+No Misrepresentation — You may not use the name of the original project or its authors to promote your derivative work without explicit written permission.
+
+Preservation of Notice — The above copyright notice and these conditions shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
