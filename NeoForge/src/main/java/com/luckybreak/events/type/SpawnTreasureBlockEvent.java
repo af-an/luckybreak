@@ -7,7 +7,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -70,7 +70,7 @@ public class SpawnTreasureBlockEvent implements LuckyEvent {
                     continue;
                 }
 
-                Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(id));
+                Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(id));
                 if (block != null && block != Blocks.AIR) {
                     blocks.add(block);
                     weights.add(weight);

@@ -61,8 +61,8 @@ public abstract class CreativeModeInventoryScreenMixin {
     @Unique
     private static boolean luckybreak$isSpecialTab(ResourceKey<CreativeModeTab> key) {
         if (key == null) return false;
-        if (!"minecraft".equals(key.identifier().getNamespace())) return false;
-        String path = key.identifier().getPath();
+        if (!"minecraft".equals(key.location().getNamespace())) return false;
+        String path = key.location().getPath();
         return "search".equals(path) || "hotbar".equals(path) || "inventory".equals(path);
     }
 
@@ -80,7 +80,7 @@ public abstract class CreativeModeInventoryScreenMixin {
         CreativeModeTab.Row[] rows = {CreativeModeTab.Row.TOP, CreativeModeTab.Row.BOTTOM};
         int count = 0;
         for (ResourceKey<CreativeModeTab> key : moddedKeys) {
-            CreativeModeTab tab = BuiltInRegistries.CREATIVE_MODE_TAB.getValue(key.identifier());
+            CreativeModeTab tab = BuiltInRegistries.CREATIVE_MODE_TAB.getValue(key.location());
             if (tab == null) {
                 continue;
             }
@@ -159,7 +159,7 @@ public abstract class CreativeModeInventoryScreenMixin {
     // -------------------------------------------------------------------------
 
     @Inject(method = "renderTabButton", at = @At("HEAD"), cancellable = true)
-    private void luckybreak$renderTabButton(GuiGraphics guiGraphics, int mouseX, int mouseY,
+    private void luckybreak$renderTabButton(GuiGraphics guiGraphics,
                                             CreativeModeTab tab, CallbackInfo ci) {
         if (!luckybreak$isTabOnCurrentPage(tab)) {
             ci.cancel();

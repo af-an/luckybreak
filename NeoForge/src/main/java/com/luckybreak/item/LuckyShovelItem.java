@@ -9,7 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -509,7 +509,7 @@ public class LuckyShovelItem extends ShovelItem {
         Map<String, Integer> levels = new HashMap<>();
         ItemEnchantments enchantments = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         for (var entry : enchantments.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id != null) {
                 levels.put(id.toString(), Math.max(0, entry.getIntValue()));
             }
@@ -526,7 +526,7 @@ public class LuckyShovelItem extends ShovelItem {
         ItemEnchantments current = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         List<EnchantLevel> keep = new ArrayList<>();
         for (var entry : current.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id == null) {
                 continue;
             }
@@ -562,6 +562,6 @@ public class LuckyShovelItem extends ShovelItem {
         return ids;
     }
 
-    private record EnchantLevel(Identifier id, int level) {
+    private record EnchantLevel(ResourceLocation id, int level) {
     }
 }

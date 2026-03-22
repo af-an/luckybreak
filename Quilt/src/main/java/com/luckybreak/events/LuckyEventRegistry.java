@@ -9,7 +9,7 @@ import com.luckybreak.api.event.lifecycle.v1.ServerLifecycleEvents;
 import com.luckybreak.config.LuckyChanceSettings;
 import com.luckybreak.events.type.*;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.packs.resources.Resource;
@@ -151,11 +151,11 @@ public class LuckyEventRegistry {
         luckyCompassNotFoundMessage = "No Lucky Block found nearby.";
         luckyCompassFoundMessageColor = 0xFFD700;
         luckyCompassNotFoundMessageColor = 0xFFFFFF;
-        Map<Identifier, Resource> configs = manager.listResources(
+        Map<ResourceLocation, Resource> configs = manager.listResources(
                 "lucky_events",
                 id -> id.getPath().endsWith("config.json")
         );
-        for (Map.Entry<Identifier, Resource> cfg : configs.entrySet()) {
+        for (Map.Entry<ResourceLocation, Resource> cfg : configs.entrySet()) {
             try (Reader reader = cfg.getValue().openAsReader()) {
                 JsonObject root = gson.fromJson(reader, JsonObject.class);
                 JsonObject luckyBlockObj = root.has("lucky_block") && root.get("lucky_block").isJsonObject()
@@ -314,12 +314,12 @@ public class LuckyEventRegistry {
             final String tierBase = "lucky_events/" + tier.getId();
             final String tierPrefix = tierBase + "/";
 
-            Map<Identifier, Resource> resources = manager.listResources(
+            Map<ResourceLocation, Resource> resources = manager.listResources(
                 tierBase,
                 id -> id.getPath().startsWith(tierPrefix) && id.getPath().endsWith(".json")
             );
 
-            for (Map.Entry<Identifier, Resource> entry : resources.entrySet()) {
+            for (Map.Entry<ResourceLocation, Resource> entry : resources.entrySet()) {
                 try (Reader reader = entry.getValue().openAsReader()) {
                     JsonObject root = gson.fromJson(reader, JsonObject.class);
 

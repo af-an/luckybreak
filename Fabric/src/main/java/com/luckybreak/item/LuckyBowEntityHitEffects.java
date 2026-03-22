@@ -4,14 +4,14 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.level.block.BaseFireBlock;
@@ -122,7 +122,7 @@ public final class LuckyBowEntityHitEffects {
 
         MobEffect effect = null;
         try {
-            effect = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse(selected.effectId()));
+            effect = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse(selected.effectId()));
         } catch (Exception ignored) {
         }
         if (effect == null) {
@@ -322,7 +322,7 @@ public final class LuckyBowEntityHitEffects {
 
         MobEffect effect = null;
         try {
-            effect = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse(selected.effectId()));
+            effect = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse(selected.effectId()));
         } catch (Exception ignored) {
         }
         if (effect == null) {

@@ -10,7 +10,7 @@ import com.luckybreak.item.LuckyPotionItem;
 import com.luckybreak.item.LuckyShovelItem;
 import com.luckybreak.item.LuckySwordItem;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -38,15 +38,15 @@ public class ModItems {
         @SubscribeEvent
         public static void onRegisterItems(RegisterEvent event) {
             event.register(Registries.ITEM, helper -> {
-                Identifier luckyCompassId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_compass");
-                Identifier luckyBowId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_bow");
-                Identifier luckyPotionId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_potion");
-                Identifier luckySwordId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_sword");
-                Identifier luckyPickaxeId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_pickaxe");
-                Identifier luckyAxeId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_axe");
-                Identifier luckyShovelId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_shovel");
-                Identifier luckyHoeId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_hoe");
-                Identifier goldenHenEggId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "golden_hen_spawn_egg");
+                ResourceLocation luckyCompassId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_compass");
+                ResourceLocation luckyBowId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_bow");
+                ResourceLocation luckyPotionId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_potion");
+                ResourceLocation luckySwordId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_sword");
+                ResourceLocation luckyPickaxeId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_pickaxe");
+                ResourceLocation luckyAxeId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_axe");
+                ResourceLocation luckyShovelId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_shovel");
+                ResourceLocation luckyHoeId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_hoe");
+                ResourceLocation goldenHenEggId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "golden_hen_spawn_egg");
 
                 LUCKY_COMPASS = new LuckyCompassItem(ResourceKey.create(Registries.ITEM, luckyCompassId));
                 LUCKY_BOW = new LuckyBowItem(ResourceKey.create(Registries.ITEM, luckyBowId));

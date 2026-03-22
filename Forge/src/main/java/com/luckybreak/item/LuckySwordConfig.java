@@ -6,7 +6,7 @@ import com.luckybreak.LuckyBreak;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 import java.io.InputStream;
@@ -343,7 +343,7 @@ public final class LuckySwordConfig {
                     continue;
                 }
 
-                Identifier id = Identifier.parse(idValue);
+                ResourceLocation id = ResourceLocation.parse(idValue);
                 int weight = parseInt(obj, "weight", 1, 0, 100000);
                 int minLevel = parseInt(obj, "min_level", 1, 1, 10);
                 int maxLevel = parseInt(obj, "max_level", minLevel, minLevel, 10);
@@ -370,7 +370,7 @@ public final class LuckySwordConfig {
                 return fallback;
             }
 
-            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(value));
+            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(value));
             if (particle instanceof SimpleParticleType simpleParticle) {
                 return simpleParticle;
             }
@@ -460,7 +460,7 @@ public final class LuckySwordConfig {
         }
     }
 
-    public record EnchantmentEntry(Identifier id, int weight, int minLevel, int maxLevel) {
+    public record EnchantmentEntry(ResourceLocation id, int weight, int minLevel, int maxLevel) {
     }
 
     public record TemporaryEnchantSettings(
@@ -482,15 +482,15 @@ public final class LuckySwordConfig {
                     3,
                     8,
                     List.of(
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "sharpness"), 30, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "smite"), 18, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "bane_of_arthropods"), 14, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "knockback"), 14, 1, 2),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "fire_aspect"), 12, 1, 2),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "looting"), 10, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "sweeping_edge"), 10, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "unbreaking"), 14, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "mending"), 8, 1, 1)
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "sharpness"), 30, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "smite"), 18, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "bane_of_arthropods"), 14, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "knockback"), 14, 1, 2),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "fire_aspect"), 12, 1, 2),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "looting"), 10, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "sweeping_edge"), 10, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "unbreaking"), 14, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "mending"), 8, 1, 1)
                     ),
                     TemporaryEnchantParticleSettings.defaults()
             );

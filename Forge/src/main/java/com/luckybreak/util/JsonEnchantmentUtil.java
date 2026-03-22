@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 
@@ -18,7 +18,7 @@ import java.util.List;
  */
 public final class JsonEnchantmentUtil {
 
-    public record Entry(Identifier id, int level) {}
+    public record Entry(ResourceLocation id, int level) {}
 
     private JsonEnchantmentUtil() {
     }
@@ -41,7 +41,7 @@ public final class JsonEnchantmentUtil {
                     continue;
                 }
                 try {
-                    Identifier id = Identifier.parse(enchantObj.get("id").getAsString());
+                    ResourceLocation id = ResourceLocation.parse(enchantObj.get("id").getAsString());
                     int level = enchantObj.has("level") ? enchantObj.get("level").getAsInt() : 1;
                     if (level > 0) {
                         parsed.add(new Entry(id, level));
@@ -56,7 +56,7 @@ public final class JsonEnchantmentUtil {
             JsonObject mapObj = root.getAsJsonObject();
             for (String key : mapObj.keySet()) {
                 try {
-                    Identifier id = Identifier.parse(key);
+                    ResourceLocation id = ResourceLocation.parse(key);
                     int level = mapObj.get(key).getAsInt();
                     if (level > 0) {
                         parsed.add(new Entry(id, level));

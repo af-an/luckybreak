@@ -10,7 +10,7 @@ import com.luckybreak.events.type.*;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.packs.PackType;
@@ -129,8 +129,8 @@ public class LuckyEventRegistry implements SimpleSynchronousResourceReloadListen
     }
 
     @Override
-    public Identifier getFabricId() {
-        return Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_events");
+    public ResourceLocation getFabricId() {
+        return ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_events");
     }
 
     @Override
@@ -158,11 +158,11 @@ public class LuckyEventRegistry implements SimpleSynchronousResourceReloadListen
         luckyCompassNotFoundMessage = "No Lucky Block found nearby.";
         luckyCompassFoundMessageColor = 0xFFD700;
         luckyCompassNotFoundMessageColor = 0xFFFFFF;
-        Map<Identifier, Resource> configs = manager.listResources(
+        Map<ResourceLocation, Resource> configs = manager.listResources(
                 "lucky_events",
                 id -> id.getPath().endsWith("config.json")
         );
-        for (Map.Entry<Identifier, Resource> cfg : configs.entrySet()) {
+        for (Map.Entry<ResourceLocation, Resource> cfg : configs.entrySet()) {
             try (Reader reader = cfg.getValue().openAsReader()) {
                 JsonObject root = gson.fromJson(reader, JsonObject.class);
                 JsonObject luckyBlockObj = root.has("lucky_block") && root.get("lucky_block").isJsonObject()
@@ -321,12 +321,12 @@ public class LuckyEventRegistry implements SimpleSynchronousResourceReloadListen
             final String tierBase = "lucky_events/" + tier.getId();
             final String tierPrefix = tierBase + "/";
 
-            Map<Identifier, Resource> resources = manager.listResources(
+            Map<ResourceLocation, Resource> resources = manager.listResources(
                 tierBase,
                 id -> id.getPath().startsWith(tierPrefix) && id.getPath().endsWith(".json")
             );
 
-            for (Map.Entry<Identifier, Resource> entry : resources.entrySet()) {
+            for (Map.Entry<ResourceLocation, Resource> entry : resources.entrySet()) {
                 try (Reader reader = entry.getValue().openAsReader()) {
                     JsonObject root = gson.fromJson(reader, JsonObject.class);
 

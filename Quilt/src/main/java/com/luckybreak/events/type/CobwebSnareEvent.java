@@ -5,7 +5,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -185,7 +185,7 @@ public class CobwebSnareEvent implements LuckyEvent {
     }
 
     private static void applyEffect(ServerLevel level, ServerPlayer player, String effectId, int durationTicks, int amplifier) {
-        MobEffect effect = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse(effectId));
+        MobEffect effect = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse(effectId));
         if (effect == null) {
             return;
         }
@@ -198,7 +198,7 @@ public class CobwebSnareEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse(obj.get(field).getAsString()));
+            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             return sound != null ? sound : fallback;
         } catch (Exception ignored) {
             return fallback;

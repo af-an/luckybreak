@@ -12,7 +12,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -837,7 +837,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
     }
 
     private void removeMutuallyExclusiveRewards(List<RewardLootEntry> pool, RewardLootEntry selected) {
-        Identifier selectedId = BuiltInRegistries.ITEM.getKey(selected.item);
+        ResourceLocation selectedId = BuiltInRegistries.ITEM.getKey(selected.item);
         if (selectedId == null) {
             return;
         }
@@ -845,7 +845,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
         String selectedKey = selectedId.toString();
         if (LUCKY_BLOCK_ITEM_ID.equals(selectedKey)) {
             pool.removeIf(entry -> {
-                Identifier id = BuiltInRegistries.ITEM.getKey(entry.item);
+                ResourceLocation id = BuiltInRegistries.ITEM.getKey(entry.item);
                 return id != null && VERY_LUCKY_BLOCK_ITEM_ID.equals(id.toString());
             });
             return;
@@ -853,7 +853,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
 
         if (VERY_LUCKY_BLOCK_ITEM_ID.equals(selectedKey)) {
             pool.removeIf(entry -> {
-                Identifier id = BuiltInRegistries.ITEM.getKey(entry.item);
+                ResourceLocation id = BuiltInRegistries.ITEM.getKey(entry.item);
                 return id != null && LUCKY_BLOCK_ITEM_ID.equals(id.toString());
             });
         }
@@ -963,7 +963,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
 
     private Item resolveItem(String itemId, Item fallback) {
         try {
-            Identifier id = Identifier.parse(itemId);
+            ResourceLocation id = ResourceLocation.parse(itemId);
             if (!BuiltInRegistries.ITEM.containsKey(id)) {
                 return fallback;
             }
@@ -1086,9 +1086,9 @@ public class MobArenaWaveEvent implements LuckyEvent {
 
     private List<UUID> spawnWave(ServerLevel level, BlockPos center, WaveConfig wave) {
         List<UUID> spawned = new ArrayList<>();
-        Identifier id;
+        ResourceLocation id;
         try {
-            id = Identifier.parse(wave.entityId);
+            id = ResourceLocation.parse(wave.entityId);
         } catch (Exception ignored) {
             return spawned;
         }
@@ -1400,7 +1400,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(obj.get(field).getAsString()));
+            Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             return block != null && block != Blocks.AIR ? block : fallback;
         } catch (Exception ignored) {
             return fallback;
@@ -1412,7 +1412,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(obj.get(field).getAsString()));
+            Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             return item != null && item != Items.AIR ? item : fallback;
         } catch (Exception ignored) {
             return fallback;
@@ -1579,7 +1579,7 @@ public class MobArenaWaveEvent implements LuckyEvent {
         if (entries.isEmpty()) {
             for (String idString : DEFAULT_SUPPORT_ITEM_IDS) {
                 try {
-                    Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(idString));
+                    Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(idString));
                     if (item != null && item != Items.AIR) {
                         entries.add(new SupportChestEntry(item, 1, 1, 1));
                     }

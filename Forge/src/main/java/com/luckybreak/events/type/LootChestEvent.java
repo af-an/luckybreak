@@ -8,7 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -119,7 +119,7 @@ public class LootChestEvent implements LuckyEvent {
         SoundEvent spawnSound = null;
         if (obj.has("spawn_sound")) {
             try {
-                Identifier soundId = Identifier.parse(obj.get("spawn_sound").getAsString());
+                ResourceLocation soundId = ResourceLocation.parse(obj.get("spawn_sound").getAsString());
                 if (BuiltInRegistries.SOUND_EVENT.containsKey(soundId)) {
                     spawnSound = BuiltInRegistries.SOUND_EVENT.getValue(soundId);
                 }
@@ -131,18 +131,18 @@ public class LootChestEvent implements LuckyEvent {
         if (obj.has("spawn_base_blocks") && obj.get("spawn_base_blocks").isJsonArray()) {
             JsonArray baseBlocksArray = obj.getAsJsonArray("spawn_base_blocks");
             for (JsonElement baseElement : baseBlocksArray) {
-                Identifier blockId = null;
+                ResourceLocation blockId = null;
                 double weight = 1.0;
 
                 try {
                     if (baseElement.isJsonPrimitive()) {
-                        blockId = Identifier.parse(baseElement.getAsString());
+                        blockId = ResourceLocation.parse(baseElement.getAsString());
                     } else if (baseElement.isJsonObject()) {
                         JsonObject baseObj = baseElement.getAsJsonObject();
                         if (!baseObj.has("block")) {
                             continue;
                         }
-                        blockId = Identifier.parse(baseObj.get("block").getAsString());
+                        blockId = ResourceLocation.parse(baseObj.get("block").getAsString());
                         if (baseObj.has("weight")) {
                             weight = baseObj.get("weight").getAsDouble();
                         }
@@ -173,7 +173,7 @@ public class LootChestEvent implements LuckyEvent {
                     continue;
                 }
 
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(lo.get("item").getAsString()));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(lo.get("item").getAsString()));
                 if (item == null || item == Items.AIR) {
                     continue;
                 }
@@ -186,7 +186,7 @@ public class LootChestEvent implements LuckyEvent {
 
                 Holder<Potion> potion = null;
                 if (lo.has("potion")) {
-                    Potion p = BuiltInRegistries.POTION.getValue(Identifier.parse(lo.get("potion").getAsString()));
+                    Potion p = BuiltInRegistries.POTION.getValue(ResourceLocation.parse(lo.get("potion").getAsString()));
                     if (p != null) {
                         potion = BuiltInRegistries.POTION.wrapAsHolder(p);
                     }
@@ -315,7 +315,7 @@ public class LootChestEvent implements LuckyEvent {
             return LimitedCategory.ENCHANTED_BOOK;
         }
 
-        Identifier id = BuiltInRegistries.ITEM.getKey(item);
+        ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
         if (id == null) {
             return LimitedCategory.NONE;
         }

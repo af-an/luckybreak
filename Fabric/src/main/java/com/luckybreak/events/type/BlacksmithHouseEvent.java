@@ -8,7 +8,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -38,7 +38,7 @@ public class BlacksmithHouseEvent implements LuckyEvent {
 
     private record LootEntry(Item item, double weight, int countMin, int countMax) {}
 
-    private final Identifier structureId;
+    private final ResourceLocation structureId;
     private final int offsetX;
     private final int offsetY;
     private final int offsetZ;
@@ -68,7 +68,7 @@ public class BlacksmithHouseEvent implements LuckyEvent {
     private final int villagerLevel;
 
     private BlacksmithHouseEvent(
-            Identifier structureId,
+            ResourceLocation structureId,
             int offsetX,
             int offsetY,
             int offsetZ,
@@ -128,7 +128,7 @@ public class BlacksmithHouseEvent implements LuckyEvent {
     }
 
     public static BlacksmithHouseEvent fromJson(JsonObject obj) {
-        Identifier structureId = parseIdentifier(obj, "structure", "luckybreak:villager_blacksmith");
+        ResourceLocation structureId = parseIdentifier(obj, "structure", "luckybreak:villager_blacksmith");
 
         int offsetX = obj.has("offset_x") ? obj.get("offset_x").getAsInt() : 0;
         int offsetY = obj.has("offset_y") ? obj.get("offset_y").getAsInt() : 0;
@@ -164,7 +164,7 @@ public class BlacksmithHouseEvent implements LuckyEvent {
         if (maxFoundationDepth < 1) {
             maxFoundationDepth = 1;
         }
-        Identifier foundationBlockId = parseIdentifier(obj, "foundation_block", "minecraft:cobblestone");
+        ResourceLocation foundationBlockId = parseIdentifier(obj, "foundation_block", "minecraft:cobblestone");
         Block foundationBlock = BuiltInRegistries.BLOCK.getValue(foundationBlockId);
         if (foundationBlock == null || foundationBlock == Blocks.AIR) {
             foundationBlock = Blocks.COBBLESTONE;
@@ -624,9 +624,9 @@ public class BlacksmithHouseEvent implements LuckyEvent {
                     continue;
                 }
 
-                Identifier itemId;
+                ResourceLocation itemId;
                 try {
-                    itemId = Identifier.parse(e.get("item").getAsString());
+                    itemId = ResourceLocation.parse(e.get("item").getAsString());
                 } catch (Exception ignored) {
                     continue;
                 }
@@ -662,14 +662,14 @@ public class BlacksmithHouseEvent implements LuckyEvent {
         return list;
     }
 
-    private static Identifier parseIdentifier(JsonObject obj, String field, String fallback) {
+    private static ResourceLocation parseIdentifier(JsonObject obj, String field, String fallback) {
         try {
             if (!obj.has(field)) {
-                return Identifier.parse(fallback);
+                return ResourceLocation.parse(fallback);
             }
-            return Identifier.parse(obj.get(field).getAsString());
+            return ResourceLocation.parse(obj.get(field).getAsString());
         } catch (Exception ignored) {
-            return Identifier.parse(fallback);
+            return ResourceLocation.parse(fallback);
         }
     }
 

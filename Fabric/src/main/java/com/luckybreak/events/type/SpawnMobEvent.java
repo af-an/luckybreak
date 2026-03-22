@@ -5,7 +5,7 @@ import com.luckybreak.LuckyBreak;
 import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -41,10 +41,10 @@ public class SpawnMobEvent implements LuckyEvent {
 
     @Override
     public void execute(ServerLevel level, BlockPos pos, ServerPlayer player) {
-        EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.parse(entityId));
+        EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(ResourceLocation.parse(entityId));
         if (type == null || type == EntityType.PIG) {
             // getValue returns Pig as default when not found; skip if unchanged
-            if (!BuiltInRegistries.ENTITY_TYPE.containsKey(Identifier.parse(entityId))) {
+            if (!BuiltInRegistries.ENTITY_TYPE.containsKey(ResourceLocation.parse(entityId))) {
                 LuckyBreak.LOGGER.warn("[LuckyBreak] Unknown entity: {}", entityId);
                 return;
             }

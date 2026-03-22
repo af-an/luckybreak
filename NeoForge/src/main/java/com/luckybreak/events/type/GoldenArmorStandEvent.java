@@ -16,7 +16,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
@@ -356,7 +356,7 @@ public class GoldenArmorStandEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(obj.get(field).getAsString()));
+            Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (item != null && item != Items.AIR) {
                 return item;
             }
@@ -383,7 +383,7 @@ public class GoldenArmorStandEvent implements LuckyEvent {
                     continue;
                 }
                 try {
-                    Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(element.getAsString()));
+                    Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(element.getAsString()));
                     if (item != null && item != Items.AIR) {
                         parsed.add(item);
                     }
@@ -408,7 +408,7 @@ public class GoldenArmorStandEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(obj.get(field).getAsString()));
+            Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (block != null && block != Blocks.AIR) {
                 return block;
             }
@@ -422,7 +422,7 @@ public class GoldenArmorStandEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(obj.get(field).getAsString()));
+            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (particleType instanceof ParticleOptions options) {
                 return options;
             }

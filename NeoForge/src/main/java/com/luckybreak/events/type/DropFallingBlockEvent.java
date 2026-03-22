@@ -5,7 +5,7 @@ import com.luckybreak.LuckyBreak;
 import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.item.FallingBlockEntity;
@@ -42,7 +42,7 @@ public class DropFallingBlockEvent implements LuckyEvent {
 
     @Override
     public void execute(ServerLevel level, BlockPos pos, ServerPlayer player) {
-        Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(blockId));
+        Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(blockId));
         if (block == null || block == Blocks.AIR) {
             LuckyBreak.LOGGER.warn("[LuckyBreak] Unknown block for falling: {}", blockId);
             return;

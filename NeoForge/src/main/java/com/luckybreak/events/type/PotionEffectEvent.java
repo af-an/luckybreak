@@ -8,7 +8,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
@@ -49,7 +49,7 @@ public class PotionEffectEvent implements LuckyEvent {
                 String id = e.get("effect").getAsString();
                 int duration  = e.has("duration_ticks") ? e.get("duration_ticks").getAsInt() : 200;
                 int amplifier = e.has("amplifier")      ? e.get("amplifier").getAsInt()      : 0;
-                MobEffect mobEffect = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse(id));
+                MobEffect mobEffect = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse(id));
                 if (mobEffect != null) {
                     Holder<MobEffect> holder = BuiltInRegistries.MOB_EFFECT.wrapAsHolder(mobEffect);
                     effects.add(new EffectEntry(holder, duration, amplifier));

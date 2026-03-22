@@ -2,7 +2,7 @@ package com.luckybreak.mixin;
 
 import com.mojang.datafixers.DSL;
 import com.mojang.datafixers.types.Type;
-import net.minecraft.util.Util;
+import net.minecraft.Util;
 import net.minecraft.world.entity.EntityType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,7 +15,7 @@ public abstract class EntityTypeBuilderDataFixerMixin {
         method = "build",
         at = @At(
             value = "INVOKE",
-            target = "Lnet/minecraft/util/Util;fetchChoiceType(Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;)Lcom/mojang/datafixers/types/Type;"
+            target = "Lnet/minecraft/Util;fetchChoiceType(Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;)Lcom/mojang/datafixers/types/Type;"
         )
     )
     private Type<?> luckybreak$suppressCustomEntityDataFixerError(DSL.TypeReference typeReference, String choiceName) {

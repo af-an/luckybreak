@@ -16,7 +16,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -43,7 +43,7 @@ public class WishingWellEvent implements LuckyEvent {
 
     private static final int DEFAULT_BOTTOM_OFFSET_Y = -3;
 
-    private final Identifier structureId;
+    private final ResourceLocation structureId;
     private final int offsetX;
     private final int offsetY;
     private final int offsetZ;
@@ -93,7 +93,7 @@ public class WishingWellEvent implements LuckyEvent {
     private final Set<Block> replaceBlocksWithAir;
 
     private WishingWellEvent(
-            Identifier structureId,
+            ResourceLocation structureId,
             int offsetX,
             int offsetY,
             int offsetZ,
@@ -302,7 +302,7 @@ public class WishingWellEvent implements LuckyEvent {
         }
 
         return new WishingWellEvent(
-                Identifier.parse(structure),
+                ResourceLocation.parse(structure),
             offsetX,
             offsetY,
             offsetZ,
@@ -357,7 +357,7 @@ public class WishingWellEvent implements LuckyEvent {
         Set<Block> blocks = new HashSet<>();
 
         if (obj.has("replace_block_with_air")) {
-            Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(obj.get("replace_block_with_air").getAsString()));
+            Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(obj.get("replace_block_with_air").getAsString()));
             if (block != null && block != Blocks.AIR) {
                 blocks.add(block);
             }
@@ -366,7 +366,7 @@ public class WishingWellEvent implements LuckyEvent {
         if (obj.has("replace_blocks_with_air")) {
             JsonArray arr = obj.getAsJsonArray("replace_blocks_with_air");
             for (JsonElement element : arr) {
-                Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(element.getAsString()));
+                Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(element.getAsString()));
                 if (block != null && block != Blocks.AIR) {
                     blocks.add(block);
                 }
@@ -382,7 +382,7 @@ public class WishingWellEvent implements LuckyEvent {
         }
 
         try {
-            Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(obj.get("coin_item").getAsString()));
+            Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(obj.get("coin_item").getAsString()));
             if (item != null && item != Items.AIR) {
                 return item;
             }
@@ -397,7 +397,7 @@ public class WishingWellEvent implements LuckyEvent {
             return null;
         }
         try {
-            Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(obj.get(field).getAsString()));
+            Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (item != null && item != Items.AIR) {
                 return item;
             }
@@ -409,7 +409,7 @@ public class WishingWellEvent implements LuckyEvent {
     private static WishingWellManager.WeightedDrop parseWeightedDrop(JsonElement element) {
         try {
             if (element.isJsonPrimitive()) {
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(element.getAsString()));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(element.getAsString()));
                 if (item != null && item != Items.AIR) {
                     return new WishingWellManager.WeightedDrop(item, 1);
                 }
@@ -421,7 +421,7 @@ public class WishingWellEvent implements LuckyEvent {
                 if (!obj.has("item")) {
                     return null;
                 }
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(obj.get("item").getAsString()));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(obj.get("item").getAsString()));
                 if (item == null || item == Items.AIR) {
                     return null;
                 }
@@ -444,7 +444,7 @@ public class WishingWellEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(obj.get(field).getAsString()));
+            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (particleType instanceof ParticleOptions options) {
                 return options;
             }
@@ -458,7 +458,7 @@ public class WishingWellEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse(obj.get(field).getAsString()));
+            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             return sound != null ? sound : fallback;
         } catch (Exception ignored) {
             return fallback;

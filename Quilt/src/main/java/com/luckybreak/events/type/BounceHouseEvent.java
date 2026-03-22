@@ -6,7 +6,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.block.Blocks;
@@ -24,7 +24,7 @@ import java.util.HashSet;
  */
 public class BounceHouseEvent implements LuckyEvent {
 
-    private final Identifier structureId;
+    private final ResourceLocation structureId;
     private final int offsetX;
     private final int offsetY;
     private final int offsetZ;
@@ -34,7 +34,7 @@ public class BounceHouseEvent implements LuckyEvent {
     private final int messageColor;
 
     private BounceHouseEvent(
-            Identifier structureId,
+            ResourceLocation structureId,
             int offsetX,
             int offsetY,
             int offsetZ,
@@ -66,7 +66,7 @@ public class BounceHouseEvent implements LuckyEvent {
         int messageColor = parseColor(obj, "message_color", 0x55FF55);
 
         return new BounceHouseEvent(
-                Identifier.parse(structure),
+                ResourceLocation.parse(structure),
                 offsetX,
                 offsetY,
                 offsetZ,

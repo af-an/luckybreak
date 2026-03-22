@@ -2,7 +2,7 @@
 
 ![Lucky Break Title](https://luckybreak.sirv.com/Images/lb03.png)
 
-![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b447?style=flat-square&logo=minecraft&logoColor=white)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.10-62b447?style=flat-square&logo=minecraft&logoColor=white)
 ![Fabric](https://img.shields.io/badge/Fabric-supported-dbb045?style=flat-square)
 ![Forge](https://img.shields.io/badge/Forge-supported-e07a29?style=flat-square)
 ![NeoForge](https://img.shields.io/badge/NeoForge-supported-cf6029?style=flat-square)
@@ -299,9 +299,30 @@ Lucky Blocks generate in all three dimensions.
 
 **Overworld** — Rare single Lucky Block placements on the surface. No structure, just the block sitting there.
 
+<details>
+<summary>Spoiler</summary>
+
+![The Overworld](https://luckybreak.sirv.com/Images/lucky-block-overworld.png)
+
+</details>
+
 **Nether** — A pedestal made of cracked nether bricks with a Lucky Block in the center. Generates across Nether biomes. Very common in the Nether.
 
+<details>
+<summary>Spoiler</summary>
+
+![The Nether](https://luckybreak.sirv.com/Images/nether-structure.png)
+
+</details>
+
 **The End** — A cage of waxed oxidized copper bulbs and chiseled copper columns with a Lucky Block inside. Very rare in the End, but also very lucky.
+
+<details>
+<summary>Spoiler</summary>
+
+![The End](https://luckybreak.sirv.com/Images/end-structure.png)
+
+</details>
 
 ---
 

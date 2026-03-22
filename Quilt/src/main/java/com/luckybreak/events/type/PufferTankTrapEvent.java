@@ -6,7 +6,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.FluidTags;
@@ -26,7 +26,7 @@ import java.util.HashSet;
 @SuppressWarnings("deprecation")
 public class PufferTankTrapEvent implements LuckyEvent {
 
-    private final Identifier structureId;
+    private final ResourceLocation structureId;
     private final int offsetX;
     private final int offsetY;
     private final int offsetZ;
@@ -38,7 +38,7 @@ public class PufferTankTrapEvent implements LuckyEvent {
     private final int messageColor;
 
     private PufferTankTrapEvent(
-            Identifier structureId,
+            ResourceLocation structureId,
             int offsetX,
             int offsetY,
             int offsetZ,
@@ -88,7 +88,7 @@ public class PufferTankTrapEvent implements LuckyEvent {
         int messageColor = parseRgbColor(obj, "message_color", 0x55CCFF);
 
         return new PufferTankTrapEvent(
-                Identifier.parse(structure),
+                ResourceLocation.parse(structure),
                 offsetX,
                 offsetY,
                 offsetZ,

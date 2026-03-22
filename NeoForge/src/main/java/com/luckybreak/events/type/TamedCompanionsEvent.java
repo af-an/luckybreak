@@ -14,8 +14,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.animal.feline.Cat;
-import net.minecraft.world.entity.animal.parrot.Parrot;
+import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.Parrot;
 import net.minecraft.world.entity.animal.wolf.Wolf;
 
 import java.lang.reflect.Method;

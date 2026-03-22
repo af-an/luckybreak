@@ -6,7 +6,7 @@ import com.luckybreak.LuckyBreak;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
@@ -120,12 +120,12 @@ public final class LuckyBowConfig {
                     3,
                     8,
                     List.of(
-                        new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "power"), 32, 1, 5),
-                        new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "punch"), 18, 1, 2),
-                        new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "flame"), 10, 1, 1),
-                        new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "infinity"), 8, 1, 1),
-                        new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "unbreaking"), 20, 1, 3),
-                        new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "mending"), 8, 1, 1)
+                        new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "power"), 32, 1, 5),
+                        new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "punch"), 18, 1, 2),
+                        new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "flame"), 10, 1, 1),
+                        new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "infinity"), 8, 1, 1),
+                        new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "unbreaking"), 20, 1, 3),
+                        new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "mending"), 8, 1, 1)
                     ),
                     TemporaryEnchantParticleSettings.defaults()
                 );
@@ -429,7 +429,7 @@ public final class LuckyBowConfig {
                     continue;
                 }
 
-                Identifier id = Identifier.parse(idValue);
+                ResourceLocation id = ResourceLocation.parse(idValue);
                 int weight = parseInt(obj, "weight", 1, 0, 100000);
                 int minLevel = parseInt(obj, "min_level", 1, 1, 10);
                 int maxLevel = parseInt(obj, "max_level", minLevel, minLevel, 10);
@@ -456,7 +456,7 @@ public final class LuckyBowConfig {
                 return fallback;
             }
 
-            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(value));
+            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(value));
             if (particle instanceof SimpleParticleType simpleParticle) {
                 return simpleParticle;
             }
@@ -543,7 +543,7 @@ public final class LuckyBowConfig {
             for (var element : obj.getAsJsonArray(field)) {
                 try {
                     if (element.isJsonPrimitive()) {
-                        Identifier id = Identifier.parse(element.getAsString());
+                        ResourceLocation id = ResourceLocation.parse(element.getAsString());
                         Block block = BuiltInRegistries.BLOCK.getValue(id);
                         if (block != null && block != Blocks.AIR) {
                             possibleBlocks.add(new WeightedBlockEntry(block, 1));
@@ -561,7 +561,7 @@ public final class LuckyBowConfig {
                         continue;
                     }
 
-                    Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(blockId));
+                    Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(blockId));
                     if (block == null || block == Blocks.AIR) {
                         continue;
                     }
@@ -923,7 +923,7 @@ public final class LuckyBowConfig {
     public record EntityHitLightningSettings(boolean enabled, float chance, boolean visualOnly) {
     }
 
-        public record EnchantmentEntry(Identifier id, int weight, int minLevel, int maxLevel) {
+        public record EnchantmentEntry(ResourceLocation id, int weight, int minLevel, int maxLevel) {
         }
 
         public record TemporaryEnchantSettings(

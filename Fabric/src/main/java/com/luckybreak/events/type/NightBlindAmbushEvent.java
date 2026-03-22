@@ -5,7 +5,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -86,7 +86,7 @@ public class NightBlindAmbushEvent implements LuckyEvent {
 
         level.setDayTime(nightTime);
 
-        MobEffect blindness = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse("minecraft:blindness"));
+        MobEffect blindness = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse("minecraft:blindness"));
         if (blindness != null) {
             Holder<MobEffect> holder = BuiltInRegistries.MOB_EFFECT.wrapAsHolder(blindness);
             player.addEffect(new MobEffectInstance(holder, blindnessDurationTicks, blindnessAmplifier));

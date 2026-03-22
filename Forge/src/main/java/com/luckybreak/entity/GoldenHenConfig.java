@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.luckybreak.LuckyBreak;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
@@ -63,7 +63,7 @@ public final class GoldenHenConfig {
     private static float goldenHenGlintMinAlpha = DEFAULT_GLINT_MIN_ALPHA;
     private static float goldenHenGlintMaxAlpha = DEFAULT_GLINT_MAX_ALPHA;
     private static float goldenHenGlintPulseSpeed = DEFAULT_GLINT_PULSE_SPEED;
-    private static Identifier goldenHenGlintTexture = Identifier.parse(DEFAULT_GLINT_TEXTURE);
+    private static ResourceLocation goldenHenGlintTexture = ResourceLocation.parse(DEFAULT_GLINT_TEXTURE);
     private static SoundEvent ambientSound = SoundEvents.CHICKEN_AMBIENT;
     private static SoundEvent hurtSound = SoundEvents.CHICKEN_HURT;
     private static SoundEvent deathSound = SoundEvents.CHICKEN_DEATH;
@@ -155,7 +155,7 @@ public final class GoldenHenConfig {
         return goldenHenGlintPulseSpeed;
     }
 
-    public static Identifier goldenHenGlintTexture() {
+    public static ResourceLocation goldenHenGlintTexture() {
         ensureLoaded();
         return goldenHenGlintTexture;
     }
@@ -203,7 +203,7 @@ public final class GoldenHenConfig {
         goldenHenGlintMinAlpha = DEFAULT_GLINT_MIN_ALPHA;
         goldenHenGlintMaxAlpha = DEFAULT_GLINT_MAX_ALPHA;
         goldenHenGlintPulseSpeed = DEFAULT_GLINT_PULSE_SPEED;
-        goldenHenGlintTexture = Identifier.parse(DEFAULT_GLINT_TEXTURE);
+        goldenHenGlintTexture = ResourceLocation.parse(DEFAULT_GLINT_TEXTURE);
         ambientSound = SoundEvents.CHICKEN_AMBIENT;
         hurtSound = SoundEvents.CHICKEN_HURT;
         deathSound = SoundEvents.CHICKEN_DEATH;
@@ -231,7 +231,7 @@ public final class GoldenHenConfig {
             goldenHenGlintMinAlpha = parseFloat(root, "glint_min_alpha", DEFAULT_GLINT_MIN_ALPHA, 0.0F, 1.0F);
             goldenHenGlintMaxAlpha = parseFloat(root, "glint_max_alpha", DEFAULT_GLINT_MAX_ALPHA, goldenHenGlintMinAlpha, 1.0F);
             goldenHenGlintPulseSpeed = parseFloat(root, "glint_pulse_speed", DEFAULT_GLINT_PULSE_SPEED, 0.0F, 5.0F);
-            goldenHenGlintTexture = parseIdentifier(root, "glint_texture", Identifier.parse(DEFAULT_GLINT_TEXTURE));
+            goldenHenGlintTexture = parseIdentifier(root, "glint_texture", ResourceLocation.parse(DEFAULT_GLINT_TEXTURE));
 
             ambientSound = parseSoundEvent(root, "ambient_sound", DEFAULT_AMBIENT_SOUND_ID, SoundEvents.CHICKEN_AMBIENT);
             hurtSound = parseSoundEvent(root, "hurt_sound", DEFAULT_HURT_SOUND_ID, SoundEvents.CHICKEN_HURT);
@@ -328,7 +328,7 @@ public final class GoldenHenConfig {
         }
 
         try {
-            Identifier id = Identifier.parse(root.get(field).getAsString());
+            ResourceLocation id = ResourceLocation.parse(root.get(field).getAsString());
             if (!BuiltInRegistries.ITEM.containsKey(id)) {
                 return null;
             }
@@ -368,13 +368,13 @@ public final class GoldenHenConfig {
         }
     }
 
-    private static Identifier parseIdentifier(JsonObject root, String field, Identifier fallback) {
+    private static ResourceLocation parseIdentifier(JsonObject root, String field, ResourceLocation fallback) {
         if (!root.has(field)) {
             return fallback;
         }
 
         try {
-            return Identifier.parse(root.get(field).getAsString());
+            return ResourceLocation.parse(root.get(field).getAsString());
         } catch (Exception ignored) {
             return fallback;
         }
@@ -383,7 +383,7 @@ public final class GoldenHenConfig {
     private static SoundEvent parseSoundEvent(JsonObject root, String field, String fallbackId, SoundEvent fallback) {
         try {
             String rawId = root.has(field) ? root.get(field).getAsString() : fallbackId;
-            Identifier id = Identifier.parse(rawId);
+            ResourceLocation id = ResourceLocation.parse(rawId);
             if (!BuiltInRegistries.SOUND_EVENT.containsKey(id)) {
                 return fallback;
             }

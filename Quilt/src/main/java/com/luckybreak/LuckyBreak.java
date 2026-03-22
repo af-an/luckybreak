@@ -4,7 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -33,7 +33,7 @@ public class LuckyBreak implements GameEntrypoint {
 
 	public static final ResourceKey<CreativeModeTab> LUCKY_BREAK_TAB = ResourceKey.create(
 			Registries.CREATIVE_MODE_TAB,
-			Identifier.fromNamespaceAndPath(MOD_ID, "lucky_break")
+			ResourceLocation.fromNamespaceAndPath(MOD_ID, "lucky_break")
 	);
 
 	public LuckyBreak() {
@@ -71,7 +71,7 @@ public class LuckyBreak implements GameEntrypoint {
 		creativeMenuRegistered = true;
 
 		CreativeTabRegistry.registerTab(
-				Identifier.fromNamespaceAndPath(MOD_ID, "lucky_break"),
+				ResourceLocation.fromNamespaceAndPath(MOD_ID, "lucky_break"),
 				Component.translatable("itemGroup.luckybreak.lucky_break"),
 				() -> luckybreak$stackOfItem("lucky_block")
 		);
@@ -102,7 +102,7 @@ public class LuckyBreak implements GameEntrypoint {
 	}
 
 	private static ItemStack luckybreak$stackOfItem(String path) {
-		Identifier id = Identifier.fromNamespaceAndPath(MOD_ID, path);
+		ResourceLocation id = ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
 		Item item = BuiltInRegistries.ITEM.getValue(id);
 		if (item == null) {
 			return ItemStack.EMPTY;

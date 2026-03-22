@@ -5,7 +5,7 @@ import com.luckybreak.item.LuckyItemVisualConfig;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ItemOwner;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +30,7 @@ public abstract class LuckyItemGlintStrengthMixin {
             return;
         }
 
-        Identifier itemId = BuiltInRegistries.ITEM.getKey(stack.getItem());
+        ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(stack.getItem());
         if (!itemId.getNamespace().equals(LuckyBreak.MOD_ID)) {
             return;
         }

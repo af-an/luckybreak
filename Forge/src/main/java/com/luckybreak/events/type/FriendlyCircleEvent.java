@@ -8,7 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -102,7 +102,7 @@ public class FriendlyCircleEvent implements LuckyEvent {
                     continue;
                 }
 
-                Identifier id = Identifier.parse(mob.get("entity").getAsString());
+                ResourceLocation id = ResourceLocation.parse(mob.get("entity").getAsString());
                 if (!BuiltInRegistries.ENTITY_TYPE.containsKey(id)) {
                     continue;
                 }
@@ -205,7 +205,7 @@ public class FriendlyCircleEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(obj.get(field).getAsString()));
+            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (particleType instanceof ParticleOptions options) {
                 return options;
             }
@@ -219,7 +219,7 @@ public class FriendlyCircleEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse(obj.get(field).getAsString()));
+            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             return sound != null ? sound : fallback;
         } catch (Exception ignored) {
             return fallback;

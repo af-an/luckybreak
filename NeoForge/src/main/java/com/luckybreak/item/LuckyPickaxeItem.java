@@ -11,7 +11,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -898,7 +898,7 @@ public class LuckyPickaxeItem extends Item {
         Map<String, Integer> levels = new HashMap<>();
         ItemEnchantments enchantments = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         for (var entry : enchantments.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id != null) {
                 levels.put(id.toString(), Math.max(0, entry.getIntValue()));
             }
@@ -915,7 +915,7 @@ public class LuckyPickaxeItem extends Item {
         ItemEnchantments current = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         List<EnchantLevel> keep = new ArrayList<>();
         for (var entry : current.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id == null) {
                 continue;
             }
@@ -974,6 +974,6 @@ public class LuckyPickaxeItem extends Item {
         );
     }
 
-    private record EnchantLevel(Identifier id, int level) {
+    private record EnchantLevel(ResourceLocation id, int level) {
     }
 }

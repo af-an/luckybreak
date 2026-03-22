@@ -12,7 +12,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -25,7 +25,7 @@ import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.BowItem;
@@ -245,7 +245,7 @@ public class LuckyBowItem extends BowItem {
 
         MobEffect effect = null;
         try {
-            effect = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse(selected.effectId()));
+            effect = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse(selected.effectId()));
         } catch (Exception ignored) {
         }
         if (effect == null) {
@@ -674,7 +674,7 @@ public class LuckyBowItem extends BowItem {
     private ItemStack createRandomTippedArrow(Level level) {
         List<Holder<Potion>> candidates = new ArrayList<>();
         for (Potion potion : BuiltInRegistries.POTION) {
-            Identifier potionId = BuiltInRegistries.POTION.getKey(potion);
+            ResourceLocation potionId = BuiltInRegistries.POTION.getKey(potion);
             if (potionId == null || "empty".equals(potionId.getPath())) {
                 continue;
             }
@@ -1552,7 +1552,7 @@ public class LuckyBowItem extends BowItem {
         Map<String, Integer> levels = new HashMap<>();
         ItemEnchantments enchantments = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         for (var entry : enchantments.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id != null) {
                 levels.put(id.toString(), Math.max(0, entry.getIntValue()));
             }
@@ -1569,7 +1569,7 @@ public class LuckyBowItem extends BowItem {
         ItemEnchantments current = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         List<EnchantLevel> keep = new ArrayList<>();
         for (var entry : current.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id == null) {
                 continue;
             }
@@ -1628,7 +1628,7 @@ public class LuckyBowItem extends BowItem {
         );
     }
 
-    private record EnchantLevel(Identifier id, int level) {
+    private record EnchantLevel(ResourceLocation id, int level) {
     }
 
     private BlockPos resolveTargetPos(Level level, BlockPos impactPos) {

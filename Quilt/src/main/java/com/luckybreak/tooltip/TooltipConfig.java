@@ -9,7 +9,7 @@ import com.luckybreak.item.WellCoinMarker;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -209,7 +209,7 @@ public final class TooltipConfig {
     private static Item parseTargetItem(JsonObject entry) {
         try {
             if (entry.has("item")) {
-                Identifier itemId = Identifier.parse(entry.get("item").getAsString());
+                ResourceLocation itemId = ResourceLocation.parse(entry.get("item").getAsString());
                 if (!BuiltInRegistries.ITEM.containsKey(itemId)) {
                     return null;
                 }
@@ -218,7 +218,7 @@ public final class TooltipConfig {
             }
 
             if (entry.has("block")) {
-                Identifier blockId = Identifier.parse(entry.get("block").getAsString());
+                ResourceLocation blockId = ResourceLocation.parse(entry.get("block").getAsString());
                 if (!BuiltInRegistries.BLOCK.containsKey(blockId)) {
                     return null;
                 }

@@ -9,7 +9,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -36,7 +36,7 @@ public class ModBlocks {
     private static Block register(String name,
                   java.util.function.Function<ResourceKey<Block>, Block> factory,
                   BiFunction<Block, ResourceKey<Item>, Item> itemFactory) {
-        Identifier id = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, name);
         ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
         Block block = factory.apply(blockKey);
@@ -96,7 +96,7 @@ public class ModBlocks {
             BiFunction<Block, ResourceKey<Item>, Item> itemFactory,
             Block fallback
     ) {
-        Identifier id = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, name);
         if (BuiltInRegistries.BLOCK.containsKey(id)) {
             Block existing = BuiltInRegistries.BLOCK.getValue(id);
             return existing == null ? fallback : existing;

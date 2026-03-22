@@ -9,7 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextColor;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.item.FallingBlockEntity;
@@ -40,7 +40,7 @@ import net.minecraft.world.level.block.state.BlockState;
  */
 public class IronBarsLookUpTrapEvent implements LuckyEvent {
 
-    private final Identifier barBlockId;
+    private final ResourceLocation barBlockId;
     private final int cageRadius;
     private final int cageHeight;
     private final boolean centerPlayer;
@@ -53,11 +53,11 @@ public class IronBarsLookUpTrapEvent implements LuckyEvent {
     private final int lavaHazardHeight;
     private final boolean clearCageSpace;
     private final boolean clearDropColumn;
-    private final Identifier anvilBlockId;
-    private final Identifier lavaBlockId;
+    private final ResourceLocation anvilBlockId;
+    private final ResourceLocation lavaBlockId;
 
     private IronBarsLookUpTrapEvent(
-            Identifier barBlockId,
+            ResourceLocation barBlockId,
             int cageRadius,
             int cageHeight,
             boolean centerPlayer,
@@ -70,8 +70,8 @@ public class IronBarsLookUpTrapEvent implements LuckyEvent {
             int lavaHazardHeight,
             boolean clearCageSpace,
             boolean clearDropColumn,
-            Identifier anvilBlockId,
-            Identifier lavaBlockId
+            ResourceLocation anvilBlockId,
+            ResourceLocation lavaBlockId
     ) {
         this.barBlockId = barBlockId;
         this.cageRadius = cageRadius;
@@ -91,7 +91,7 @@ public class IronBarsLookUpTrapEvent implements LuckyEvent {
     }
 
     public static IronBarsLookUpTrapEvent fromJson(JsonObject obj) {
-        Identifier barBlockId = parseIdentifier(obj, "bar_block", "minecraft:iron_bars");
+        ResourceLocation barBlockId = parseIdentifier(obj, "bar_block", "minecraft:iron_bars");
         int cageRadius = obj.has("cage_radius") ? obj.get("cage_radius").getAsInt() : 1;
         int cageHeight = obj.has("cage_height") ? obj.get("cage_height").getAsInt() : 3;
         boolean centerPlayer = !obj.has("center_player") || obj.get("center_player").getAsBoolean();
@@ -108,8 +108,8 @@ public class IronBarsLookUpTrapEvent implements LuckyEvent {
         boolean clearCageSpace = !obj.has("clear_cage_space") || obj.get("clear_cage_space").getAsBoolean();
         boolean clearDropColumn = !obj.has("clear_drop_column") || obj.get("clear_drop_column").getAsBoolean();
 
-        Identifier anvilBlockId = parseIdentifier(obj, "anvil_block", "minecraft:damaged_anvil");
-        Identifier lavaBlockId = parseIdentifier(obj, "lava_block", "minecraft:lava");
+        ResourceLocation anvilBlockId = parseIdentifier(obj, "anvil_block", "minecraft:damaged_anvil");
+        ResourceLocation lavaBlockId = parseIdentifier(obj, "lava_block", "minecraft:lava");
 
         if (cageRadius < 1) cageRadius = 1;
         if (cageHeight < 2) cageHeight = 2;
@@ -215,7 +215,7 @@ public class IronBarsLookUpTrapEvent implements LuckyEvent {
         });
     }
 
-    private static Block resolveBlock(Identifier id, Block fallback) {
+    private static Block resolveBlock(ResourceLocation id, Block fallback) {
         Block block = BuiltInRegistries.BLOCK.getValue(id);
         if (block == null || block == Blocks.AIR) {
             LuckyBreak.LOGGER.warn("[LuckyBreak] Invalid block id '{}', using fallback {}", id, fallback);
@@ -224,14 +224,14 @@ public class IronBarsLookUpTrapEvent implements LuckyEvent {
         return block;
     }
 
-    private static Identifier parseIdentifier(JsonObject obj, String field, String fallback) {
+    private static ResourceLocation parseIdentifier(JsonObject obj, String field, String fallback) {
         try {
             if (!obj.has(field)) {
-                return Identifier.parse(fallback);
+                return ResourceLocation.parse(fallback);
             }
-            return Identifier.parse(obj.get(field).getAsString());
+            return ResourceLocation.parse(obj.get(field).getAsString());
         } catch (Exception ignored) {
-            return Identifier.parse(fallback);
+            return ResourceLocation.parse(fallback);
         }
     }
 

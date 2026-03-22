@@ -11,7 +11,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -230,7 +230,7 @@ public class StarfallBlessingEvent implements LuckyEvent {
                 if (!el.isJsonObject()) continue;
                 JsonObject entry = el.getAsJsonObject();
                 if (!entry.has("item")) continue;
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(entry.get("item").getAsString()));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(entry.get("item").getAsString()));
                 if (item == null || item == Items.AIR) continue;
                 double weight = entry.has("weight") ? entry.get("weight").getAsDouble() : 1.0;
                 int countMin = entry.has("count_min") ? entry.get("count_min").getAsInt() : 1;
@@ -416,7 +416,7 @@ public class StarfallBlessingEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(obj.get(field).getAsString()));
+            var particleType = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             if (particleType instanceof ParticleOptions options) {
                 return options;
             }
@@ -430,7 +430,7 @@ public class StarfallBlessingEvent implements LuckyEvent {
             return fallback;
         }
         try {
-            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse(obj.get(field).getAsString()));
+            SoundEvent sound = BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse(obj.get(field).getAsString()));
             return sound != null ? sound : fallback;
         } catch (Exception ignored) {
             return fallback;

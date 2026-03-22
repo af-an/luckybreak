@@ -7,7 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import com.luckybreak.events.LuckyEventRegistry;
@@ -28,7 +28,7 @@ public class LuckyBreak implements ModInitializer {
 
 	public static final ResourceKey<CreativeModeTab> LUCKY_BREAK_TAB = ResourceKey.create(
 			Registries.CREATIVE_MODE_TAB,
-			Identifier.fromNamespaceAndPath(MOD_ID, "lucky_break")
+			ResourceLocation.fromNamespaceAndPath(MOD_ID, "lucky_break")
 	);
 
 	@Override

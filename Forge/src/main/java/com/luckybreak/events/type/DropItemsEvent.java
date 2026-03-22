@@ -7,7 +7,7 @@ import com.luckybreak.events.LuckyEvent;
 import com.luckybreak.util.JsonEnchantmentUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
@@ -51,7 +51,7 @@ public class DropItemsEvent implements LuckyEvent {
             int min = it.has("count_min") ? it.get("count_min").getAsInt() : 1;
             int max = it.has("count_max") ? it.get("count_max").getAsInt() : min;
             List<JsonEnchantmentUtil.Entry> enchantments = JsonEnchantmentUtil.parseList(it, "enchantments");
-            Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(id));
+            Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(id));
             if (item != null && !item.equals(Items.AIR)) {
                 entries.add(new ItemEntry(item, min, max, enchantments));
             }

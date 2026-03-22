@@ -4,7 +4,7 @@ import com.google.gson.JsonObject;
 import com.luckybreak.LuckyBreak;
 import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
@@ -25,10 +25,10 @@ import java.util.Optional;
  */
 public class SpawnStructureEvent implements LuckyEvent {
 
-    private final Identifier structureId;
+    private final ResourceLocation structureId;
     private final int offsetX, offsetY, offsetZ;
 
-    private SpawnStructureEvent(Identifier id, int ox, int oy, int oz) {
+    private SpawnStructureEvent(ResourceLocation id, int ox, int oy, int oz) {
         this.structureId = id;
         this.offsetX = ox;
         this.offsetY = oy;
@@ -40,7 +40,7 @@ public class SpawnStructureEvent implements LuckyEvent {
         int ox = obj.has("offset_x") ? obj.get("offset_x").getAsInt() : 0;
         int oy = obj.has("offset_y") ? obj.get("offset_y").getAsInt() : 0;
         int oz = obj.has("offset_z") ? obj.get("offset_z").getAsInt() : 0;
-        return new SpawnStructureEvent(Identifier.parse(id), ox, oy, oz);
+        return new SpawnStructureEvent(ResourceLocation.parse(id), ox, oy, oz);
     }
 
     @Override

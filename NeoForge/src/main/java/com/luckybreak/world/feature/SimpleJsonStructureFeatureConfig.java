@@ -2,27 +2,27 @@ package com.luckybreak.world.feature;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 
 import java.util.List;
 
 public record SimpleJsonStructureFeatureConfig(
-        Identifier structure,
+        ResourceLocation structure,
         int originX,
         int originY,
         int originZ,
         boolean ignoreAir,
         boolean replaceAirOnly,
-        List<Identifier> replaceBlocksWithAir,
-        List<Identifier> requiredFloorBlocks,
+        List<ResourceLocation> replaceBlocksWithAir,
+        List<ResourceLocation> requiredFloorBlocks,
         int requiredAirBlocksAbove,
         int minDistanceFromSameStructure,
         boolean generateSupportPillars,
         boolean clearOccupiedSpace,
         int searchDownDepth
 ) implements FeatureConfiguration {
-    private static final Codec<Identifier> IDENTIFIER_CODEC = Codec.STRING.xmap(Identifier::parse, Identifier::toString);
+    private static final Codec<ResourceLocation> IDENTIFIER_CODEC = Codec.STRING.xmap(ResourceLocation::parse, ResourceLocation::toString);
 
     public static final Codec<SimpleJsonStructureFeatureConfig> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             IDENTIFIER_CODEC.fieldOf("structure").forGetter(SimpleJsonStructureFeatureConfig::structure),

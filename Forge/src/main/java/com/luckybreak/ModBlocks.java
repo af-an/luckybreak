@@ -7,7 +7,7 @@ import com.luckybreak.events.LuckyTier;
 import com.luckybreak.item.LuckyTierBlockItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -33,11 +33,11 @@ public class ModBlocks {
         @SubscribeEvent
         public static void onRegisterBlocks(RegisterEvent event) {
             event.register(Registries.BLOCK, helper -> {
-                Identifier luckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block");
-                Identifier veryLuckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_lucky_block");
-                Identifier veryUnluckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_unlucky_block");
-                Identifier mostlyLuckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_lucky_block");
-                Identifier mostlyUnluckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_unlucky_block");
+                ResourceLocation luckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block");
+                ResourceLocation veryLuckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_lucky_block");
+                ResourceLocation veryUnluckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_unlucky_block");
+                ResourceLocation mostlyLuckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_lucky_block");
+                ResourceLocation mostlyUnluckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_unlucky_block");
 
                 LUCKY_BLOCK = new LuckyBlock(ResourceKey.create(Registries.BLOCK, luckyBlockId));
                 VERY_LUCKY_BLOCK = new ForcedTierLuckyBlock(ResourceKey.create(Registries.BLOCK, veryLuckyBlockId), LuckyTier.LUCKY);
@@ -60,11 +60,11 @@ public class ModBlocks {
                     return;
                 }
 
-                Identifier luckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block");
-                Identifier veryLuckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_lucky_block");
-                Identifier veryUnluckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_unlucky_block");
-                Identifier mostlyLuckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_lucky_block");
-                Identifier mostlyUnluckyBlockId = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_unlucky_block");
+                ResourceLocation luckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block");
+                ResourceLocation veryLuckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_lucky_block");
+                ResourceLocation veryUnluckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_unlucky_block");
+                ResourceLocation mostlyLuckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_lucky_block");
+                ResourceLocation mostlyUnluckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "mostly_unlucky_block");
 
                 helper.register(luckyBlockId, new BlockItem(LUCKY_BLOCK, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, luckyBlockId))));
                 helper.register(veryLuckyBlockId, new LuckyTierBlockItem(VERY_LUCKY_BLOCK, ResourceKey.create(Registries.ITEM, veryLuckyBlockId), ChatFormatting.GREEN));

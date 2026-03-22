@@ -3,7 +3,7 @@ package com.luckybreak.item;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.luckybreak.LuckyBreak;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 import java.io.InputStream;
@@ -88,7 +88,7 @@ public final class LuckyPotionConfig {
                     continue;
                 }
 
-                Identifier id = Identifier.parse(idValue);
+                ResourceLocation id = ResourceLocation.parse(idValue);
                 int weight = parseInt(obj, "weight", 1, 0, 100000);
                 int durationTicks = parseInt(obj, "duration_ticks", 1200, 1, 20 * 60 * 10);
                 int amplifier = parseInt(obj, "amplifier", 0, 0, 10);
@@ -138,7 +138,7 @@ public final class LuckyPotionConfig {
         }
     }
 
-    public record PositiveEffectEntry(Identifier id, int weight, int durationTicks, int amplifier) {
+    public record PositiveEffectEntry(ResourceLocation id, int weight, int durationTicks, int amplifier) {
     }
 
     public record PositiveEffectSettings(
@@ -153,25 +153,25 @@ public final class LuckyPotionConfig {
                     4,
                     8,
                     List.of(
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "speed"), 20, 1800, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "haste"), 18, 1800, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "strength"), 16, 1800, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "instant_health"), 12, 1, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "jump_boost"), 16, 1800, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "regeneration"), 16, 900, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "resistance"), 14, 1800, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "fire_resistance"), 14, 1800, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "water_breathing"), 12, 1800, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "invisibility"), 10, 1200, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "night_vision"), 12, 1800, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "health_boost"), 10, 1800, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "absorption"), 12, 1800, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "saturation"), 6, 1, 1),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "luck"), 10, 1800, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "slow_falling"), 10, 1200, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "conduit_power"), 8, 1200, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "dolphins_grace"), 8, 1200, 0),
-                            new PositiveEffectEntry(Identifier.fromNamespaceAndPath("minecraft", "hero_of_the_village"), 6, 2400, 0)
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "speed"), 20, 1800, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "haste"), 18, 1800, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "strength"), 16, 1800, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "instant_health"), 12, 1, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "jump_boost"), 16, 1800, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "regeneration"), 16, 900, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "resistance"), 14, 1800, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "fire_resistance"), 14, 1800, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "water_breathing"), 12, 1800, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "invisibility"), 10, 1200, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "night_vision"), 12, 1800, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "health_boost"), 10, 1800, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "absorption"), 12, 1800, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "saturation"), 6, 1, 1),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "luck"), 10, 1800, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "slow_falling"), 10, 1200, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "conduit_power"), 8, 1200, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "dolphins_grace"), 8, 1200, 0),
+                            new PositiveEffectEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "hero_of_the_village"), 6, 2400, 0)
                     )
             );
         }

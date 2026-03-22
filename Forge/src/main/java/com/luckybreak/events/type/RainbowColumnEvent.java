@@ -8,7 +8,7 @@ import com.luckybreak.events.LuckyScheduler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -90,7 +90,7 @@ public class RainbowColumnEvent implements LuckyEvent {
                 JsonObject entry = el.getAsJsonObject();
                 String id = entry.get("block").getAsString();
                 int    w  = entry.has("weight") ? entry.get("weight").getAsInt() : 10;
-                Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(id));
+                Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(id));
                 if (block == Blocks.AIR) {
                     LuckyBreak.LOGGER.warn("[LuckyBreak] rainbow_column: unknown block '{}', skipping.", id);
                     continue;

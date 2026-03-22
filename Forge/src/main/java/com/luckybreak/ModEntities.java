@@ -2,11 +2,11 @@ package com.luckybreak;
 
 import com.luckybreak.entity.GoldenHenEntity;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.animal.chicken.Chicken;
+import net.minecraft.world.entity.animal.Chicken;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,7 +27,7 @@ public final class ModEntities {
         @SubscribeEvent
         public static void onRegisterEntities(RegisterEvent event) {
             event.register(Registries.ENTITY_TYPE, helper -> {
-                Identifier id = Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "golden_hen");
+                ResourceLocation id = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "golden_hen");
                 ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, id);
                 GOLDEN_HEN = EntityType.Builder.of(GoldenHenEntity::new, MobCategory.CREATURE)
                         .sized(0.4F, 0.7F)

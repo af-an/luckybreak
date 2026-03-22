@@ -6,7 +6,7 @@ import com.google.gson.JsonParser;
 import com.luckybreak.LuckyBreak;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -260,7 +260,7 @@ public final class LuckyHoeConfig {
                     continue;
                 }
 
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(itemId));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(itemId));
                 if (item == null || item == Items.AIR) {
                     continue;
                 }
@@ -421,7 +421,7 @@ public final class LuckyHoeConfig {
                     continue;
                 }
 
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(itemId));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(itemId));
                 if (item == null || item == Items.AIR) {
                     continue;
                 }

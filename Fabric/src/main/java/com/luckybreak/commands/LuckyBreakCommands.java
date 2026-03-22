@@ -22,7 +22,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.SharedSuggestionProvider;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.permissions.Permissions;
+
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -124,7 +124,7 @@ public final class LuckyBreakCommands {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
                 dispatcher.register(
                         Commands.literal("luckybreak")
-                                .requires(source -> source.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER))
+                                .requires(source -> source.hasPermission(2))
                             .then(Commands.literal("item")
                                 .then(Commands.argument("itemname", StringArgumentType.word())
                                     .suggests((context, builder) -> SharedSuggestionProvider.suggest(LUCKY_ITEM_NAMES, builder))

@@ -5,11 +5,11 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.animal.chicken.Chicken;
+import net.minecraft.world.entity.animal.Chicken;
 
 public final class ModEntities {
 
@@ -30,7 +30,7 @@ public final class ModEntities {
     ) {
         ResourceKey<EntityType<?>> key = ResourceKey.create(
                 Registries.ENTITY_TYPE,
-                Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, name)
+                ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, name)
         );
         EntityType<T> type = builder.build(key);
         Registry.register(BuiltInRegistries.ENTITY_TYPE, key, type);

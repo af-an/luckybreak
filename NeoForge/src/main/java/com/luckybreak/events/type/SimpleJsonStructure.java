@@ -7,7 +7,7 @@ import com.google.gson.JsonObject;
 import com.luckybreak.LuckyBreak;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
@@ -39,12 +39,12 @@ public class SimpleJsonStructure {
         this.size = size;
     }
 
-    public static SimpleJsonStructure load(ServerLevel level, Identifier structureId) {
+    public static SimpleJsonStructure load(ServerLevel level, ResourceLocation structureId) {
         return load(level.getServer().getResourceManager(), structureId);
     }
 
-    public static SimpleJsonStructure load(ResourceManager resourceManager, Identifier structureId) {
-        Identifier resourceId = Identifier.fromNamespaceAndPath(
+    public static SimpleJsonStructure load(ResourceManager resourceManager, ResourceLocation structureId) {
+        ResourceLocation resourceId = ResourceLocation.fromNamespaceAndPath(
                 structureId.getNamespace(),
                 "simple_structures/" + structureId.getPath() + ".json"
         );
@@ -74,7 +74,7 @@ public class SimpleJsonStructure {
                 if (z > maxZ) maxZ = z;
 
                 String blockId = entry.get("block").getAsString();
-                Block block = BuiltInRegistries.BLOCK.getValue(Identifier.parse(blockId));
+                Block block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse(blockId));
                 if (block == null) {
                     continue;
                 }

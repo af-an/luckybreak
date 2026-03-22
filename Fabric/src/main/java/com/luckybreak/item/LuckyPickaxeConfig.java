@@ -7,7 +7,7 @@ import com.luckybreak.ModBlocks;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
@@ -353,7 +353,7 @@ public final class LuckyPickaxeConfig {
                     continue;
                 }
 
-                Identifier id = Identifier.parse(idValue);
+                ResourceLocation id = ResourceLocation.parse(idValue);
                 int weight = parseInt(obj, "weight", 1, 0, 100000);
                 int minLevel = parseInt(obj, "min_level", 1, 1, 10);
                 int maxLevel = parseInt(obj, "max_level", minLevel, minLevel, 10);
@@ -380,7 +380,7 @@ public final class LuckyPickaxeConfig {
                 return fallback;
             }
 
-            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(value));
+            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(value));
             if (particle instanceof SimpleParticleType simpleParticle) {
                 return simpleParticle;
             }
@@ -436,7 +436,7 @@ public final class LuckyPickaxeConfig {
                     continue;
                 }
 
-                Identifier identifier = Identifier.parse(id);
+                ResourceLocation identifier = ResourceLocation.parse(id);
                 Block block = BuiltInRegistries.BLOCK.getValue(identifier);
                 if (block == null || block == Blocks.AIR) {
                     continue;
@@ -487,7 +487,7 @@ public final class LuckyPickaxeConfig {
                     if (id == null || id.isBlank()) {
                         continue;
                     }
-                    EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.parse(id));
+                    EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(ResourceLocation.parse(id));
                     if (type != null) {
                         result.add(new FriendlyMobEntry(type, 0, 1));
                     }
@@ -506,7 +506,7 @@ public final class LuckyPickaxeConfig {
                 if (id.isBlank()) {
                     continue;
                 }
-                EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.parse(id));
+                EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(ResourceLocation.parse(id));
                 if (type == null) {
                     continue;
                 }
@@ -567,7 +567,7 @@ public final class LuckyPickaxeConfig {
                     if (id == null || id.isBlank()) {
                         continue;
                     }
-                    EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.parse(id));
+                    EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(ResourceLocation.parse(id));
                     if (type != null) {
                         result.add(new HostileMobEntry(type, 0, 1));
                     }
@@ -586,7 +586,7 @@ public final class LuckyPickaxeConfig {
                 if (id.isBlank()) {
                     continue;
                 }
-                EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.parse(id));
+                EntityType<?> type = BuiltInRegistries.ENTITY_TYPE.getValue(ResourceLocation.parse(id));
                 if (type == null) {
                     continue;
                 }
@@ -674,7 +674,7 @@ public final class LuckyPickaxeConfig {
                     continue;
                 }
 
-                Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(itemId));
+                Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(itemId));
                 if (item == null || item == Items.AIR) {
                     continue;
                 }
@@ -961,7 +961,7 @@ public final class LuckyPickaxeConfig {
         }
     }
 
-    public record EnchantmentEntry(Identifier id, int weight, int minLevel, int maxLevel) {
+    public record EnchantmentEntry(ResourceLocation id, int weight, int minLevel, int maxLevel) {
     }
 
     public record TemporaryEnchantSettings(
@@ -983,21 +983,21 @@ public final class LuckyPickaxeConfig {
                     3,
                     8,
                     List.of(
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "looting"), 24, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "sharpness"), 22, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "smite"), 16, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "bane_of_arthropods"), 16, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "fire_aspect"), 10, 1, 2),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "knockback"), 10, 1, 2),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "sweeping_edge"), 8, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "thorns"), 8, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "depth_strider"), 7, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "feather_falling"), 7, 1, 4),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "respiration"), 6, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "aqua_affinity"), 6, 1, 1),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "soul_speed"), 4, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "swift_sneak"), 4, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "frost_walker"), 4, 1, 2)
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "looting"), 24, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "sharpness"), 22, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "smite"), 16, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "bane_of_arthropods"), 16, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "fire_aspect"), 10, 1, 2),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "knockback"), 10, 1, 2),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "sweeping_edge"), 8, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "thorns"), 8, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "depth_strider"), 7, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "feather_falling"), 7, 1, 4),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "respiration"), 6, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "aqua_affinity"), 6, 1, 1),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "soul_speed"), 4, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "swift_sneak"), 4, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "frost_walker"), 4, 1, 2)
                     ),
                     TemporaryEnchantParticleSettings.defaults()
             );

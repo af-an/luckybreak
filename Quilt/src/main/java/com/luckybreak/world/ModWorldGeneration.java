@@ -9,7 +9,7 @@ import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerChunkCache;
@@ -31,13 +31,13 @@ public class ModWorldGeneration {
 
     private static final ResourceKey<PlacedFeature> LUCKY_BLOCK_PLACED =
             ResourceKey.create(Registries.PLACED_FEATURE,
-                    Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block"));
+                    ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block"));
     private static final ResourceKey<PlacedFeature> NETHER_LUCKY_BLOCK_PLACED =
             ResourceKey.create(Registries.PLACED_FEATURE,
-                    Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "nether_lucky_block"));
+                    ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "nether_lucky_block"));
     private static final ResourceKey<PlacedFeature> END_LUCKY_CAGE_PLACED =
             ResourceKey.create(Registries.PLACED_FEATURE,
-                    Identifier.fromNamespaceAndPath(LuckyBreak.MOD_ID, "end_lucky_cage"));
+                    ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "end_lucky_cage"));
 
     private static final Map<ResourceKey<Level>, LongSet> SCANNED_CHUNKS = new HashMap<>();
 

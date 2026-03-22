@@ -7,7 +7,7 @@ import com.luckybreak.ModBlocks;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -211,7 +211,7 @@ public final class LuckyShovelConfig {
                     continue;
                 }
 
-                Identifier id = Identifier.parse(idValue);
+                ResourceLocation id = ResourceLocation.parse(idValue);
                 int weight = parseInt(obj, "weight", 1, 0, 100000);
                 int minLevel = parseInt(obj, "min_level", 1, 1, 10);
                 int maxLevel = parseInt(obj, "max_level", minLevel, minLevel, 10);
@@ -255,7 +255,7 @@ public final class LuckyShovelConfig {
                 return fallback;
             }
 
-            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(Identifier.parse(value));
+            var particle = BuiltInRegistries.PARTICLE_TYPE.getValue(ResourceLocation.parse(value));
             if (particle instanceof SimpleParticleType simpleParticle) {
                 return simpleParticle;
             }
@@ -352,7 +352,7 @@ public final class LuckyShovelConfig {
                         continue;
                     }
 
-                    Item item = BuiltInRegistries.ITEM.getValue(Identifier.parse(itemId));
+                    Item item = BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(itemId));
                     if (item == null || item == Items.AIR) {
                         continue;
                     }
@@ -527,7 +527,7 @@ public final class LuckyShovelConfig {
         }
     }
 
-    public record EnchantmentEntry(Identifier id, int weight, int minLevel, int maxLevel) {
+    public record EnchantmentEntry(ResourceLocation id, int weight, int minLevel, int maxLevel) {
     }
 
     public record TemporaryEnchantSettings(
@@ -549,11 +549,11 @@ public final class LuckyShovelConfig {
                     3,
                     8,
                     List.of(
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "efficiency"), 36, 1, 5),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "unbreaking"), 26, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "fortune"), 22, 1, 3),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "mending"), 8, 1, 1),
-                            new EnchantmentEntry(Identifier.fromNamespaceAndPath("minecraft", "silk_touch"), 8, 1, 1)
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "efficiency"), 36, 1, 5),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "unbreaking"), 26, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "fortune"), 22, 1, 3),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "mending"), 8, 1, 1),
+                            new EnchantmentEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "silk_touch"), 8, 1, 1)
                         ),
                         TemporaryEnchantParticleSettings.defaults()
             );

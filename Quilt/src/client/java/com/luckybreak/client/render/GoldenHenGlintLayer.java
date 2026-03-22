@@ -2,14 +2,14 @@ package com.luckybreak.client.render;
 
 import com.luckybreak.entity.GoldenHenConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.model.animal.chicken.ChickenModel;
+import net.minecraft.client.model.ChickenModel;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.EnergySwirlLayer;
 import net.minecraft.client.renderer.entity.state.ChickenRenderState;
-import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 public class GoldenHenGlintLayer extends EnergySwirlLayer<ChickenRenderState, ChickenModel> {
@@ -48,13 +48,13 @@ public class GoldenHenGlintLayer extends EnergySwirlLayer<ChickenRenderState, Ch
 
         collector.order(1).submitModel(
                 glintModel, state, poseStack,
-                RenderTypes.energySwirl(getTextureLocation(), xOff, yOff),
+                RenderType.energySwirl(getTextureLocation(), xOff, yOff),
                 packedLight, OverlayTexture.NO_OVERLAY, argb, null);
     }
 
     // Abstract method implementations (not called — submit() is fully overridden above)
     @Override protected boolean isPowered(ChickenRenderState state) { return true; }
     @Override protected float xOffset(float ageInTicks) { return ageInTicks * 0.01f; }
-    @Override protected Identifier getTextureLocation() { return GoldenHenConfig.goldenHenGlintTexture(); }
+    @Override protected ResourceLocation getTextureLocation() { return GoldenHenConfig.goldenHenGlintTexture(); }
     @Override protected ChickenModel model() { return getParentModel(); }
 }

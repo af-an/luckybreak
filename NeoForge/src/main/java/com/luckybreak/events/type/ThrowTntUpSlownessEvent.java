@@ -5,7 +5,7 @@ import com.luckybreak.events.LuckyEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -112,7 +112,7 @@ public class ThrowTntUpSlownessEvent implements LuckyEvent {
             level.addFreshEntity(tnt);
         }
 
-        MobEffect slowness = BuiltInRegistries.MOB_EFFECT.getValue(Identifier.parse("minecraft:slowness"));
+        MobEffect slowness = BuiltInRegistries.MOB_EFFECT.getValue(ResourceLocation.parse("minecraft:slowness"));
         if (slowness != null) {
             Holder<MobEffect> holder = BuiltInRegistries.MOB_EFFECT.wrapAsHolder(slowness);
             player.addEffect(new MobEffectInstance(holder, slownessDurationTicks, slownessAmplifier));

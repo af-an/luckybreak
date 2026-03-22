@@ -1,16 +1,16 @@
 package com.luckybreak.client.render;
 
 import com.luckybreak.LuckyBreak;
-import net.minecraft.client.model.animal.chicken.ChickenModel;
+import net.minecraft.client.model.ChickenModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.ChickenRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.ChickenRenderState;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 
 public class GoldenHenRenderer extends ChickenRenderer {
 
-    private static final Identifier GOLDEN_HEN_TEXTURE = Identifier.fromNamespaceAndPath(
+        private static final ResourceLocation GOLDEN_HEN_TEXTURE = ResourceLocation.fromNamespaceAndPath(
             LuckyBreak.MOD_ID,
             "textures/entity/chicken/golden_hen.png"
     );
@@ -32,7 +32,7 @@ public class GoldenHenRenderer extends ChickenRenderer {
     }
 
     @Override
-    public Identifier getTextureLocation(ChickenRenderState chickenRenderState) {
+    public ResourceLocation getTextureLocation(ChickenRenderState chickenRenderState) {
         return GOLDEN_HEN_TEXTURE;
     }
 }

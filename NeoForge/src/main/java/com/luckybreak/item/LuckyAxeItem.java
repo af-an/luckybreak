@@ -8,7 +8,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -386,7 +386,7 @@ public class LuckyAxeItem extends AxeItem {
         Map<String, Integer> levels = new HashMap<>();
         ItemEnchantments enchantments = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         for (var entry : enchantments.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id != null) {
                 levels.put(id.toString(), Math.max(0, entry.getIntValue()));
             }
@@ -403,7 +403,7 @@ public class LuckyAxeItem extends AxeItem {
         ItemEnchantments current = stack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
         List<EnchantLevel> keep = new ArrayList<>();
         for (var entry : current.entrySet()) {
-            Identifier id = enchantmentRegistry.getKey(entry.getKey().value());
+            ResourceLocation id = enchantmentRegistry.getKey(entry.getKey().value());
             if (id == null) {
                 continue;
             }
@@ -480,7 +480,7 @@ public class LuckyAxeItem extends AxeItem {
         );
     }
 
-    private record EnchantLevel(Identifier id, int level) {
+    private record EnchantLevel(ResourceLocation id, int level) {
     }
 
     private LuckyAxeConfig.DropEntry pickDrop(Level level, LuckyAxeConfig.BonusDropSettings settings) {
