@@ -2,7 +2,7 @@
 
 ![Lucky Break Title](https://luckybreak.sirv.com/Images/title03.png)
 
-![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62b447?style=flat-square&logo=minecraft&logoColor=white)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.10-62b447?style=flat-square&logo=minecraft&logoColor=white)
 ![Fabric](https://img.shields.io/badge/Fabric-supported-dbb045?style=flat-square)
 ![Forge](https://img.shields.io/badge/Forge-supported-e07a29?style=flat-square)
 ![NeoForge](https://img.shields.io/badge/NeoForge-supported-cf6029?style=flat-square)
