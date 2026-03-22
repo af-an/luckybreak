@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="${forge_loader_range}"
-license="MIT + additional Lucky Break terms (see LICENSE)"
+license="MIT + attribution/no-misrepresentation *full terms: https://github.com/af-an/luckybreak/?tab=readme-ov-file#license"
 
 [[mods]]
 modId="${mod_id}"

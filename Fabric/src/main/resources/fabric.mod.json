@@ -10,10 +10,10 @@
 	"contact": {
 		"homepage": "https://github.com/af-an/luckybreak",
 		"sources": "https://github.com/af-an/luckybreak",
-		"license": "https://github.com/af-an/luckybreak/blob/main/LICENSE",
+		"license": "https://github.com/af-an/luckybreak/?tab=readme-ov-file#license",
 		"issues": "https://github.com/af-an/luckybreak/issues"
 	},
-	"license": "MIT + additional Lucky Break terms (see LICENSE)",
+	"license": "MIT + attribution/no-misrepresentation (full terms in source link)",
 	"icon": "assets/luckybreak/icon.png",
 	"environment": "*",
 	"entrypoints": {
