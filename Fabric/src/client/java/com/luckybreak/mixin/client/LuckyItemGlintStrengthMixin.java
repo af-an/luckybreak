@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.ItemOwner;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -23,7 +23,7 @@ public abstract class LuckyItemGlintStrengthMixin {
                                                          ItemStack stack,
                                                          ItemDisplayContext displayContext,
                                                          Level level,
-                                                         ItemOwner itemOwner,
+                                                         LivingEntity itemOwner,
                                                          int seed,
                                                          CallbackInfo ci) {
         if (!stack.hasFoil()) {

@@ -29,7 +29,7 @@ public class LuckyBreakClient implements ClientModInitializer {
 				return;
 			}
 
-			var window = client.getWindow();
+			long window = client.getWindow().getWindow();
 			boolean ctrlDown = InputConstants.isKeyDown(window, GLFW.GLFW_KEY_LEFT_CONTROL)
 					|| InputConstants.isKeyDown(window, GLFW.GLFW_KEY_RIGHT_CONTROL);
 			boolean kDown = InputConstants.isKeyDown(window, GLFW.GLFW_KEY_K);

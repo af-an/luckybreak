@@ -15,7 +15,7 @@ import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.io.Reader;
@@ -139,9 +139,9 @@ public class LuckyEventRegistry implements PreparableReloadListener {
     }
 
     @Override
-    public CompletableFuture<Void> reload(SharedState state, Executor prepExecutor, PreparationBarrier stage, Executor applyExecutor) {
+    public CompletableFuture<Void> reload(PreparationBarrier stage, ResourceManager manager, Executor prepExecutor, Executor applyExecutor) {
         return CompletableFuture
-                .runAsync(() -> onResourceManagerReload(state.resourceManager()), prepExecutor)
+                .runAsync(() -> onResourceManagerReload(manager), prepExecutor)
                 .thenCompose(stage::wait)
                 .thenRunAsync(() -> {
                 }, applyExecutor);

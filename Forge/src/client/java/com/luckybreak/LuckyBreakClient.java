@@ -13,7 +13,7 @@ import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -51,7 +51,7 @@ public class LuckyBreakClient {
 				return;
 			}
 
-			var window = client.getWindow();
+			long window = client.getWindow().getWindow();
 			boolean ctrlDown = InputConstants.isKeyDown(window, GLFW.GLFW_KEY_LEFT_CONTROL)
 					|| InputConstants.isKeyDown(window, GLFW.GLFW_KEY_RIGHT_CONTROL);
 			boolean kDown = InputConstants.isKeyDown(window, GLFW.GLFW_KEY_K);
@@ -96,7 +96,7 @@ public class LuckyBreakClient {
 		}
 	}
 
-	@Mod.EventBusSubscriber(modid = LuckyBreak.MOD_ID, value = Dist.CLIENT)
+	@Mod.EventBusSubscriber(modid = LuckyBreak.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static final class ForgeClientModBusEvents {
 		@SubscribeEvent
 		public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {

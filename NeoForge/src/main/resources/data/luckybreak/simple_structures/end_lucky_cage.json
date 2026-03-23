@@ -186,7 +186,7 @@
         1,
         0
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "true",
         "waterlogged": "false",
@@ -201,7 +201,7 @@
         1,
         1
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "true",
         "waterlogged": "false",
@@ -216,7 +216,7 @@
         1,
         2
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "true",
         "waterlogged": "false",
@@ -231,7 +231,7 @@
         1,
         0
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "true",
         "waterlogged": "false",
@@ -246,7 +246,7 @@
         1,
         2
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "true",
         "waterlogged": "false",
@@ -261,7 +261,7 @@
         1,
         0
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "false",
         "waterlogged": "false",
@@ -276,7 +276,7 @@
         1,
         1
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "false",
         "waterlogged": "false",
@@ -291,7 +291,7 @@
         1,
         2
       ],
-      "block": "minecraft:waxed_oxidized_copper_bars",
+      "block": "minecraft:iron_bars",
       "properties": {
         "east": "false",
         "waterlogged": "false",

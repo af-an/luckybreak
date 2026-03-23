@@ -55,7 +55,7 @@ public class LuckyBlock extends Block {
     /**
      * Called server-side after this block has been removed from the level.
      * Unregisters the position from LuckyBlockTracker.
-     * This is the 1.21.10 replacement for the removed onRemove() hook.
+    * This is the 1.21.5 replacement for the removed onRemove() hook.
      */
     @Override
     protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel level,

@@ -41,7 +41,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.ArrayList;
@@ -77,7 +77,7 @@ public final class WishingWellManager {
     public static final class ForgeEvents {
         @SubscribeEvent
         public static void onServerTick(TickEvent.ServerTickEvent.Post event) {
-            tickServer(event.server());
+            tickServer(event.getServer());
         }
     }
 

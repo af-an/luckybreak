@@ -252,32 +252,28 @@ public class LuckyChanceConfigScreen extends Screen {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         Layout layout = computeLayout();
 
-        float titleScale = 1.5F;
+        super.render(guiGraphics, mouseX, mouseY, partialTick);
+
+        float titleScale = 2.0F;
         int titleBaseY = layout.panelTop() + 8;
         int titleX = Math.round(layout.centerX() / titleScale);
         int titleY = Math.round(titleBaseY / titleScale);
-        guiGraphics.pose().pushMatrix();
-        guiGraphics.pose().scale(titleScale, titleScale);
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().scale(titleScale, titleScale, 1.0F);
         guiGraphics.drawCenteredString(this.font, this.title, titleX, titleY, 0xFFFFD700);
-        guiGraphics.pose().popMatrix();
+        guiGraphics.pose().popPose();
 
         guiGraphics.drawCenteredString(this.font, SUBTITLE, layout.centerX(), layout.panelTop() + 29, 0xFFD0D0D0);
         guiGraphics.drawCenteredString(this.font, SECTION_TITLE, layout.centerX(), layout.panelTop() + 42, 0xFFFFFFAA);
 
-        float tipScale = 0.9F;
         int tipX = 8;
         int tipY = this.height - 20;
-        guiGraphics.pose().pushMatrix();
-        guiGraphics.pose().scale(tipScale, tipScale);
-        guiGraphics.drawString(this.font, Component.literal("TIP: PRESS CTRL+K TO OPEN THIS MENU IN-GAME."), Math.round(tipX / tipScale), Math.round(tipY / tipScale), 0xFFD8D8D8, true);
-        guiGraphics.drawString(this.font, Component.literal("TIP: HOVER OVER (i) TO SEE WHAT EACH CHANCE TIER MEANS."), Math.round(tipX / tipScale), Math.round((tipY + 10) / tipScale), 0xFFD8D8D8, true);
-        guiGraphics.pose().popMatrix();
+        guiGraphics.drawString(this.font, Component.literal("TIP: PRESS CTRL+K TO OPEN THIS MENU IN-GAME."), tipX, tipY, 0xFFD8D8D8, false);
+        guiGraphics.drawString(this.font, Component.literal("TIP: HOVER OVER (i) TO SEE WHAT EACH CHANCE TIER MEANS."), tipX, tipY + 10, 0xFFD8D8D8, false);
 
         if (this.width < MIN_READABLE_WIDTH || this.height < MIN_READABLE_HEIGHT) {
             guiGraphics.drawCenteredString(this.font, SMALL_WINDOW_WARNING, layout.centerX(), layout.panelTop() + 56, 0xFFFFAA55);
         }
-
-        super.render(guiGraphics, mouseX, mouseY, partialTick);
 
         if (!this.statusMessage.getString().isEmpty()) {
             guiGraphics.drawCenteredString(this.font, this.statusMessage, layout.centerX(), layout.statusY(), this.statusColor);
@@ -309,10 +305,10 @@ public class LuckyChanceConfigScreen extends Screen {
 
         guiGraphics.fill(left - 1, top - 1, right + 1, bottom + 1, 0xD0100010);
         guiGraphics.fill(left, top, right, bottom, 0xE0202028);
-        guiGraphics.pose().pushMatrix();
-        guiGraphics.pose().scale(1.5F, 1.5F);
+        guiGraphics.pose().pushPose();
+        guiGraphics.pose().scale(1.5F, 1.5F, 1.0F);
         guiGraphics.drawString(this.font, this.actionTooltipMessage, Math.round(x / 1.5F), Math.round(y / 1.5F), this.actionTooltipColor, false);
-        guiGraphics.pose().popMatrix();
+        guiGraphics.pose().popPose();
     }
 
     private final class ChanceSlider extends AbstractSliderButton {

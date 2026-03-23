@@ -287,7 +287,7 @@ public class NightRidersEvent implements LuckyEvent {
 
             level.addFreshEntity(horse);
             level.addFreshEntity(rider);
-            boolean mounted = rider.startRiding(horse, true, true);
+            boolean mounted = rider.startRiding(horse, true);
             if (mounted) {
                 return;
             }

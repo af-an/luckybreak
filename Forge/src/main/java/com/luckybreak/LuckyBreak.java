@@ -17,7 +17,7 @@ import com.luckybreak.world.WishingWellManager;
 import com.luckybreak.world.feature.ModFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegisterEvent;
 
@@ -31,6 +31,7 @@ public class LuckyBreak {
 			ResourceLocation.fromNamespaceAndPath(MOD_ID, "lucky_break")
 	);
 	private static final ResourceLocation LUCKY_BREAK_TAB_ID = ResourceLocation.fromNamespaceAndPath(MOD_ID, "lucky_break");
+	private static boolean creativeTabRegistered;
 
 	public void onInitialize() {
 		ModFeatures.register();
@@ -48,12 +49,16 @@ public class LuckyBreak {
 		LOGGER.info("Lucky Break initialized!");
 	}
 
-	@Mod.EventBusSubscriber(modid = MOD_ID)
+	@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static final class ForgeEvents {
 		@SubscribeEvent
 		public static void onRegisterCreativeTabs(RegisterEvent event) {
+			if (creativeTabRegistered) {
+				return;
+			}
 			event.register(Registries.CREATIVE_MODE_TAB, helper ->
-				helper.register(LUCKY_BREAK_TAB_ID,
+				{
+					helper.register(LUCKY_BREAK_TAB_ID,
 						CreativeModeTab.builder()
 								.title(Component.translatable("itemGroup.luckybreak.lucky_break"))
 								.icon(() -> new ItemStack(ModBlocks.LUCKY_BLOCK.asItem()))
@@ -70,7 +75,9 @@ public class LuckyBreak {
 									output.accept(ModItems.GOLDEN_HEN_SPAWN_EGG);
 								})
 								.build()
-				)
+					);
+					creativeTabRegistered = true;
+				}
 			);
 		}
 	}

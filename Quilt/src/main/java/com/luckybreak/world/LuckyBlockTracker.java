@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 /**
  * SavedData that persists all Lucky Block positions in a dimension.
  *
- * Uses 1.21.10's SavedDataType + Codec API. Positions are grouped in-memory by
+ * Uses 1.21.5's SavedDataType + Codec API. Positions are grouped in-memory by
  * ChunkPos so the spiral nearest-neighbor search can skip empty chunks instantly.
  */
 public class LuckyBlockTracker extends SavedData {
@@ -46,7 +46,7 @@ public class LuckyBlockTracker extends SavedData {
     );
 
     // -------------------------------------------------------------------------
-    // SavedDataType — the 1.21.10 replacement for SavedData.Factory
+    // SavedDataType — the 1.21.5 replacement for SavedData.Factory
     // -------------------------------------------------------------------------
 
     public static final SavedDataType<LuckyBlockTracker> TYPE = new SavedDataType<>(

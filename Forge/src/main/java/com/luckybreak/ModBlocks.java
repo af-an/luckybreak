@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegisterEvent;
 
@@ -23,16 +23,24 @@ public class ModBlocks {
     public static Block VERY_UNLUCKY_BLOCK;
     public static Block MOSTLY_LUCKY_BLOCK;
     public static Block MOSTLY_UNLUCKY_BLOCK;
+    private static boolean blocksRegistered;
+    private static boolean blockItemsRegistered;
 
     public static void register() {
         // No-op for Forge; registration is event-driven.
     }
 
-    @Mod.EventBusSubscriber(modid = LuckyBreak.MOD_ID)
+    @Mod.EventBusSubscriber(modid = LuckyBreak.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static final class ForgeEvents {
         @SubscribeEvent
         public static void onRegisterBlocks(RegisterEvent event) {
+            if (blocksRegistered) {
+                return;
+            }
             event.register(Registries.BLOCK, helper -> {
+                if (blocksRegistered) {
+                    return;
+                }
                 ResourceLocation luckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_block");
                 ResourceLocation veryLuckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_lucky_block");
                 ResourceLocation veryUnluckyBlockId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "very_unlucky_block");
@@ -50,12 +58,19 @@ public class ModBlocks {
                 helper.register(veryUnluckyBlockId, VERY_UNLUCKY_BLOCK);
                 helper.register(mostlyLuckyBlockId, MOSTLY_LUCKY_BLOCK);
                 helper.register(mostlyUnluckyBlockId, MOSTLY_UNLUCKY_BLOCK);
+                blocksRegistered = true;
             });
         }
 
         @SubscribeEvent
         public static void onRegisterItems(RegisterEvent event) {
+            if (blockItemsRegistered) {
+                return;
+            }
             event.register(Registries.ITEM, helper -> {
+                if (blockItemsRegistered) {
+                    return;
+                }
                 if (LUCKY_BLOCK == null) {
                     return;
                 }
@@ -71,6 +86,7 @@ public class ModBlocks {
                 helper.register(veryUnluckyBlockId, new LuckyTierBlockItem(VERY_UNLUCKY_BLOCK, ResourceKey.create(Registries.ITEM, veryUnluckyBlockId), ChatFormatting.RED));
                 helper.register(mostlyLuckyBlockId, new LuckyTierBlockItem(MOSTLY_LUCKY_BLOCK, ResourceKey.create(Registries.ITEM, mostlyLuckyBlockId), ChatFormatting.DARK_AQUA));
                 helper.register(mostlyUnluckyBlockId, new LuckyTierBlockItem(MOSTLY_UNLUCKY_BLOCK, ResourceKey.create(Registries.ITEM, mostlyUnluckyBlockId), ChatFormatting.GOLD));
+                blockItemsRegistered = true;
             });
         }
     }

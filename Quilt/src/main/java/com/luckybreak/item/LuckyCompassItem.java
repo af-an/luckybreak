@@ -12,6 +12,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -100,7 +101,8 @@ public class LuckyCompassItem extends Item {
         // At least 1 durability is consumed whenever a Lucky Block is found.
         double distance = Math.sqrt(player.blockPosition().distSqr(nearest));
         int damage = (int) Math.max(5, Math.min(distance / 25.0, MAX_DAMAGE_PER_USE));
-        compass.hurtAndBreak(damage, player, hand);
+        EquipmentSlot slot = hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
+        compass.hurtAndBreak(damage, player, slot);
 
         player.displayClientMessage(
             Component.literal(LuckyEventRegistry.INSTANCE.luckyCompassFoundMessage())

@@ -13,7 +13,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegisterEvent;
 
@@ -28,16 +28,23 @@ public class ModItems {
     public static Item LUCKY_SHOVEL;
     public static Item LUCKY_HOE;
     public static Item GOLDEN_HEN_SPAWN_EGG;
+    private static boolean itemsRegistered;
 
     public static void register() {
         // No-op for Forge; registration is event-driven.
     }
 
-    @Mod.EventBusSubscriber(modid = LuckyBreak.MOD_ID)
+    @Mod.EventBusSubscriber(modid = LuckyBreak.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static final class ForgeEvents {
         @SubscribeEvent
         public static void onRegisterItems(RegisterEvent event) {
+            if (itemsRegistered) {
+                return;
+            }
             event.register(Registries.ITEM, helper -> {
+                if (itemsRegistered) {
+                    return;
+                }
                 ResourceLocation luckyCompassId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_compass");
                 ResourceLocation luckyBowId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_bow");
                 ResourceLocation luckyPotionId = ResourceLocation.fromNamespaceAndPath(LuckyBreak.MOD_ID, "lucky_potion");
@@ -67,6 +74,7 @@ public class ModItems {
                 helper.register(luckyShovelId, LUCKY_SHOVEL);
                 helper.register(luckyHoeId, LUCKY_HOE);
                 helper.register(goldenHenEggId, GOLDEN_HEN_SPAWN_EGG);
+                itemsRegistered = true;
             });
         }
     }

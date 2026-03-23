@@ -139,9 +139,9 @@ public class LuckyEventRegistry implements PreparableReloadListener {
     }
 
     @Override
-    public CompletableFuture<Void> reload(SharedState state, Executor prepExecutor, PreparationBarrier stage, Executor applyExecutor) {
+    public CompletableFuture<Void> reload(PreparationBarrier stage, ResourceManager manager, Executor prepExecutor, Executor applyExecutor) {
         return CompletableFuture
-                .runAsync(() -> onResourceManagerReload(state.resourceManager()), prepExecutor)
+                .runAsync(() -> onResourceManagerReload(manager), prepExecutor)
                 .thenCompose(stage::wait)
                 .thenRunAsync(() -> {
                 }, applyExecutor);
